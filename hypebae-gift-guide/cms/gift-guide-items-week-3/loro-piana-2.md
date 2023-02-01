@@ -12,16 +12,13 @@ updated-on: '2022-11-28T15:19:41.301Z'
 created-on: '2022-11-24T09:15:37.550Z'
 published-on: '2022-11-29T11:56:32.943Z'
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/637f3a8ebb8073e9a14ce6de_01_FAM6140_F3ZM.png
+  url: /assets/external/63d9e57e0ac990965449f465_01_fam6140_f3zm.png
   alt: null
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/6384d182f721d50ee0a1adae_WEEK03_LOROPIANA_INDEXLOGO.png
+  url: /assets/external/63d9e57e0ac990e1fa49f46d_week03_loropiana_indexlogo.png
   alt: null
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638266dbf12be17c9e8238b6_WEEK_06_HYPEBAE_LOROPIANA_LOGO.svg
+  url: /assets/external/63d9e57e0ac990b4a449f454_week_06_hypebae_loropiana_logo.svg
   alt: null
 f_page-description: >-
   Welcome to Hypebae’s curated Gift Index. A visual library of products is

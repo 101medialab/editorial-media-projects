@@ -13,8 +13,7 @@ updated-on: '2022-12-01T12:03:48.011Z'
 created-on: '2022-11-24T09:15:37.551Z'
 published-on: '2022-12-01T12:07:30.775Z'
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/637f3a56ad465646714a14b9_04_FAM6930_B2VC_BAE.png
+  url: /assets/external/63d9e57e0ac990fcb749f464_04_fam6930_b2vc_bae.png
   alt: null
 f_page-description: >-
   Welcome to Hypebae’s curated Gift Index. A visual library of products is
@@ -23,12 +22,10 @@ f_page-description: >-
   artisanal cashmere.
 f_page-number: Week 3
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/6384d182f721d50ee0a1adae_WEEK03_LOROPIANA_INDEXLOGO.png
+  url: /assets/external/63d9e57e0ac990e1fa49f46d_week03_loropiana_indexlogo.png
   alt: null
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638266dbf12be17c9e8238b6_WEEK_06_HYPEBAE_LOROPIANA_LOGO.svg
+  url: /assets/external/63d9e57e0ac990b4a449f454_week_06_hypebae_loropiana_logo.svg
   alt: null
 layout: '[gift-guide-items-week-3].html'
 tags: gift-guide-items-week-3

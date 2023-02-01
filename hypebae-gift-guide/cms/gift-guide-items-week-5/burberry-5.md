@@ -15,19 +15,18 @@ f_page-description: >-
   some Burberry icons make a return in the brand’s latest offering.
 f_brand-logo:
   url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638f68df415c506649cacf68_WEEK_05_BURBERRY_INDEX_LOGO-BLACK.png
+    /assets/external/63d9e57e0ac990255649f479_week_05_burberry_index_logo-black.png
   alt: null
 slug: burberry-5
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638f67c6eba6c4aedbd8f425_uc.png
+  url: /assets/external/63d9e57e0ac990c62049f478_uc.png
   alt: null
 updated-on: '2022-12-13T09:11:56.092Z'
 created-on: '2022-12-06T16:03:19.089Z'
 published-on: '2022-12-13T09:52:07.953Z'
 f_index-logo:
   url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638f67d78a288f1bac39cbc4_GIFT_INDEX_LOGO_HYPEBAE_BURBERRY.svg
+    /assets/external/63d9e57e0ac9900b1449f45f_gift_index_logo_hypebae_burberry.svg
   alt: null
 f_custom-sort-order: 5
 layout: '[gift-guide-items-week-5].html'

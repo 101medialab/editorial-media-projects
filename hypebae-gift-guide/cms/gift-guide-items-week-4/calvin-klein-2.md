@@ -18,16 +18,13 @@ updated-on: '2022-12-01T12:15:40.971Z'
 created-on: '2022-11-28T20:34:22.678Z'
 published-on: '2022-12-01T12:43:59.685Z'
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/63851c8e3bffa43b7bf6251a_CK_PRODUCT-4.png
+  url: /assets/external/63d9e57e0ac9907bef49f474_ck_product-4.png
   alt: null
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/638520169e703d08339d053b_WEEK_04_CK_INDEX_LOGO-BLACK.png
+  url: /assets/external/63d9e57e0ac9904bea49f473_week_04_ck_index_logo-black.png
   alt: null
 f_index-logo-2:
-  url: >-
-    https://uploads-ssl.webflow.com/637e94c1fd697f7193c3e8c3/63851d1069650d2831a961e6_WEEK_03_HYPEBAE_PARTNER_LOGO.svg
+  url: /assets/external/63d9e57e0ac990a6f449f45c_week_03_hypebae_partner_logo.svg
   alt: null
 f_custom-sort-order: 3
 layout: '[gift-guide-items-week-4].html'

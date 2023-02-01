@@ -79,107 +79,6 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: example_gift_guide_items
-    label: EXAMPLE ---- TESTs
-    folder: cms/example-gift-guide-items
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: Brand
-        name: title
-        label: Platform
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: f_brand
-        label: Brand
-        widget: string
-        required: false
-      - hint: ''
-        name: f_product-name
-        label: Product Name
-        widget: string
-        required: false
-      - hint: ''
-        name: f_price
-        label: Price
-        widget: string
-        required: false
-      - hint: ''
-        name: f_image
-        label: Image
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: ''
-        name: f_product-description
-        label: Product Description
-        widget: string
-        required: false
-      - hint: ''
-        name: f_link
-        label: Link
-        widget: string
-        required: false
-      - hint: >-
-          Add Brand logo - ensure that this is created within the PSD template
-          to ensure correct brand logo size
-        name: f_brand-logo
-        label: Brand Logo
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: example-gift-guide-items
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[example-gift-guide-items].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
   - name: gift_guide_items_week_1
     label: WEEK-1 -- NETFLIX STRANGER THINGs
     folder: cms/gift-guide-items-week-1
@@ -913,13 +812,12 @@ collections:
             widget: hidden
             default: Texts
           - hint: >-
-              Original text: Welcome to Hypebae’s curated Gift Index. A visual
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
               library of products is presented as an easy-to-navigate resource
-              for all things gifting. A breath of fresh air, Calvin Klein takes
-              its most classic staples and gives them a contemporary update for
-              this week’s installment., key: 182ccecf
+              for all things gifting. This week, some Burberry icons make a
+              return in the brand’s latest offering., key: 2de70793
             label: Text
-            name: 182ccecf
+            name: 2de70793
             widget: text
           - hint: 'Original text: WEEKLY , key: 73ec1bbf'
             label: Text
@@ -929,9 +827,9 @@ collections:
             label: Text
             name: '-7f031a52'
             widget: string
-          - hint: 'Original text: Week 4, key: -65cb9cd8'
+          - hint: 'Original text: Week 5, key: -65cb9cd7'
             label: Text
-            name: '-65cb9cd8'
+            name: '-65cb9cd7'
             widget: string
           - hint: 'Original text: Shop Now, key: -10d26d54'
             label: Text
@@ -941,33 +839,34 @@ collections:
             label: Text
             name: 3d503d2b
             widget: string
-          - hint: >-
-              Original text: Welcome to Hypebae’s curated Gift Index. A visual
-              library of products is presented as an easy-to-navigate resource
-              for all things gifting. Loro Piana’s cozy winter staples land in
-              this week’s installment, with new blends of its artisanal
-              cashmere. , key: -3fb1d468
+          - hint: "Original text: Welcome to Hypebeast’s curated Gift Index. A visual library of products is presented\_as an easy-to-navigate resource for all things gifting., key: 60870b99"
             label: Text
-            name: '-3fb1d468'
+            name: 60870b99
+            widget: text
+          - hint: >-
+              Original text: Loro Piana’s cozy winter staples land in this
+              week’s installment, with new blends of its artisanal cashmere. ,
+              key: -73518cc8
+            label: Text
+            name: '-73518cc8'
+            widget: text
+          - hint: 'Original text: INDEX, key: 42930b2'
+            label: Text
+            name: 42930b2
+            widget: string
+          - hint: >-
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting.Loro Piana’s cozy winter staples land in
+              this week’s installment, with new blends of its artisanal
+              cashmere. , key: fa373bf
+            label: Text
+            name: fa373bf
             widget: text
           - hint: 'Original text: Week 3, key: -65cb9cd9'
             label: Text
             name: '-65cb9cd9'
             widget: string
-          - hint: 'Original text: Heading, key: -6d5fea1e'
-            label: Text
-            name: '-6d5fea1e'
-            widget: string
-          - hint: >-
-              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Suspendisse varius enim in eros elementum tristique. Duis
-              cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-              commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
-              tristique posuere., key: -5286fc08
-            label: Text
-            name: '-5286fc08'
-            widget: text
           - hint: >-
               Original text: Welcome to Hypebeast’s curated Gift Index. A visual
               library of products is presented as an easy-to-navigate resource
@@ -999,14 +898,28 @@ collections:
             label: Text
             name: '-65cb9cda'
             widget: string
-          - hint: 'Original text: Week 5, key: -65cb9cd7'
+          - hint: 'Original text: Week 4, key: -65cb9cd8'
             label: Text
-            name: '-65cb9cd7'
+            name: '-65cb9cd8'
             widget: string
           - hint: 'Original text: - coming soon, key: -7351d439'
             label: Text
             name: '-7351d439'
             widget: string
+          - hint: 'Original text: Heading, key: -6d5fea1e'
+            label: Text
+            name: '-6d5fea1e'
+            widget: string
+          - hint: >-
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Suspendisse varius enim in eros elementum tristique. Duis
+              cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+              commodo diam libero vitae erat. Aenean faucibus nibh et justo
+              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere., key: -5286fc08
+            label: Text
+            name: '-5286fc08'
+            widget: text
           - hint: 'Original text: Week 6, key: -65cb9cd6'
             label: Text
             name: '-65cb9cd6'
@@ -1020,16 +933,23 @@ collections:
             name: '-65cb9cd4'
             widget: string
           - hint: >-
-              Original text: Welcome to Hypebae's curated Gift Index. A visual
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
               library of products is presented as an easy-to-navigate resource
-              for all things gifting. This week, some Burberry icons make a
-              return in the brand’s latest offering., key: -7bf49066
+              for all things gifting. A breath of fresh air, Calvin Klein takes
+              its most classic staples and gives them a contemporary update for
+              this week’s installment., key: -6c8b812a
             label: Text
-            name: '-7bf49066'
+            name: '-6c8b812a'
             widget: text
-          - hint: 'Original text: HeadingHeadingHeading, key: -387cdfde'
+          - hint: 'Original text: BALMAIN X STRANGER THINGS, key: 1a6195ed'
             label: Text
-            name: '-387cdfde'
+            name: 1a6195ed
+            widget: string
+          - hint: >-
+              Original text: BALMAIN X STRANGER THINGSB-COURT MID TOP
+              SHOESHeading, key: -40aba176
+            label: Text
+            name: '-40aba176'
             widget: string
           - hint: >-
               Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -1042,29 +962,22 @@ collections:
             label: Text
             name: '-2f23306e'
             widget: text
-          - hint: "Original text: Welcome to Hypebeast’s curated Gift Index. A visual library of products is presented\_as an easy-to-navigate resource for all things gifting., key: 60870b99"
-            label: Text
-            name: 60870b99
-            widget: text
-          - hint: >-
-              Original text: Loro Piana’s cozy winter staples land in this
-              week’s installment, with new blends of its artisanal cashmere. ,
-              key: -73518cc8
-            label: Text
-            name: '-73518cc8'
-            widget: text
-          - hint: 'Original text: INDEX, key: 42930b2'
-            label: Text
-            name: 42930b2
-            widget: string
           - hint: >-
               Original text: Welcome to Hypebae’s curated Gift Index. A visual
               library of products is presented as an easy-to-navigate resource
-              for all things gifting.Loro Piana’s cozy winter staples land in
-              this week’s installment, with new blends of its artisanal
-              cashmere. , key: 227edeb8
+              for all things gifting. A breath of fresh air, Calvin Klein takes
+              its most classic staples and gives them a contemporary update for
+              this week’s installment., key: 182ccecf
             label: Text
-            name: 227edeb8
+            name: 182ccecf
+            widget: text
+          - hint: >-
+              Original text: Welcome to Hypebae's curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting. This week, some Burberry icons make a
+              return in the brand’s latest offering., key: -7bf49066
+            label: Text
+            name: '-7bf49066'
             widget: text
       - label: Links
         name: links
@@ -1074,13 +987,46 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: /calvin-klein-gift-guide-2022, key: -6b4c0929'
+          - hint: 'Original link: /burberry-gift-guide-2022, key: 2609ef45'
             label: Link
-            name: '-6b4c0929'
+            name: 2609ef45
             widget: string
           - hint: 'Original link: #, key: 23'
             label: Link
             name: '23'
+            widget: string
+          - hint: 'Original link: /hypebeast-gift-guide-weekly-index, key: 49348bb1'
+            label: Link
+            name: 49348bb1
+            widget: string
+          - hint: 'Original link: https://www.hypebeast.com/, key: 42ce6189'
+            label: Link
+            name: 42ce6189
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-1/stranger-things-1,
+              key: -25b93d5f
+            label: Link
+            name: '-25b93d5f'
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-2/adidas-headphones-8,
+              key: -2cbbe4b1
+            label: Link
+            name: '-2cbbe4b1'
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-3/loro-piana-4,
+              key: -67b0788e
+            label: Link
+            name: '-67b0788e'
+            widget: string
+          - hint: 'Original link: /calvin-klein-gift-guide-2022, key: -6b4c0929'
+            label: Link
+            name: '-6b4c0929'
             widget: string
           - hint: 'Original link: /hypebae-gift-guide-weekly-index, key: -6b6cf1e8'
             label: Link
@@ -1089,10 +1035,6 @@ collections:
           - hint: 'Original link: /, key: 2f'
             label: Link
             name: 2f
-            widget: string
-          - hint: 'Original link: /burberry-gift-guide-2022, key: 2609ef45'
-            label: Link
-            name: 2609ef45
             widget: string
           - hint: >-
               Original link:
@@ -1114,10 +1056,6 @@ collections:
               key: -1bc91fd5
             label: Link
             name: '-1bc91fd5'
-            widget: string
-          - hint: 'Original link: https://www.hypebeast.com/, key: 42ce6189'
-            label: Link
-            name: 42ce6189
             widget: string
       - label: Images
         name: images
@@ -1154,7 +1092,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-3b67aade'
+            name: '-648cd57b'
             widget: object
             fields:
               - name: url
@@ -1167,7 +1105,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 6c553732
+            name: 7d4d659d
             widget: object
             fields:
               - name: url
@@ -1193,7 +1131,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-3eb72f54'
+            name: 33f81d33
             widget: object
             fields:
               - name: url
@@ -1206,7 +1144,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: c045f7b
+            name: 2382f557
             widget: object
             fields:
               - name: url
@@ -1219,7 +1157,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 317f733b
+            name: '-2b07cf98'
             widget: object
             fields:
               - name: url
@@ -1232,20 +1170,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-4fe6b018'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 6175c3e3
+            name: 66b52ac3
             widget: object
             fields:
               - name: url
@@ -1297,6 +1222,19 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: 6c553732
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: 2c3cd5f3
             widget: object
             fields:
@@ -1323,7 +1261,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-27af58c2'
+            name: '-3cbca8bd'
             widget: object
             fields:
               - name: url
@@ -1336,7 +1274,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 33f81d33
+            name: 6507faa9
             widget: object
             fields:
               - name: url
@@ -1348,4 +1286,83 @@ collections:
                 label: Image Alt
                 widget: string
                 required: false
+          - label: Image
+            name: '-45b2b1a4'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3b67aade'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4fe6b018'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6175c3e3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 317f733b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-27af58c2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+local_backend: true
 publish_mode: editorial_workflow
