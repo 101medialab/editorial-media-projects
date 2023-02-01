@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: 101medialab/editorial-media-projects
+  name: git-gateway
   accept_roles:
     - admin
     - editor
@@ -80,127 +79,6 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: example_cms_layout
-    label: EXAMPLE CMS - LAYOUTs
-    folder: cms/example-cms-layout
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: ''
-        name: title
-        label: Platform
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: f_week-number
-        label: Week Number
-        widget: string
-        required: false
-      - hint: ''
-        name: f_page-description
-        label: Page Description
-        widget: string
-        required: false
-      - hint: ''
-        name: f_product-name
-        label: Product Name
-        widget: string
-        required: false
-      - hint: ''
-        name: f_price
-        label: Price
-        widget: string
-        required: false
-      - hint: ''
-        name: f_image
-        label: Image
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: ''
-        name: f_product-description
-        label: Product Description
-        widget: string
-        required: false
-      - hint: ''
-        name: f_link
-        label: Link
-        widget: string
-        required: false
-      - hint: ''
-        name: f_brand-logo
-        label: Brand Logo
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: ''
-        name: f_index-logo
-        label: Index Logo
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: example-cms-layout
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[example-cms-layout].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
   - name: gift_guide_items_week_1
     label: WEEK-1 -- NETFLIX STRANGER THINGs
     folder: cms/gift-guide-items-week-1
@@ -453,107 +331,6 @@ collections:
         name: date
         widget: datetime
       - *ref_0
-  - name: gift_guide_items_week_3
-    label: WEEK-3 -- LORO PIANAs
-    folder: cms/gift-guide-items-week-3
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: What we site is this for? Beast or Bae?
-        name: title
-        label: Platform
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - hint: Brand Name goes here
-        name: f_brand
-        label: Brand
-        widget: string
-        required: false
-      - hint: Product name goes here..
-        name: f_product-name
-        label: Product Name
-        widget: string
-        required: false
-      - hint: Item price goes here
-        name: f_price
-        label: Price
-        widget: string
-        required: false
-      - hint: Add the product item
-        name: f_image
-        label: Image
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: Product overview
-        name: f_product-description
-        label: Product Description
-        widget: string
-        required: false
-      - hint: Product Link
-        name: f_link
-        label: Link
-        widget: string
-        required: false
-      - hint: >-
-          Add Brand logo - ensure that this is created within the PSD template
-          to ensure correct brand logo size
-        name: f_brand-logo
-        label: Brand Logo
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: gift-guide-items-week-3
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[gift-guide-items-week-3].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
   - name: gift_guide_items_week_4
     label: WEEK-4 -- CALVIN KLEINs
     folder: cms/gift-guide-items-week-4
@@ -681,6 +458,107 @@ collections:
         widget: hidden
         name: layout
         default: '[gift-guide-items-week-4].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_3
+    label: WEEK-3 -- LORO PIANAs
+    folder: cms/gift-guide-items-week-3
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: What we site is this for? Beast or Bae?
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Brand Name goes here
+        name: f_brand
+        label: Brand
+        widget: string
+        required: false
+      - hint: Product name goes here..
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: Item price goes here
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: Add the product item
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: Product overview
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: Product Link
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: >-
+          Add Brand logo - ensure that this is created within the PSD template
+          to ensure correct brand logo size
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-3
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-3].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -1036,6 +914,36 @@ collections:
             label: Text
             name: '-6c8b812a'
             widget: text
+          - hint: 'Original text: BALMAIN X STRANGER THINGS, key: 1a6195ed'
+            label: Text
+            name: 1a6195ed
+            widget: string
+          - hint: >-
+              Original text: BALMAIN X STRANGER THINGSB-COURT MID TOP
+              SHOESHeading, key: -40aba176
+            label: Text
+            name: '-40aba176'
+            widget: string
+          - hint: >-
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Suspendisse varius enim in eros elementum tristique. Duis
+              cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+              commodo diam libero vitae erat. Aenean faucibus nibh et justo
+              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere.
+                            , key: -2f23306e
+            label: Text
+            name: '-2f23306e'
+            widget: text
+          - hint: >-
+              Original text: Welcome to Hypebae’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting. A breath of fresh air, Calvin Klein takes
+              its most classic staples and gives them a contemporary update for
+              this week’s installment., key: 182ccecf
+            label: Text
+            name: 182ccecf
+            widget: text
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1084,6 +992,35 @@ collections:
           - hint: 'Original link: /calvin-klein-gift-guide-2022, key: -6b4c0929'
             label: Link
             name: '-6b4c0929'
+            widget: string
+          - hint: 'Original link: /hypebae-gift-guide-weekly-index, key: -6b6cf1e8'
+            label: Link
+            name: '-6b6cf1e8'
+            widget: string
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebae.com/gift-guide-items-week-1/stranger-things-4,
+              key: 4ce6f58b
+            label: Link
+            name: 4ce6f58b
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebae.com/gift-guide-items-week-2/adidas-headphones-8,
+              key: 1ea33076
+            label: Link
+            name: 1ea33076
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebae.com/gift-guide-items-week-3/loro-piana-4,
+              key: -1bc91fd5
+            label: Link
+            name: '-1bc91fd5'
             widget: string
       - label: Images
         name: images
@@ -1316,6 +1253,58 @@ collections:
                 required: false
           - label: Image
             name: '-45b2b1a4'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3b67aade'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4fe6b018'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6175c3e3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 317f733b
             widget: object
             fields:
               - name: url

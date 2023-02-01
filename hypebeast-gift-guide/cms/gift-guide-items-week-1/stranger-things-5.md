@@ -11,14 +11,14 @@ updated-on: '2022-12-01T12:12:16.957Z'
 created-on: '2022-11-21T13:31:16.402Z'
 published-on: '2022-12-01T12:17:23.211Z'
 f_image:
-  url: /assets/external/637b89b7059ccf2a39fca94f_balmain_x_stranger-things_2.png
+  url: /assets/external/63d9e541c1b722699313bbea_balmain_x_stranger-things_2.png
   alt: null
 f_brand-2: BALMAIN X STRANGER THINGS
 f_brand-logo:
-  url: /assets/external/6380de344d9c4e8173e27413_week01_netflix_indexlogo.png
+  url: /assets/external/63d9e541c1b722f46d13bc5c_week01_netflix_indexlogo.png
   alt: null
 f_index-logo:
-  url: /assets/external/6380919f3df186ef4892c8de_gift_index_logo_hypenetflix.svg
+  url: /assets/external/63d9e541c1b722ea6013bc26_gift_index_logo_hypenetflix.svg
   alt: null
 f_page-description: >-
   Welcome to Hypebeast’s curated Gift Index. A visual library of products is

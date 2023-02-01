@@ -11,7 +11,7 @@ updated-on: '2022-11-24T10:40:33.771Z'
 created-on: '2022-11-18T09:01:08.237Z'
 published-on: '2022-11-24T10:40:42.389Z'
 f_image:
-  url: /assets/external/63774a312e01c5e1ac58d629_03_fam6838_5c10_d1-lrg.png
+  url: /assets/external/63d9e541c1b7225d7513bc4a_03_fam6838_5c10_d1-lrg.png
   alt: null
 f_brand: Loro Piana
 layout: '[gift-guide-items-week-3].html'
