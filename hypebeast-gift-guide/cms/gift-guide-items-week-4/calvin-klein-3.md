@@ -17,16 +17,13 @@ updated-on: '2022-12-01T15:41:12.608Z'
 created-on: '2022-11-28T16:27:03.258Z'
 published-on: '2022-12-01T15:41:51.505Z'
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6384e1758d22d760d3f340f9_WEEK_04_CK_INDEX_LOGO-WHITE.png
+  url: /assets/external/6384e1758d22d760d3f340f9_week_04_ck_index_logo-white.png
   alt: null
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6384e1a62ddca7b590685d30_WEEK_03_HYPEBEAST_PARTNER_LOGO.svg
+  url: /assets/external/6384e1a62ddca7b590685d30_week_03_hypebeast_partner_logo.svg
   alt: null
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6388ca2665d9f87ab294f97d_CK_PRODUCT-5_shadow.png
+  url: /assets/external/6388ca2665d9f87ab294f97d_ck_product-5_shadow.png
   alt: null
 f_link-2: http://bit.ly/3AV1Muz
 f_custom-sort-order: 2

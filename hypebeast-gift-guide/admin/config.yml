@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: 101medialab/editorial-media-projects
   accept_roles:
     - admin
     - editor
@@ -1288,7 +1289,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 317f733b
+            name: '-3cbca8bd'
             widget: object
             fields:
               - name: url
@@ -1326,4 +1327,5 @@ collections:
                 label: Image Alt
                 widget: string
                 required: false
+local_backend: true
 publish_mode: editorial_workflow

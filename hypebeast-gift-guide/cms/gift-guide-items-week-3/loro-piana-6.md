@@ -11,8 +11,7 @@ updated-on: '2022-12-01T12:15:24.056Z'
 created-on: '2022-11-18T09:01:07.391Z'
 published-on: '2022-12-01T12:17:23.211Z'
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/63774aa81d771a7dd5b516d2_01_FAL8689_W000.png
+  url: /assets/external/63774aa81d771a7dd5b516d2_01_fal8689_w000.png
   alt: null
 f_brand: Loro Piana
 layout: '[gift-guide-items-week-3].html'

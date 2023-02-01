@@ -18,8 +18,7 @@ f_page-description: >-
   for exercise or recharging during downtime.
 slug: adidas-headphones-2
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d708992fecaa1a4de2e6_uc.svg
+  url: /assets/external/6380d708992fecaa1a4de2e6_uc.svg
   alt: null
 updated-on: '2022-11-25T14:54:01.482Z'
 created-on: '2022-11-25T14:54:01.482Z'

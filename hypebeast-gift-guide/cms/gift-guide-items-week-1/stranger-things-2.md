@@ -12,17 +12,14 @@ updated-on: '2022-12-01T12:11:37.361Z'
 created-on: '2022-11-21T13:31:16.652Z'
 published-on: '2022-12-01T12:17:23.211Z'
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/637b89a26f8fe025303896fe_LUSH-X-STRANGER-THINGS.png
+  url: /assets/external/637b89a26f8fe025303896fe_lush-x-stranger-things.png
   alt: null
 f_brand-2: LUSH X STRANGER THINGS
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380de344d9c4e8173e27413_WEEK01_NETFLIX_INDEXLOGO.png
+  url: /assets/external/6380de344d9c4e8173e27413_week01_netflix_indexlogo.png
   alt: null
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380919f3df186ef4892c8de_GIFT_INDEX_LOGO_HYPENETFLIX.svg
+  url: /assets/external/6380919f3df186ef4892c8de_gift_index_logo_hypenetflix.svg
   alt: null
 f_page-description: >-
   Welcome to Hypebeast’s curated Gift Index. A visual library of products is

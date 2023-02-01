@@ -14,12 +14,11 @@ created-on: '2022-11-21T14:35:03.290Z'
 published-on: '2022-11-25T15:27:14.424Z'
 f_brand: ADIDAS HEADPHONES
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/637b9159059ccf63fafd3951_adidas_RPT-02_SOL_NightGrey_02.png
+  url: /assets/external/637b9159059ccf63fafd3951_adidas_rpt-02_sol_nightgrey_02.png
   alt: null
 f_index-logo:
   url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d94f5af6af154d719e6d_LOGO_HYPEBEAST_ADIDAS_WEEK04_v2.svg
+    /assets/external/6380d94f5af6af154d719e6d_logo_hypebeast_adidas_week04_v2.svg
   alt: null
 f_page-description: >-
   Made for the active lifestyle, the adidas Headphones range expands your
@@ -30,8 +29,7 @@ f_page-description: >-
   for exercise or recharging during downtime.
 f_week-number: Week 2
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d8c54d9c4e2770e208df_WEEK02_ADIDAS_INDEXLOGO-WHITE.png
+  url: /assets/external/6380d8c54d9c4e2770e208df_week02_adidas_indexlogo-white.png
   alt: null
 layout: '[gift-guide-items-week-2].html'
 tags: gift-guide-items-week-2

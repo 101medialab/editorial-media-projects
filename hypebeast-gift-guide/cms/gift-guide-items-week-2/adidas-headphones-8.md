@@ -14,16 +14,14 @@ created-on: '2022-11-21T14:35:03.484Z'
 published-on: '2022-11-28T11:29:52.270Z'
 f_brand: ADIDAS HEADPHONES
 f_image:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/637b910ae055f0fda8dafcab_adidas_ZNE01_LightGrey_03.png
+  url: /assets/external/637b910ae055f0fda8dafcab_adidas_zne01_lightgrey_03.png
   alt: null
 f_brand-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d8c54d9c4e2770e208df_WEEK02_ADIDAS_INDEXLOGO-WHITE.png
+  url: /assets/external/6380d8c54d9c4e2770e208df_week02_adidas_indexlogo-white.png
   alt: null
 f_index-logo:
   url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d94f5af6af154d719e6d_LOGO_HYPEBEAST_ADIDAS_WEEK04_v2.svg
+    /assets/external/6380d94f5af6af154d719e6d_logo_hypebeast_adidas_week04_v2.svg
   alt: null
 f_page-description: >-
   Made for the active lifestyle, the adidas Headphones range expands your

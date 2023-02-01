@@ -17,8 +17,7 @@ f_page-description: >-
   splash-proof materials, you can rely on them to deliver whether charging up
   for exercise or recharging during downtime.
 f_index-logo:
-  url: >-
-    https://uploads-ssl.webflow.com/6377481f2c8a5cf4f51594c3/6380d7089a6441bcf58b47b7_uc.svg
+  url: /assets/external/6380d7089a6441bcf58b47b7_uc.svg
   alt: null
 slug: adidas-headphones
 updated-on: '2022-11-25T14:54:00.831Z'
