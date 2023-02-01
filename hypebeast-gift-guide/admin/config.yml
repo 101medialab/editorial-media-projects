@@ -1,0 +1,1329 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: example_cms_layout
+    label: EXAMPLE CMS - LAYOUTs
+    folder: cms/example-cms-layout
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_week-number
+        label: Week Number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_page-description
+        label: Page Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_index-logo
+        label: Index Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: example-cms-layout
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[example-cms-layout].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_1
+    label: WEEK-1 -- NETFLIX STRANGER THINGs
+    folder: cms/gift-guide-items-week-1
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_brand-2
+        label: Brand
+        widget: string
+        required: false
+      - hint: ''
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_index-logo
+        label: Index Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_week-number
+        label: Week Number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_page-description
+        label: Page Description
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-1
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-1].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_2
+    label: WEEK-2 -- ADIDAs
+    folder: cms/gift-guide-items-week-2
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_brand
+        label: Brand
+        widget: string
+        required: false
+      - hint: ''
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_week-number
+        label: Week Number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_page-description
+        label: Page Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_index-logo
+        label: Index Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-2
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-2].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_3
+    label: WEEK-3 -- LORO PIANAs
+    folder: cms/gift-guide-items-week-3
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: What we site is this for? Beast or Bae?
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Brand Name goes here
+        name: f_brand
+        label: Brand
+        widget: string
+        required: false
+      - hint: Product name goes here..
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: Item price goes here
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: Add the product item
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: Product overview
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: Product Link
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: >-
+          Add Brand logo - ensure that this is created within the PSD template
+          to ensure correct brand logo size
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-3
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-3].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_4
+    label: WEEK-4 -- CALVIN KLEINs
+    folder: cms/gift-guide-items-week-4
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Platfrom
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_brand
+        label: Brand
+        widget: string
+        required: false
+      - hint: ''
+        name: f_week-number
+        label: Week Number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_page-description
+        label: Page Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_index-logo
+        label: Index Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_link-2
+        label: Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_custom-sort-order
+        label: Custom sort order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-4
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-4].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: gift_guide_items_week_5
+    label: WEEK-5 -- BURBERRies
+    folder: cms/gift-guide-items-week-5
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Platform
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_brand
+        label: Brand
+        widget: string
+        required: false
+      - hint: ''
+        name: f_week-number
+        label: Week Number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_page-description
+        label: Page Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_product-name
+        label: Product Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_price
+        label: Price
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_product-description
+        label: Product Description
+        widget: string
+        required: false
+      - hint: ''
+        name: f_link
+        label: Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_brand-logo
+        label: Brand Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_index-logo
+        label: Index Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_custom-sort-order
+        label: Custom Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gift-guide-items-week-5
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gift-guide-items-week-5].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: >-
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting. This week, some Burberry icons make a
+              return in the brand’s latest offering., key: 2de70793
+            label: Text
+            name: 2de70793
+            widget: text
+          - hint: 'Original text: WEEKLY , key: 73ec1bbf'
+            label: Text
+            name: 73ec1bbf
+            widget: string
+          - hint: 'Original text: INDEX , key: -7f031a52'
+            label: Text
+            name: '-7f031a52'
+            widget: string
+          - hint: 'Original text: Week 5, key: -65cb9cd7'
+            label: Text
+            name: '-65cb9cd7'
+            widget: string
+          - hint: 'Original text: Shop Now, key: -10d26d54'
+            label: Text
+            name: '-10d26d54'
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: "Original text: Welcome to Hypebeast’s curated Gift Index. A visual library of products is presented\_as an easy-to-navigate resource for all things gifting., key: 60870b99"
+            label: Text
+            name: 60870b99
+            widget: text
+          - hint: >-
+              Original text: Loro Piana’s cozy winter staples land in this
+              week’s installment, with new blends of its artisanal cashmere. ,
+              key: -73518cc8
+            label: Text
+            name: '-73518cc8'
+            widget: text
+          - hint: 'Original text: INDEX, key: 42930b2'
+            label: Text
+            name: 42930b2
+            widget: string
+          - hint: >-
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting.Loro Piana’s cozy winter staples land in
+              this week’s installment, with new blends of its artisanal
+              cashmere. , key: fa373bf
+            label: Text
+            name: fa373bf
+            widget: text
+          - hint: 'Original text: Week 3, key: -65cb9cd9'
+            label: Text
+            name: '-65cb9cd9'
+            widget: string
+          - hint: >-
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting., key: -3aa263e7
+            label: Text
+            name: '-3aa263e7'
+            widget: text
+          - hint: 'Original text: WEEKLY, key: -679d8b7f'
+            label: Text
+            name: '-679d8b7f'
+            widget: string
+          - hint: 'Original text: EXPLORE PREVIOUS GIFT GUIDES BELOW, key: 5f26a97c'
+            label: Text
+            name: 5f26a97c
+            widget: string
+          - hint: 'Original text: EXPAND ALL, key: 3d0c7efb'
+            label: Text
+            name: 3d0c7efb
+            widget: string
+          - hint: 'Original text: collapse all, key: 6f9f8aae'
+            label: Text
+            name: 6f9f8aae
+            widget: string
+          - hint: 'Original text: Week 1, key: -65cb9cdb'
+            label: Text
+            name: '-65cb9cdb'
+            widget: string
+          - hint: 'Original text: Week 2, key: -65cb9cda'
+            label: Text
+            name: '-65cb9cda'
+            widget: string
+          - hint: 'Original text: Week 4, key: -65cb9cd8'
+            label: Text
+            name: '-65cb9cd8'
+            widget: string
+          - hint: 'Original text: - coming soon, key: -7351d439'
+            label: Text
+            name: '-7351d439'
+            widget: string
+          - hint: 'Original text: Heading, key: -6d5fea1e'
+            label: Text
+            name: '-6d5fea1e'
+            widget: string
+          - hint: >-
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Suspendisse varius enim in eros elementum tristique. Duis
+              cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+              commodo diam libero vitae erat. Aenean faucibus nibh et justo
+              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere., key: -5286fc08
+            label: Text
+            name: '-5286fc08'
+            widget: text
+          - hint: 'Original text: Week 6, key: -65cb9cd6'
+            label: Text
+            name: '-65cb9cd6'
+            widget: string
+          - hint: 'Original text: Week 7, key: -65cb9cd5'
+            label: Text
+            name: '-65cb9cd5'
+            widget: string
+          - hint: 'Original text: Week 8, key: -65cb9cd4'
+            label: Text
+            name: '-65cb9cd4'
+            widget: string
+          - hint: >-
+              Original text: Welcome to Hypebeast’s curated Gift Index. A visual
+              library of products is presented as an easy-to-navigate resource
+              for all things gifting. A breath of fresh air, Calvin Klein takes
+              its most classic staples and gives them a contemporary update for
+              this week’s installment., key: -6c8b812a
+            label: Text
+            name: '-6c8b812a'
+            widget: text
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: /burberry-gift-guide-2022, key: 2609ef45'
+            label: Link
+            name: 2609ef45
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: /hypebeast-gift-guide-weekly-index, key: 49348bb1'
+            label: Link
+            name: 49348bb1
+            widget: string
+          - hint: 'Original link: https://www.hypebeast.com/, key: 42ce6189'
+            label: Link
+            name: 42ce6189
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-1/stranger-things-1,
+              key: -25b93d5f
+            label: Link
+            name: '-25b93d5f'
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-2/adidas-headphones-8,
+              key: -2cbbe4b1
+            label: Link
+            name: '-2cbbe4b1'
+            widget: string
+          - hint: >-
+              Original link:
+              https://gift-guide.hypebeast.com/gift-guide-items-week-3/loro-piana-4,
+              key: -67b0788e
+            label: Link
+            name: '-67b0788e'
+            widget: string
+          - hint: 'Original link: /calvin-klein-gift-guide-2022, key: -6b4c0929'
+            label: Link
+            name: '-6b4c0929'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: 337cfb41
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3aa4ed2b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-648cd57b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 7d4d659d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '0'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 33f81d33
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2382f557
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2b07cf98'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 66b52ac3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-d7c1265'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6ef6b4b8
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7d1e657a'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6c553732
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2c3cd5f3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 41f367cd
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 317f733b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6507faa9
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-45b2b1a4'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
