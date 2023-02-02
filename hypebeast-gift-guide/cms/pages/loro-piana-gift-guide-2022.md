@@ -8,18 +8,20 @@ seo:
   noindex: false
   title: Loro Piana Gift Guide 2022
   description: >-
-    Welcome to Hypebeast’s curated Gift Index. A visual library of products is
-    presented as an easy-to-navigate resource for all things gifting. This week,
-    some Burberry icons make a return in the brand’s latest offering.
+    Welcome to Hypebeast's curated Gift Index. A visual library of products is
+    presented as an easy-to-navigate resource for all things gifting. Loro
+    Piana’s cozy winter staples land in this week’s installment, with new blends
+    of its artisanal cashmere.
   og:title: Loro Piana Gift Guide 2022
   additional_tags: >-
-    <meta content="Welcome to Hypebeast’s curated Gift Index. A visual library
+    <meta content="Welcome to Hypebeast's curated Gift Index. A visual library
     of products is presented as an easy-to-navigate resource for all things
-    gifting. This week, some Burberry icons make a return in the brand’s latest
-    offering." property="og:description"><meta content="Welcome to Hypebeast’s
-    curated Gift Index. A visual library of products is presented as an
-    easy-to-navigate resource for all things gifting. This week, some Burberry
-    icons make a return in the brand’s latest offering."
+    gifting. Loro Piana’s cozy winter staples land in this week’s installment,
+    with new blends of its artisanal cashmere." property="og:description"><meta
+    content="Welcome to Hypebeast's curated Gift Index. A visual library of
+    products is presented as an easy-to-navigate resource for all things
+    gifting. Loro Piana’s cozy winter staples land in this week’s installment,
+    with new blends of its artisanal cashmere."
     property="twitter:description"><meta property="og:type" content="website">
   twitter:title: Loro Piana Gift Guide 2022
 ---
