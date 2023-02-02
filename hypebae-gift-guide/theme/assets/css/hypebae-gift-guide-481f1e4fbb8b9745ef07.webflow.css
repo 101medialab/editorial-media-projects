@@ -859,7 +859,7 @@
 
 .product-block-hover {
   position: relative;
-  display: block;
+  display: none;
   margin-bottom: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -882,7 +882,7 @@
 }
 
 .page-load-section.loading {
-  display: none;
+  display: block;
   background-color: #f4f4f4;
   background-position: 0% 0%;
 }
@@ -893,7 +893,10 @@
 
 .page-load-block {
   position: relative;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -941,7 +944,7 @@
 }
 
 .product-line-long {
-  display: block;
+  display: none;
   border: 1px solid #ececec;
 }
 
@@ -2803,6 +2806,144 @@
   justify-self: end;
 }
 
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-57fd8977 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-57fd8977 {
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2628-57fd8977 {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac262c-57fd8977 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2630-57fd8977 {
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac264e-57fd8977 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-aabdab37 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-aabdab37 {
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2628-aabdab37 {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac262c-aabdab37 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2630-aabdab37 {
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac264e-aabdab37 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-e8981d26 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-e8981d26 {
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2628-e8981d26 {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac262c-e8981d26 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2630-e8981d26 {
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+#w-node-d80d9b8b-9962-d643-bd9a-4afa68ac264e-e8981d26 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
 @media screen and (min-width: 1920px) {
   #w-node-cabb9af8-fb23-0b8b-63d2-d27f0c2e9ea4-3449f3c5 {
     -ms-grid-column: span 1;
@@ -3067,6 +3208,69 @@
   }
 
   #w-node-_0c3023e1-cc97-a6d5-1ef0-030dff1031c9-5249f3cc {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-57fd8977 {
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2619-57fd8977 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-57fd8977 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-aabdab37 {
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2619-aabdab37 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-aabdab37 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2617-e8981d26 {
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac2619-e8981d26 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  #w-node-d80d9b8b-9962-d643-bd9a-4afa68ac261e-e8981d26 {
     -ms-grid-column-align: center;
     justify-self: center;
   }
