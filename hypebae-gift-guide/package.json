@@ -18,7 +18,7 @@
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "local-backend": "npx netlify-cms-proxy-server",
-    "deploy": "env-cmd --verbose -x -f .env s3-deploy './public/**' --cwd './public/' --aws_access_key_id \\$AWS_ACCESS_KEY_ID --aws_secret_access_key \\$AWS_SECRET_ACCESS_KEY --region \\$AWS_REGION --bucket \\$AWS_BUCKET_NAME --distId \\$CF_DIST_ID --invalidate '/' --gzip --deleteRemoved --private"
+    "deploy": "env-cmd --verbose -x -f .env s3-deploy './public/**' --cwd './public/' --aws_access_key_id \\$AWS_ACCESS_KEY_ID --aws_secret_access_key \\$AWS_SECRET_ACCESS_KEY --region \\$AWS_REGION --bucket \\$AWS_BUCKET_NAME --distId \\$CF_DIST_ID --invalidate '/*' --gzip --deleteRemoved --private"
   },
   "devDependencies": {
     "date-fns": "2.16.1",
