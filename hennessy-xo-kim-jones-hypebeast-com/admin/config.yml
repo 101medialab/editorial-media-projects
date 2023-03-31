@@ -1,0 +1,1147 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: section_1
+    label: Section 1s
+    folder: cms/section-1
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Song Description
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_album
+        label: Album
+        widget: string
+        required: false
+      - hint: ''
+        name: f_album-image
+        label: Album Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_lyrics
+        label: Lyrics
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_video
+        label: Video
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Url
+            widget: string
+            required: false
+      - hint: ''
+        name: f_date-recorded
+        label: Date Recorded
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: section-1
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[section-1].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: section_2
+    label: Section 2s
+    folder: cms/section-2
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Song Description
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_album
+        label: Album
+        widget: string
+        required: false
+      - hint: ''
+        name: f_album-image
+        label: Album Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_lyrics
+        label: Lyrics
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_video
+        label: Video
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Url
+            widget: string
+            required: false
+      - hint: ''
+        name: f_date-recorded
+        label: Date Recorded
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: section-2
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[section-2].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: section_3_carousel_1
+    label: Section 3 - Carousel 1s
+    folder: cms/section-3-carousel-1
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Song Description
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_album
+        label: Album
+        widget: string
+        required: false
+      - hint: ''
+        name: f_album-image
+        label: Album Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_lyrics
+        label: Lyrics
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_video
+        label: Video
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Url
+            widget: string
+            required: false
+      - hint: ''
+        name: f_date-recorded
+        label: Date Recorded
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: section-3-carousel-1
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[section-3-carousel-1].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: section_3_carousel_2
+    label: Section 3 - Carousel 2s
+    folder: cms/section-3-carousel-2
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Song Description
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_album
+        label: Album
+        widget: string
+        required: false
+      - hint: ''
+        name: f_album-image
+        label: Album Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_lyrics
+        label: Lyrics
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_video
+        label: Video
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Url
+            widget: string
+            required: false
+      - hint: ''
+        name: f_date-recorded
+        label: Date Recorded
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: section-3-carousel-2
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[section-3-carousel-2].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: videos
+    label: Videos
+    folder: cms/videos
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Song Description
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_album
+        label: Album
+        widget: string
+        required: false
+      - hint: ''
+        name: f_album-image
+        label: Album Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_lyrics
+        label: Lyrics
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_video
+        label: Video
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Url
+            widget: string
+            required: false
+      - hint: ''
+        name: f_date-recorded
+        label: Date Recorded
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: videos
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[videos].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: Made in France, key: 25aa0a6b'
+            label: Text
+            name: 25aa0a6b
+            widget: string
+          - hint: 'Original text: 2023, key: 1774ff'
+            label: Text
+            name: 1774ff
+            widget: string
+          - hint: 'Original text: When Cognac, key: eb88d5b'
+            label: Text
+            name: eb88d5b
+            widget: string
+          - hint: 'Original text: Meets Couture, key: 69372229'
+            label: Text
+            name: '69372229'
+            widget: string
+          - hint: >-
+              Original text: Kim Jones Explores Hennessy X.O’s Rich Legacy
+              Through Haute Couture, key: -435caba
+            label: Text
+            name: '-435caba'
+            widget: string
+          - hint: 'Original text: chapter, key: 2c0c7c4d'
+            label: Text
+            name: 2c0c7c4d
+            widget: string
+          - hint: 'Original text: 01, key: 601'
+            label: Text
+            name: '601'
+            widget: string
+          - hint: 'Original text: title, key: 6942258'
+            label: Text
+            name: '6942258'
+            widget: string
+          - hint: 'Original text: when two icons, key: 14efcee0'
+            label: Text
+            name: 14efcee0
+            widget: string
+          - hint: 'Original text: unite, key: 6a45761'
+            label: Text
+            name: 6a45761
+            widget: string
+          - hint: 'Original text: keywords, key: 1f2e9faa'
+            label: Text
+            name: 1f2e9faa
+            widget: string
+          - hint: 'Original text: 0, key: 30'
+            label: Text
+            name: '30'
+            widget: string
+          - hint: 'Original text: 1. Arts, key: 70727ab3'
+            label: Text
+            name: 70727ab3
+            widget: string
+          - hint: 'Original text: 2. Culture, key: -3256c56'
+            label: Text
+            name: '-3256c56'
+            widget: string
+          - hint: 'Original text: 3. Heritage, key: -9ffe1bc'
+            label: Text
+            name: '-9ffe1bc'
+            widget: string
+          - hint: 'Original text: HXOxKJ, key: 7fdab638'
+            label: Text
+            name: 7fdab638
+            widget: string
+          - hint: >-
+              Original text: Continuing its run of highly-coveted artistic
+              collaborations, Hennessy X.O takes a different approach to its
+              partnerships for 2023. Known for tapping artists, directors, and
+              architects, this year Hennessy X.O enters the world of fashion for
+              the first time — enlisting acclaimed designer Kim Jones for a
+              series of show-stopping products., key: 2497ad4e
+            label: Text
+            name: 2497ad4e
+            widget: text
+          - hint: >-
+              Original text: Translating the intricacies of couture fashion into
+              the heritage cognac brand, this collaboration ushers a new
+              direction for Hennessy X.O. Through the lens of contemporary
+              design, Jones reinterprets the brand’s 150-year history whilst
+              protecting the complex art form passed down through eight
+              generations of master blenders. The partnership itself marks the
+              fusion of two leading forces at the forefront of driving culture
+              forward who are pushing the boundaries of their established
+              disciplines. The collection boasts an exclusive Masterpiece
+              decanter, a limited-edition Hennessy X.O bottle as well as the
+              stand-out piece of the range, a sneaker referencing Jones’
+              streetwear résumé., key: 6608b52c
+            label: Text
+            name: 6608b52c
+            widget: text
+          - hint: >-
+              Original text: “I’m interested in the best of the best. And
+              [Hennessy] is the best at making cognac.”, key: 27b37e25
+            label: Text
+            name: 27b37e25
+            widget: string
+          - hint: 'Original text: — Kim Jones, key: -724a9fa6'
+            label: Text
+            name: '-724a9fa6'
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: 02, key: 602'
+            label: Text
+            name: '602'
+            widget: string
+          - hint: 'Original text: step into the , key: 6adbef3b'
+            label: Text
+            name: 6adbef3b
+            widget: string
+          - hint: 'Original text: world of luxury, key: -1ae8b198'
+            label: Text
+            name: '-1ae8b198'
+            widget: string
+          - hint: 'Original text: 1. Craft, key: -62073dc3'
+            label: Text
+            name: '-62073dc3'
+            widget: string
+          - hint: 'Original text: 2. Design details, key: 7bf90064'
+            label: Text
+            name: 7bf90064
+            widget: string
+          - hint: 'Original text: 3. Experience, key: -bab6f91'
+            label: Text
+            name: '-bab6f91'
+            widget: string
+          - hint: 'Original text: step into the, key: -1553be7b'
+            label: Text
+            name: '-1553be7b'
+            widget: string
+          - hint: 'Original text: 2. Design Details, key: -20ce67bc'
+            label: Text
+            name: '-20ce67bc'
+            widget: string
+          - hint: >-
+              Original text: Given Kim Jones’ deep-rooted ties to the sneaker
+              community, introducing a footwear offering to the collection was
+              the perfect fit. Crafted in an LVMH-owned shoe factory in Italy,
+              the limited-edition HNY Low by Kim Jones is inspired by early
+              basketball silhouettes reimagined for the modern wearer. “A cognac
+              and a sneaker is not a usual pairing. I wanted it to be very
+              classic. I wanted it to be a shoe that a lot of different people
+              could wear,” Jones says., key: -276e9d47
+            label: Text
+            name: '-276e9d47'
+            widget: text
+          - hint: >-
+              Original text: Wanting to recreate the amber brown tones of
+              cognac, the sneaker’s upper arrives in a premium nubuck,
+              reinstating its timeless design. As well as co-branded touches
+              adorning the heel including the KJ initials and Hennessy’s bras
+              armé emblem, the leather midsole also incorporates the curves of
+              the bottle’s labeling which seep into the grooves of the outsole.,
+              key: 48876b51
+            label: Text
+            name: 48876b51
+            widget: text
+          - hint: >-
+              Original text: “I wanted it to feel like you’re almost looking
+              into the bottle. It’s a glass of cognac in sneaker form.”, key:
+              -f8ffae5
+            label: Text
+            name: '-f8ffae5'
+            widget: text
+          - hint: >-
+              Original text: Keeping in mind the full consumer experience, the
+              sneaker comes packaged in cotton dust bags with luxe detailing.
+              Inspired by the barrels used to age Hennessy X.O eaux-de-vie, they
+              are presented in an oak sneaker box with wavy details reminiscent
+              of the Masterpiece’s design language featured in the collection.,
+              key: -5859a7b2
+            label: Text
+            name: '-5859a7b2'
+            widget: text
+          - hint: >-
+              Original text: The collaborative HNY Low by Kim Jones sneaker is
+              available to purchase now on HBX and retails at €650 EUR (approx.
+              $705 USD)., key: -22ba7a6f
+            label: Text
+            name: '-22ba7a6f'
+            widget: text
+          - hint: 'Original text: 03, key: 603'
+            label: Text
+            name: '603'
+            widget: string
+          - hint: 'Original text: Designing a, key: 2e247885'
+            label: Text
+            name: '2e247885'
+            widget: string
+          - hint: 'Original text: masterpiece, key: 49b38dcc'
+            label: Text
+            name: 49b38dcc
+            widget: string
+          - hint: 'Original text: 1. Couture, key: -12d1da6'
+            label: Text
+            name: '-12d1da6'
+            widget: string
+          - hint: 'Original text: 2. Limited-edition, key: -4e9b8979'
+            label: Text
+            name: '-4e9b8979'
+            widget: string
+          - hint: 'Original text: 3. Reimagining tradition, key: -32736209'
+            label: Text
+            name: '-32736209'
+            widget: string
+          - hint: 'Original text: designing a, key: -35452f5b'
+            label: Text
+            name: '-35452f5b'
+            widget: string
+          - hint: >-
+              Original text: Juxtaposing the mechanical factory production of
+              sneakers with the intricate human process of using the senses to
+              craft cognac, the Masterpiece sculptural decanter bridges the gap
+              between tradition and modernity., key: 6522b6f2
+            label: Text
+            name: 6522b6f2
+            widget: text
+          - hint: >-
+              Original text: Limited to only 200 units, the decanter is created
+              using 3D printing technology complete with hand-finished details.
+              Its design cues are inspired by the original way Hennessy bottles
+              were wrapped in tissue paper at the turn of the 20th century and
+              Jones takes his expertise from the world of high fashion to evoke
+              a feeling of couture at the cognac house. “If you look at [the
+              Masterpiece] you can see how it can become a draped dress. I
+              wanted to take something I’ve learned from one discipline and
+              bring it to another,” he explains. Similarly to the sneaker, the
+              gradient hues reference the vast eaux-de-vie reserve colors aged
+              in barrels, rising from darker brown to a golden tip., key:
+              -34b832c5
+            label: Text
+            name: '-34b832c5'
+            widget: text
+          - hint: >-
+              Original text: Having integrated his disruptive approach at the
+              creative helm of some of the world’s most lauded labels, Jones
+              brings the same energy to this collaboration. Tapping into the
+              heritage brand’s colloquial term, he cleverly masks certain
+              letters by utilizing the folds of the design to only reveal the
+              word ‘Henny.’ “There are nicknames for brands that people love,
+              and Henny comes up a lot. I thought I’d be nice to bring it in as
+              a tongue-in-cheek moment,” he says., key: 457b9d46
+            label: Text
+            name: 457b9d46
+            widget: text
+          - hint: >-
+              Original text: “I visited the archive of Hennessy and treated it
+              the same way as with any house. It was about studying the DNA and
+              the history.”, key: -3edb3314
+            label: Text
+            name: '-3edb3314'
+            widget: text
+          - hint: >-
+              Original text: The limited-edition bottle represents a
+              ‘ready-to-wear’ version of the creative direction applied to the
+              Masterpiece. The iconic Hennessy X.O bottle is encased in an
+              aluminum second skin, with its structure showcasing the bottle’s
+              signature shape while channeling a couture silhouette. A testament
+              to the luxury feel of the collaboration, dual-branding adorns the
+              facade to complete the design., key: -6b273c03
+            label: Text
+            name: '-6b273c03'
+            widget: text
+          - hint: 'Original text: discover more, key: 7cf93d2c'
+            label: Text
+            name: 7cf93d2c
+            widget: string
+          - hint: 'Original text: HXOxKJ_FOOTWEAR, key: -588250ec'
+            label: Text
+            name: '-588250ec'
+            widget: string
+          - hint: 'Original text: HXOxKJ_masterpiece, key: c30e45'
+            label: Text
+            name: c30e45
+            widget: string
+          - hint: >-
+              Original text: Not intended to be seen by persons under the legal
+              alcohol drinking age or in countries with restrictions on
+              advertising on alcoholic beverages., key: 3a277500
+            label: Text
+            name: 3a277500
+            widget: text
+          - hint: 'Original text: Please drink responsibly., key: 2b220c2'
+            label: Text
+            name: 2b220c2
+            widget: string
+          - hint: >-
+              Original text: Not intended to be seen by persons under the legal
+              alcohol drinking age or in countries with restrictions on
+              advertising on alcoholic beverages. Please drink responsibly.,
+              key: -6e14465e
+            label: Text
+            name: '-6e14465e'
+            widget: text
+          - hint: 'Original text: Heading, key: -6d5fea1e'
+            label: Text
+            name: '-6d5fea1e'
+            widget: string
+          - hint: 'Original text: Heading 2, key: 6af22974'
+            label: Text
+            name: 6af22974
+            widget: string
+          - hint: 'Original text: Heading 3, key: 6af22975'
+            label: Text
+            name: 6af22975
+            widget: string
+          - hint: 'Original text: Heading 4, key: 6af22976'
+            label: Text
+            name: 6af22976
+            widget: string
+          - hint: 'Original text: Body 1, key: 76eb4953'
+            label: Text
+            name: 76eb4953
+            widget: string
+          - hint: 'Original text: Body 2, key: 76eb4954'
+            label: Text
+            name: 76eb4954
+            widget: string
+          - hint: 'Original text: Body 03, key: 667de121'
+            label: Text
+            name: 667de121
+            widget: string
+          - hint: 'Original text: Body 4, key: 76eb4956'
+            label: Text
+            name: 76eb4956
+            widget: string
+          - hint: 'Original text: CTA, key: 105f0'
+            label: Text
+            name: 105f0
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: http://bit.ly/3TiCz5o, key: 5110c34a'
+            label: Link
+            name: 5110c34a
+            widget: string
+          - hint: 'Original link: https://hbx.com/, key: -6dbc3833'
+            label: Link
+            name: '-6dbc3833'
+            widget: string
+          - hint: 'Original link: http://bit.ly/3JfI1kE, key: 3fd7b522'
+            label: Link
+            name: 3fd7b522
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: 1cdad45d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i2fa697a9
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2a484e45'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3bb2025
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3ad2496e'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-52ea6361'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3ad255a9'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-460f32df'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7d149231'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2acf83e1'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 241ffa94
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: b8837c0
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 152975ef
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
