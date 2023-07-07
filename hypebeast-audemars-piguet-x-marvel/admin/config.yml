@@ -1,0 +1,2549 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: master
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: credits_special_thanks
+    label: Credits - Special Thanks
+    folder: cms/credits-special-thanks
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-special-thanks
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-special-thanks].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: credits_post_production
+    label: Credits - Post-Productions
+    folder: cms/credits-post-production
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_company
+        label: Company
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-post-production
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-post-production].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: credits_loyle_carner
+    label: Credits - Loyle Carners
+    folder: cms/credits-loyle-carner
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-loyle-carner
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-loyle-carner].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: credits_nour_arida
+    label: Credits - Nour Aridas
+    folder: cms/credits-nour-arida
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-nour-arida
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-nour-arida].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: credits_kevin_hart_shoot
+    label: Credits - Kevin Hart Shoots
+    folder: cms/credits-kevin-hart-shoot
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-kevin-hart-shoot
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-kevin-hart-shoot].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: credits_hb_team
+    label: Credits - HB Teams
+    folder: cms/credits-hb-team
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_staff-name
+        label: Staff Name
+        widget: string
+        required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: false
+      - hint: ''
+        name: f_company
+        label: Company
+        widget: string
+        required: false
+      - hint: ''
+        name: f_sort-order
+        label: Sort Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: credits-hb-team
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[credits-hb-team].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: Jump to section, key: 286ad152'
+            label: Text
+            name: 286ad152
+            widget: string
+          - hint: 'Original text: Kevin Hart, key: 6257257a'
+            label: Text
+            name: 6257257a
+            widget: string
+          - hint: 'Original text: Nour Arida, key: -51f0dad'
+            label: Text
+            name: '-51f0dad'
+            widget: string
+          - hint: 'Original text: Loyle Carner, key: -1404e888'
+            label: Text
+            name: '-1404e888'
+            widget: string
+          - hint: 'Original text: The Watch, key: -ba90fe0'
+            label: Text
+            name: '-ba90fe0'
+            widget: string
+          - hint: 'Original text: Spider-Man Essentials, key: -661bca8d'
+            label: Text
+            name: '-661bca8d'
+            widget: string
+          - hint: 'Original text: STARRING, key: 7d21e782'
+            label: Text
+            name: 7d21e782
+            widget: string
+          - hint: 'Original text: Spidey Objects, key: 5731efe0'
+            label: Text
+            name: 5731efe0
+            widget: string
+          - hint: 'Original text: ← back to hypebeast, key: 4aa104fd'
+            label: Text
+            name: 4aa104fd
+            widget: string
+          - hint: 'Original text: presents, key: -4c1860e8'
+            label: Text
+            name: '-4c1860e8'
+            widget: string
+          - hint: 'Original text: with, key: 37b0c6'
+            label: Text
+            name: 37b0c6
+            widget: string
+          - hint: 'Original text: great power, key: -3ea9724e'
+            label: Text
+            name: '-3ea9724e'
+            widget: string
+          - hint: >-
+              Original text: With the 2021 “Black Panther” watch making history
+              in the horology world, Audemars Piguet continues its partnership
+              with Marvel to unveil the limited-edition Royal Oak Concept
+              Tourbillon “Spider-Man”., key: 3d193ee3
+            label: Text
+            name: 3d193ee3
+            widget: text
+          - hint: >-
+              Original text: To commemorate the release, Hypebeast teams up with
+              the Swiss Haute Horlogerie expert to explore local neighborhood
+              heroes and how with great power comes great responsibility. Taking
+              inspiration from Peter Parker’s iconic slogan, the campaign stars
+              Kevin Hart, Nour Arida and Loyle Carner — each bearing an essence
+              of the Super Hero’s ethos into their philanthropy and creative
+              outlets., key: -ce079ad
+            label: Text
+            name: '-ce079ad'
+            widget: text
+          - hint: 'Original text: JUMP TO SECTION, key: 3f2ba952'
+            label: Text
+            name: 3f2ba952
+            widget: string
+          - hint: 'Original text: Spidey-Essentials, key: -6ccfa39a'
+            label: Text
+            name: '-6ccfa39a'
+            widget: string
+          - hint: 'Original text: “, key: 201c'
+            label: Text
+            name: 201c
+            widget: string
+          - hint: >-
+              Original text: “Philadelphia can make or break you. I am who I am
+              because of that city.”, key: 59399028
+            label: Text
+            name: '59399028'
+            widget: string
+          - hint: 'Original text: — Kevin Hart, key: -3285b6fa'
+            label: Text
+            name: '-3285b6fa'
+            widget: string
+          - hint: >-
+              Original text: From Emmy Awards to sold-out arenas, Kevin Hart is
+              undeniably the biggest comedian of our generation. However, as
+              well as providing the world with laughter, giving back to the
+              community is just as important to the actor. Having launched Help
+              From the Hart Charity in 2017, the non-profit organization was
+              formed to support young people from underrepresented communities
+              with opportunities to make an impact through scholarship programs.
+              Spider-Man, to him, is the epitome of having a selfless mentality
+              and helping others as he explains, “[he] immediately wanted to use
+              that power for good.”, key: 77682f2e
+            label: Text
+            name: 77682f2e
+            widget: text
+          - hint: >-
+              Original text: Hailing from North Philadelphia, it’s the city’s
+              energy that shaped his formative years. As he takes us on a
+              journey through where it all started, he mentions the , key:
+              -7148c9b1
+            label: Text
+            name: '-7148c9b1'
+            widget: text
+          - hint: 'Original text: Kevin Hart: Live. Love. Laugh., key: 206dd08f'
+            label: Text
+            name: 206dd08f
+            widget: string
+          - hint: >-
+              Original text:  mural created by Willis "Nomo" Humphrey and
+              commissioned by Mural Arts Philadelphia. Located on the side of
+              Max's Steaks, a classic cheesesteak spot, it’s right around the
+              corner where Hart grew up and remains a proud achievement in his
+              life., key: 213ec8d9
+            label: Text
+            name: 213ec8d9
+            widget: text
+          - hint: >-
+              Original text: Joined in the campaign by his eldest daughter
+              Heaven, she explains that Miles Morales is a character that
+              resonates most closely with her dad. “He’s underrated and a
+              character that’s for the people,” she says. As well as explaining
+              that glitching would be her superpower of choice, Hart jokingly
+              says that for him it’s “the ability to make my kids listen.”, key:
+              6a03129e
+            label: Text
+            name: 6a03129e
+            widget: text
+          - hint: >-
+              Original text: “I’ve been given a voice and I like to use it to
+              make a change.”, key: 1ce8dd6c
+            label: Text
+            name: 1ce8dd6c
+            widget: string
+          - hint: 'Original text: — Nour Arida, key: 660415df'
+            label: Text
+            name: 660415df
+            widget: string
+          - hint: >-
+              Original text: “When you’re given power, you are responsible for
+              using it to make a change,” Nour Arida explains. For the
+              Paris-based Lebanese designer, model, and women’s rights advocate,
+              it’s being raised amongst the beauty of Beirut that has helped her
+              be that voice for change. , key: 75fb1724
+            label: Text
+            name: 75fb1724
+            widget: text
+          - hint: >-
+              Original text: Having been awarded Arab Woman of the Year 2023 for
+              her efforts in protecting women in the region, Arida explains that
+              “I’ve been trying to defend their bodies, their rights, in a
+              region where they’re not protected.”, key: -4372128d
+            label: Text
+            name: '-4372128d'
+            widget: text
+          - hint: >-
+              Original text: Named after her grandmother who she sees as a Super
+              Hero, “Nour” which translates to “light” in Arabic, aims to be the
+              light that shines in people’s lives. Family plays an integral role
+              in her journey and visiting Beirut “every six weeks is important
+              for my soul,” she says. With Arida’s curious side leaning toward
+              wanting to possess psychic powers, one piece of advice she gives
+              is that “You are way more powerful than you think you are.”, key:
+              -3f5068f0
+            label: Text
+            name: '-3f5068f0'
+            widget: text
+          - hint: >-
+              Original text: “I got a lot of security, my wisdom and outlook on
+              the world [from superheroes].”, key: 7b6913
+            label: Text
+            name: 7b6913
+            widget: string
+          - hint: 'Original text: — Loyle Carner, key: 1ae38804'
+            label: Text
+            name: 1ae38804
+            widget: string
+          - hint: >-
+              Original text: Spider-Man is one Super Hero that has transcended
+              generations. Being a constant throughout Loyle Carner’s life, from
+              seeing his younger brother have the costume and now his son
+              getting excited about the same, proves the value the character has
+              on shaping childhoods, “everyone dreams of being that thing.”,
+              key: 4930240f
+            label: Text
+            name: 4930240f
+            widget: text
+          - hint: >-
+              Original text: As with the other talent, the burgeoning UK
+              musician’s diverse South London surroundings play a pivotal role
+              in his outlook, and it’s the distinct vibe that separates it from
+              the rest of the city. As well as music, he also launched Chilli
+              Con Carner in 2016, a cooking school for young people with ADHD.,
+              key: 2147b35f
+            label: Text
+            name: 2147b35f
+            widget: text
+          - hint: >-
+              Original text: As someone who has been diagnosed with the
+              condition, and having a mother who was a special educational needs
+              teacher who helped him have “an understanding of what my brain was
+              doing and how it operated,” Carner recognizes the importance of
+              his initiative. Giving kids a space to learn, connect and create
+              is the main aim of the campaign but getting the chance “to spend
+              time with the younger generation is essential,” he says. “They’re
+              so innovative, they don’t want to follow rules.”, key: -875fb6
+            label: Text
+            name: '-875fb6'
+            widget: text
+          - hint: >-
+              Original text: Audemars Piguet x Marvel Royal Oak Concept, key:
+              -727bab3d
+            label: Text
+            name: '-727bab3d'
+            widget: string
+          - hint: 'Original text: “Spider-Man”, key: 3a650a4f'
+            label: Text
+            name: 3a650a4f
+            widget: string
+          - hint: >-
+              Original text: Limited to 250 pieces, the Royal Oak Concept
+              Tourbillon “Spider-Man” arrives in a 42mm case combining titanium
+              and black ceramic, as well as Audemars Piguet’s new hand-wound
+              caliber 2974 showcasing its meticulous craftsmanship. The
+              movement’s stripped-back yet complex design achieves a level of
+              transparency that allows Spider-Man’s character to appear in 3D. ,
+              key: -7cdcc243
+            label: Text
+            name: '-7cdcc243'
+            widget: text
+          - hint: >-
+              Original text: Final finishings are completed by hand like the
+              instantly recognizable two-tone suit handpainted in matte red and
+              metallic blue. The dial itself features alternating blackened gold
+              hour markers and Arabic numerals finished with a white
+              luminescence that turns blue in the dark. The watch itself is
+              presented with an interchangeable strap, equipped with a black and
+              gray rubber strap with an AP buckle as well as a second black and
+              red rubber strap to reference the Super Hero’s suit., key:
+              200c78e1
+            label: Text
+            name: 200c78e1
+            widget: text
+          - hint: >-
+              Original text: Much like its 2021 “Black Panther” predecessor, the
+              Royal Oak Concept Tourbillon “Spider-Man” was put up for auction
+              to raise money for non-profit organizations First Book and Ashoka,
+              which help empower underprivileged young people to create a
+              positive change in their communities., key: 5708fa7c
+            label: Text
+            name: 5708fa7c
+            widget: text
+          - hint: >-
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam., key: -e350d5
+            label: Text
+            name: '-e350d5'
+            widget: text
+          - hint: 'Original text: AP x Marvel Royal Oak, key: -79d95f08'
+            label: Text
+            name: '-79d95f08'
+            widget: string
+          - hint: "Original text: Peter's Camera, key: 7a8904d"
+            label: Text
+            name: 7a8904d
+            widget: string
+          - hint: 'Original text: Venom Vial, key: -21d3611f'
+            label: Text
+            name: '-21d3611f'
+            widget: string
+          - hint: 'Original text: Web-Shooter, key: -2218a0ad'
+            label: Text
+            name: '-2218a0ad'
+            widget: string
+          - hint: 'Original text: Doc Ock Arm, key: -32dc7f75'
+            label: Text
+            name: '-32dc7f75'
+            widget: string
+          - hint: >-
+              Original text: Audemars Piguet x Marvel Royal Oak Concept
+              Tourbillon “Spider-Man”, key: 7a78b234
+            label: Text
+            name: 7a78b234
+            widget: string
+          - hint: >-
+              Original text: - Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam., key: 1908fd3e
+            label: Text
+            name: 1908fd3e
+            widget: text
+          - hint: 'Original text: Web Shooter, key: -6887e800'
+            label: Text
+            name: '-6887e800'
+            widget: string
+          - hint: >-
+              Original text: use the arrows to explore the objects, key:
+              -3c806f3f
+            label: Text
+            name: '-3c806f3f'
+            widget: string
+          - hint: 'Original text: Spider-man Essentials, key: -2a6296ad'
+            label: Text
+            name: '-2a6296ad'
+            widget: string
+          - hint: 'Original text: Explore more, key: -6d71d71e'
+            label: Text
+            name: '-6d71d71e'
+            widget: string
+          - hint: 'Original text: ↑, key: 2191'
+            label: Text
+            name: '2191'
+            widget: string
+          - hint: 'Original text: AP X MARVEL ROYAL OAK, key: 484d00f8'
+            label: Text
+            name: 484d00f8
+            widget: string
+          - hint: 'Original text: Venom SYMBIOTE, key: -34559cb'
+            label: Text
+            name: '-34559cb'
+            widget: string
+          - hint: 'Original text: Pumpkin bomb, key: 3071687a'
+            label: Text
+            name: 3071687a
+            widget: string
+          - hint: >-
+              Original text: Audemars Piguet X Marvel Royal Oak Concept, key:
+              5259f0e3
+            label: Text
+            name: 5259f0e3
+            widget: string
+          - hint: >-
+              Original text: The second release from Audemars Piguet’s
+              groundbreaking partnership with Marvel. Ancestral expertise meets
+              futuristic technology, with everyone’s favorite wall-crawler
+              taking center stage on the watch face., key: -a7fc1fe
+            label: Text
+            name: '-a7fc1fe'
+            widget: text
+          - hint: >-
+              Original text: Transparent architecture makes Spider-Man appear in
+              a three-dimensional form., key: 2b80dd29
+            label: Text
+            name: 2b80dd29
+            widget: string
+          - hint: >-
+              Original text: Spider-Man’s suit is laser-engraved to create
+              detailed textile differences., key: -36d7080b
+            label: Text
+            name: '-36d7080b'
+            widget: string
+          - hint: 'Original text: Limited to 250 pieces worldwide., key: -2ba0ebee'
+            label: Text
+            name: '-2ba0ebee'
+            widget: string
+          - hint: >-
+              Original text: Originally designed by Dr. Otto Octavius to
+              facilitate the safe handling of radioactive substances, a freak
+              laboratory accident fused these arms to the already
+              ‘unconventional’ scientist., key: 6c9a392a
+            label: Text
+            name: 6c9a392a
+            widget: text
+          - hint: >-
+              Original text: Each arm is made of a titanium-steel alloy, has
+              telescopic reach and three pincers at the tip., key: b403a4c
+            label: Text
+            name: b403a4c
+            widget: text
+          - hint: >-
+              Original text: The motors required to employ the arms use energy
+              sourced from a nuclear-powered, thermo-electric generator., key:
+              68b82927
+            label: Text
+            name: 68b82927
+            widget: text
+          - hint: 'Original text: Venom Symbiote, key: -2e10e5ab'
+            label: Text
+            name: '-2e10e5ab'
+            widget: string
+          - hint: >-
+              Original text: Venom is the alias of an alien symbiote merged with
+              Eddie Brock, a deadly combination of two living beings, both with
+              a vendetta against Spider-Man., key: -9b23802
+            label: Text
+            name: '-9b23802'
+            widget: text
+          - hint: >-
+              Original text: The symbiote has the ability to heal itself,
+              shapeshift and manipulate its own matter into weapons., key:
+              -6f8a8190
+            label: Text
+            name: '-6f8a8190'
+            widget: text
+          - hint: >-
+              Original text: Sound is the symbiote’s weakness - which Spider-Man
+              puts to great effect., key: -6eb44ea6
+            label: Text
+            name: '-6eb44ea6'
+            widget: string
+          - hint: >-
+              Original text: Like other symbiotes, Venom has the ability to
+              spawn offspring., key: -c94658e
+            label: Text
+            name: '-c94658e'
+            widget: string
+          - hint: >-
+              Original text: Not just limited to being a science whizz, Peter
+              Parker is also skilled in photography, using his talents to earn a
+              living as a part-time newspaper photographer., key: -18fb393c
+            label: Text
+            name: '-18fb393c'
+            widget: text
+          - hint: >-
+              Original text: Peter (reluctantly) sells photos of Spider-Man -
+              often staged - to J. Jonah Jameson at the Daily Bugle., key:
+              -229a4f85
+            label: Text
+            name: '-229a4f85'
+            widget: text
+          - hint: >-
+              Original text: He uses a traditional 35mm camera with a
+              telescopic, wide-angle lens., key: -74ae4c7b
+            label: Text
+            name: '-74ae4c7b'
+            widget: string
+          - hint: >-
+              Original text: Peter develops the photos himself, often using the
+              equipment available to him at high school., key: -3f3f13d0
+            label: Text
+            name: '-3f3f13d0'
+            widget: text
+          - hint: 'Original text: pumpkin Bomb, key: 2697887a'
+            label: Text
+            name: 2697887a
+            widget: string
+          - hint: >-
+              Original text: The Pumpkin Bomb is the Green Goblin’s weapon of
+              choice, first developed by Norman Osborn - to assist in his
+              clashes with Spider-Man!, key: 1252a34b
+            label: Text
+            name: 1252a34b
+            widget: text
+          - hint: >-
+              Original text: Shaped like a mischievous jack-o’-lantern, it
+              carries a powerful explosive charge., key: 38819229
+            label: Text
+            name: '38819229'
+            widget: string
+          - hint: >-
+              Original text: The detonation settings can be adjusted by rotating
+              the stem at the top of the pumpkin to the desired position., key:
+              -69b16797
+            label: Text
+            name: '-69b16797'
+            widget: text
+          - hint: >-
+              Original text: Green Goblin has adapted the types of explosives he
+              uses in his many attempts to defeat Spider-Man., key: 4199c953
+            label: Text
+            name: 4199c953
+            widget: text
+          - hint: >-
+              Original text: A wrist-worn device designed by Peter Parker
+              himself. It shoots adhesive webs to entangle foes and allow the
+              hero to swing through the city., key: -35ee209a
+            label: Text
+            name: '-35ee209a'
+            widget: text
+          - hint: >-
+              Original text: Activated by a trigger on the palm of Spider-Man’s
+              hand, the webbing has incredible tensile strength and can create a
+              variety of complex web patterns., key: -2846be36
+            label: Text
+            name: '-2846be36'
+            widget: text
+          - hint: >-
+              Original text: Small turbine pump veins compress the web-fluid and
+              force it through the spinneret nozzle., key: 7698fe8
+            label: Text
+            name: 7698fe8
+            widget: string
+          - hint: >-
+              Original text: The chemical makeup of Spider-Man’s web-fluid is
+              known only to Peter Parker., key: 37ad4151
+            label: Text
+            name: 37ad4151
+            widget: string
+          - hint: >-
+              Original text: Discover more about the Royal Oak Concept on the
+              brands website., key: -4c384d9b
+            label: Text
+            name: '-4c384d9b'
+            widget: string
+          - hint: 'Original text: DISCOVER MORE, key: 387a452c'
+            label: Text
+            name: 387a452c
+            widget: string
+          - hint: 'Original text: Credits, key: -5f77b386'
+            label: Text
+            name: '-5f77b386'
+            widget: string
+          - hint: 'Original text: Hypebeast, key: -5caacbc7'
+            label: Text
+            name: '-5caacbc7'
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: KEVIN HART shoot, key: 5f495dd9'
+            label: Text
+            name: 5f495dd9
+            widget: string
+          - hint: 'Original text: Nour arida shoot, key: -8c067ce'
+            label: Text
+            name: '-8c067ce'
+            widget: string
+          - hint: 'Original text: LOYLE CARNER shoot, key: 763cdd57'
+            label: Text
+            name: 763cdd57
+            widget: string
+          - hint: 'Original text: Post-production, key: 39c6d7e6'
+            label: Text
+            name: 39c6d7e6
+            widget: string
+          - hint: 'Original text: special thanks, key: 9290c10'
+            label: Text
+            name: 9290c10
+            widget: string
+          - hint: 'Original text: BACK TO TOP, key: -28fb7097'
+            label: Text
+            name: '-28fb7097'
+            widget: string
+          - hint: 'Original text: Style guide, key: -5e8b453'
+            label: Text
+            name: '-5e8b453'
+            widget: string
+          - hint: 'Original text: Fonts, key: 40e8de4'
+            label: Text
+            name: 40e8de4
+            widget: string
+          - hint: 'Original text: 01, key: 601'
+            label: Text
+            name: '601'
+            widget: string
+          - hint: 'Original text: H1, key: 8e9'
+            label: Text
+            name: '8e9'
+            widget: string
+          - hint: 'Original text: Neue Haas Grotesk Display, key: -22774c6d'
+            label: Text
+            name: '-22774c6d'
+            widget: string
+          - hint: 'Original text: Heading, key: -6d5fea1e'
+            label: Text
+            name: '-6d5fea1e'
+            widget: string
+          - hint: 'Original text: H2, key: 8ea'
+            label: Text
+            name: 8ea
+            widget: string
+          - hint: 'Original text: H3, key: 8eb'
+            label: Text
+            name: 8eb
+            widget: string
+          - hint: 'Original text: H4, key: 8ec'
+            label: Text
+            name: 8ec
+            widget: string
+          - hint: 'Original text: H5, key: 8ed'
+            label: Text
+            name: 8ed
+            widget: string
+          - hint: 'Original text: H6, key: 8ee'
+            label: Text
+            name: 8ee
+            widget: string
+          - hint: 'Original text: Aglet Mono, key: 27dc782e'
+            label: Text
+            name: 27dc782e
+            widget: string
+          - hint: 'Original text: H7, key: 8ef'
+            label: Text
+            name: 8ef
+            widget: string
+          - hint: 'Original text: CTA, key: 105f0'
+            label: Text
+            name: 105f0
+            widget: string
+          - hint: 'Original text: T1, key: a5d'
+            label: Text
+            name: a5d
+            widget: string
+          - hint: 'Original text: ANTON, key: 3b8b1e6'
+            label: Text
+            name: 3b8b1e6
+            widget: string
+          - hint: 'Original text: TITLE, key: 4c22a38'
+            label: Text
+            name: 4c22a38
+            widget: string
+          - hint: 'Original text: T2, key: a5e'
+            label: Text
+            name: a5e
+            widget: string
+          - hint: 'Original text: QOUTE, key: 49aa2a8'
+            label: Text
+            name: 49aa2a8
+            widget: string
+          - hint: 'Original text: p, key: 70'
+            label: Text
+            name: '70'
+            widget: string
+          - hint: 'Original text: Freightdisp Pro Book, key: -72aaccc9'
+            label: Text
+            name: '-72aaccc9'
+            widget: string
+          - hint: >-
+              Original text: Jim, you’re 6’11 and you weigh 90 pounds. Gumby has
+              a better body than you. Boom, roasted. Dwight, you’re a kiss ass.
+              Boom, roasted. Pam, you failed art school. Boom, roasted.
+              Meredith, you’ve slept with so many guys, you’re starting to look
+              like one. Boom, roasted. Kevin, I can’t decide between a fat joke
+              and a dumb joke. Boom, roasted. Creed, your teeth called, your
+              breath stinks. Boom, roasted., key: 4e89724b
+            label: Text
+            name: 4e89724b
+            widget: text
+          - hint: 'Original text: Ordered list, key: 670f3891'
+            label: Text
+            name: 670f3891
+            widget: string
+          - hint: 'Original text: Neue Haas Grotesk, key: -3f7df7ef'
+            label: Text
+            name: '-3f7df7ef'
+            widget: string
+          - hint: 'Original text: Webflow is an innovative tool, key: 1bf9ea28'
+            label: Text
+            name: 1bf9ea28
+            widget: string
+          - hint: 'Original text: Colors, key: 78a3a990'
+            label: Text
+            name: 78a3a990
+            widget: string
+          - hint: 'Original text: 02, key: 602'
+            label: Text
+            name: '602'
+            widget: string
+          - hint: 'Original text: white, key: 6bdcc29'
+            label: Text
+            name: 6bdcc29
+            widget: string
+          - hint: 'Original text: #FFFFFF, key: -49175bdd'
+            label: Text
+            name: '-49175bdd'
+            widget: string
+          - hint: 'Original text: black, key: 5978fff'
+            label: Text
+            name: 5978fff
+            widget: string
+          - hint: 'Original text: #000000, key: -6fe2541d'
+            label: Text
+            name: '-6fe2541d'
+            widget: string
+          - hint: 'Original text: GRADIENT 1 - Title , key: 754efa3a'
+            label: Text
+            name: 754efa3a
+            widget: string
+          - hint: 'Original text: #000000 & #000000, key: -4e57ae14'
+            label: Text
+            name: '-4e57ae14'
+            widget: string
+          - hint: 'Original text: GRADIENT 2 - section bg, key: -293eeaaf'
+            label: Text
+            name: '-293eeaaf'
+            widget: string
+          - hint: 'Original text: GRADIENT 3 - section bg, key: -47612110'
+            label: Text
+            name: '-47612110'
+            widget: string
+          - hint: 'Original text: blur, key: 2e3067'
+            label: Text
+            name: '2e3067'
+            widget: string
+          - hint: 'Original text: Buttons, key: 719b5761'
+            label: Text
+            name: 719b5761
+            widget: string
+          - hint: 'Original text: 03, key: 603'
+            label: Text
+            name: '603'
+            widget: string
+          - hint: 'Original text: discover more, key: 7cf93d2c'
+            label: Text
+            name: 7cf93d2c
+            widget: string
+          - hint: 'Original text: GRid system, key: 56deb849'
+            label: Text
+            name: 56deb849
+            widget: string
+          - hint: 'Original text: Container, key: 5ef36c61'
+            label: Text
+            name: 5ef36c61
+            widget: string
+          - hint: 'Original text: Elements, key: 35b2517'
+            label: Text
+            name: 35b2517
+            widget: string
+          - hint: 'Original text: Row, key: 141ba'
+            label: Text
+            name: 141ba
+            widget: string
+          - hint: 'Original text: Col, key: 10960'
+            label: Text
+            name: '10960'
+            widget: string
+          - hint: 'Original text: Desktop, key: -3ff7d804'
+            label: Text
+            name: '-3ff7d804'
+            widget: string
+          - hint: 'Original text: Grid, key: 21ff66'
+            label: Text
+            name: 21ff66
+            widget: string
+          - hint: 'Original text: col-lg-1, key: -291fcf74'
+            label: Text
+            name: '-291fcf74'
+            widget: string
+          - hint: 'Original text: col-lg-11, key: 525e125'
+            label: Text
+            name: '525e125'
+            widget: string
+          - hint: 'Original text: col-lg-2, key: -291fcf73'
+            label: Text
+            name: '-291fcf73'
+            widget: string
+          - hint: 'Original text: col-lg-10, key: 525e124'
+            label: Text
+            name: '525e124'
+            widget: string
+          - hint: 'Original text: col-lg-3, key: -291fcf72'
+            label: Text
+            name: '-291fcf72'
+            widget: string
+          - hint: 'Original text: col-lg-9, key: -291fcf6c'
+            label: Text
+            name: '-291fcf6c'
+            widget: string
+          - hint: 'Original text: col-lg-4, key: -291fcf71'
+            label: Text
+            name: '-291fcf71'
+            widget: string
+          - hint: 'Original text: col-lg-8, key: -291fcf6d'
+            label: Text
+            name: '-291fcf6d'
+            widget: string
+          - hint: 'Original text: col-lg-5, key: -291fcf70'
+            label: Text
+            name: '-291fcf70'
+            widget: string
+          - hint: 'Original text: col-lg-7, key: -291fcf6e'
+            label: Text
+            name: '-291fcf6e'
+            widget: string
+          - hint: 'Original text: col-lg-6, key: -291fcf6f'
+            label: Text
+            name: '-291fcf6f'
+            widget: string
+          - hint: 'Original text: col-lg-12, key: 525e126'
+            label: Text
+            name: '525e126'
+            widget: string
+          - hint: 'Original text: Tablet, key: -6b23d57a'
+            label: Text
+            name: '-6b23d57a'
+            widget: string
+          - hint: 'Original text: col-md-1, key: -291f6658'
+            label: Text
+            name: '-291f6658'
+            widget: string
+          - hint: 'Original text: col-md-11, key: 5329b89'
+            label: Text
+            name: 5329b89
+            widget: string
+          - hint: 'Original text: col-md-2, key: -291f6657'
+            label: Text
+            name: '-291f6657'
+            widget: string
+          - hint: 'Original text: col-md-10, key: 5329b88'
+            label: Text
+            name: 5329b88
+            widget: string
+          - hint: 'Original text: col-md-3, key: -291f6656'
+            label: Text
+            name: '-291f6656'
+            widget: string
+          - hint: 'Original text: col-md-9, key: -291f6650'
+            label: Text
+            name: '-291f6650'
+            widget: string
+          - hint: 'Original text: col-md-4, key: -291f6655'
+            label: Text
+            name: '-291f6655'
+            widget: string
+          - hint: 'Original text: col-md-8, key: -291f6651'
+            label: Text
+            name: '-291f6651'
+            widget: string
+          - hint: 'Original text: col-md-5, key: -291f6654'
+            label: Text
+            name: '-291f6654'
+            widget: string
+          - hint: 'Original text: col-md-7, key: -291f6652'
+            label: Text
+            name: '-291f6652'
+            widget: string
+          - hint: 'Original text: col-md-6, key: -291f6653'
+            label: Text
+            name: '-291f6653'
+            widget: string
+          - hint: 'Original text: col-md-12, key: 5329b8a'
+            label: Text
+            name: 5329b8a
+            widget: string
+          - hint: 'Original text: md-no-margin, key: 2cf13684'
+            label: Text
+            name: 2cf13684
+            widget: string
+          - hint: 'Original text: Landscape, key: -3347ed65'
+            label: Text
+            name: '-3347ed65'
+            widget: string
+          - hint: 'Original text: col-sm-1, key: -291c8a55'
+            label: Text
+            name: '-291c8a55'
+            widget: string
+          - hint: 'Original text: col-sm-11, key: 58b3fe6'
+            label: Text
+            name: 58b3fe6
+            widget: string
+          - hint: 'Original text: col-sm-2, key: -291c8a54'
+            label: Text
+            name: '-291c8a54'
+            widget: string
+          - hint: 'Original text: col-sm-10, key: 58b3fe5'
+            label: Text
+            name: 58b3fe5
+            widget: string
+          - hint: 'Original text: col-sm-3, key: -291c8a53'
+            label: Text
+            name: '-291c8a53'
+            widget: string
+          - hint: 'Original text: col-sm-9, key: -291c8a4d'
+            label: Text
+            name: '-291c8a4d'
+            widget: string
+          - hint: 'Original text: col-sm-4, key: -291c8a52'
+            label: Text
+            name: '-291c8a52'
+            widget: string
+          - hint: 'Original text: col-sm-8, key: -291c8a4e'
+            label: Text
+            name: '-291c8a4e'
+            widget: string
+          - hint: 'Original text: col-sm-5, key: -291c8a51'
+            label: Text
+            name: '-291c8a51'
+            widget: string
+          - hint: 'Original text: col-sm-7, key: -291c8a4f'
+            label: Text
+            name: '-291c8a4f'
+            widget: string
+          - hint: 'Original text: col-sm-6, key: -291c8a50'
+            label: Text
+            name: '-291c8a50'
+            widget: string
+          - hint: 'Original text: col-sm-12, key: 58b3fe7'
+            label: Text
+            name: 58b3fe7
+            widget: string
+          - hint: 'Original text: sm-no-margin, key: -68daa079'
+            label: Text
+            name: '-68daa079'
+            widget: string
+          - hint: 'Original text: Mobile, key: -7650833e'
+            label: Text
+            name: '-7650833e'
+            widget: string
+          - hint: 'Original text: col-xs-1, key: -291a2df4'
+            label: Text
+            name: '-291a2df4'
+            widget: string
+          - hint: 'Original text: col-xs-11, key: 5d46fa5'
+            label: Text
+            name: 5d46fa5
+            widget: string
+          - hint: 'Original text: col-xs-2, key: -291a2df3'
+            label: Text
+            name: '-291a2df3'
+            widget: string
+          - hint: 'Original text: col-xs-10, key: 5d46fa4'
+            label: Text
+            name: 5d46fa4
+            widget: string
+          - hint: 'Original text: col-xs-3, key: -291a2df2'
+            label: Text
+            name: '-291a2df2'
+            widget: string
+          - hint: 'Original text: col-xs-9, key: -291a2dec'
+            label: Text
+            name: '-291a2dec'
+            widget: string
+          - hint: 'Original text: col-xs-4, key: -291a2df1'
+            label: Text
+            name: '-291a2df1'
+            widget: string
+          - hint: 'Original text: col-xs-8, key: -291a2ded'
+            label: Text
+            name: '-291a2ded'
+            widget: string
+          - hint: 'Original text: col-xs-5, key: -291a2df0'
+            label: Text
+            name: '-291a2df0'
+            widget: string
+          - hint: 'Original text: col-xs-7, key: -291a2dee'
+            label: Text
+            name: '-291a2dee'
+            widget: string
+          - hint: 'Original text: col-xs-6, key: -291a2def'
+            label: Text
+            name: '-291a2def'
+            widget: string
+          - hint: 'Original text: col-xs-12, key: 5d46fa6'
+            label: Text
+            name: 5d46fa6
+            widget: string
+          - hint: 'Original text: xs-no-margin, key: 3af9cae8'
+            label: Text
+            name: 3af9cae8
+            widget: string
+          - hint: "Original text: Margin 1/2\_col, key: -488af9e"
+            label: Text
+            name: '-488af9e'
+            widget: string
+          - hint: 'Original text: col, key: 18180'
+            label: Text
+            name: '18180'
+            widget: string
+          - hint: 'Original text: Align start, key: 70caff67'
+            label: Text
+            name: 70caff67
+            widget: string
+          - hint: 'Original text: Align center, key: -73860e10'
+            label: Text
+            name: '-73860e10'
+            widget: string
+          - hint: 'Original text: Align end, key: -1f513ee0'
+            label: Text
+            name: '-1f513ee0'
+            widget: string
+          - hint: 'Original text: Align stretch, key: 6af274ca'
+            label: Text
+            name: 6af274ca
+            widget: string
+          - hint: 'Original text: Justify start, key: 7bd546b2'
+            label: Text
+            name: 7bd546b2
+            widget: string
+          - hint: 'Original text: Justify center, key: -1d476bfb'
+            label: Text
+            name: '-1d476bfb'
+            widget: string
+          - hint: 'Original text: Justify end, key: -3c57a0d5'
+            label: Text
+            name: '-3c57a0d5'
+            widget: string
+          - hint: 'Original text: Justify between, key: 3fc99a58'
+            label: Text
+            name: 3fc99a58
+            widget: string
+          - hint: 'Original text: Justify around, key: -1ff97283'
+            label: Text
+            name: '-1ff97283'
+            widget: string
+          - hint: 'Original text: Display, key: -39224f5e'
+            label: Text
+            name: '-39224f5e'
+            widget: string
+          - hint: 'Original text: md--hide, key: 34445339'
+            label: Text
+            name: '34445339'
+            widget: string
+          - hint: 'Original text: sm--hide, key: 7fa375bc'
+            label: Text
+            name: 7fa375bc
+            widget: string
+          - hint: 'Original text: xs--hide, key: -3b914663'
+            label: Text
+            name: '-3b914663'
+            widget: string
+          - hint: 'Original text: AUDEMARS PIGUET, key: 61d72c6c'
+            label: Text
+            name: 61d72c6c
+            widget: string
+          - hint: 'Original text: X, key: 58'
+            label: Text
+            name: '58'
+            widget: string
+          - hint: 'Original text: MARVEL, key: -78e04e81'
+            label: Text
+            name: '-78e04e81'
+            widget: string
+          - hint: 'Original text: june 2023, key: 4760ca1d'
+            label: Text
+            name: 4760ca1d
+            widget: string
+          - hint: 'Original text: 特別主演, key: 35479405'
+            label: Text
+            name: '35479405'
+            widget: string
+          - hint: 'Original text: 跳轉到頁面, key: 12bc223b'
+            label: Text
+            name: 12bc223b
+            widget: string
+          - hint: 'Original text: ← 返回 Hypebeast, key: 2d7fedb3'
+            label: Text
+            name: 2d7fedb3
+            widget: string
+          - hint: 'Original text: 呈獻, key: aa833'
+            label: Text
+            name: aa833
+            widget: string
+          - hint: >-
+              Original text: 憑著 2021 年《黑豹》腕錶在鐘錶界創造歷史，愛彼 (Audemars Piguet)
+              再度與漫威（Marvel）合作，推出限量版Royal Oak Concept 皇家橡樹概念系列陀飛輪「SPIDER-MAN」腕錶
+              。, key: 17d39d2d
+            label: Text
+            name: 17d39d2d
+            widget: text
+          - hint: >-
+              Original text: 為紀念推出這款腕錶，Hypebeast
+              就與這個瑞士高級鐘錶品牌合作，邀請多位「鄰家英雄」擔任主角，印證出自「蜘蛛俠」 Peter Parker
+              口中，觀眾耳熟能詳「能力越強，責任越大（With great power comes great
+              responsibility）」的道理。企劃由 Kevin Hart、Nour Arida 及 Loyle Carner
+              出演，揭示他們如何將超級英雄的精神融入到日常生活及創意之中。, key: -332ec9bc
+            label: Text
+            name: '-332ec9bc'
+            widget: text
+          - hint: 'Original text: 「費城是成敗的關鍵。因為那座都市，我才是今天的我。」, key: 79ce9d3d'
+            label: Text
+            name: 79ce9d3d
+            widget: string
+          - hint: >-
+              Original text: 從艾美獎頒獎禮到座無虛席的體育館，Kevin Hart
+              無疑是我們這一代最偉大的喜劇演員。然而對他來說，除了為世界帶來歡笑之外，回饋社會同樣重要；在 2017 年成立的非牟利組織「Help
+              From the Hart
+              Charity」就旨在支持一眾來自弱勢社群的年青人，讓他們有機會透過獎學金計劃發揮自身的影響力。對他來說，蜘蛛俠就是擁有無私精神及樂於助人的佼佼者，「他（蜘蛛俠）二話不說要用這種力量造福人群。」Kevin
+              Hart 如此說。, key: 79412aba
+            label: Text
+            name: 79412aba
+            widget: text
+          - hint: >-
+              Original text: 來自費城北部的他，被這座城市的活力塑造了自己的青蔥歲月。隨著他帶領我們回到旅程的起點時，他提到了《,
+              key: -7f68c9c4
+            label: Text
+            name: '-7f68c9c4'
+            widget: string
+          - hint: 'Original text: Kevin Hart: Live. Love. Laugh, key: 2a561f7f'
+            label: Text
+            name: 2a561f7f
+            widget: string
+          - hint: >-
+              Original text: 》這幅由費城壁畫藝術委託 Willis "Nomo" Humphrey 所創作的壁畫。它位於
+              Max's Steaks（一家馳名的芝士牛排餐廳）旁邊，也就是 Kevin Hart 長大的地方；至今仍是他一生中引以為豪的成就。,
+              key: -3c33f85a
+            label: Text
+            name: '-3c33f85a'
+            widget: text
+          - hint: >-
+              Original text: Kevin Hart 的大女兒 Heaven 也在這次特輯中登場；她認為 Miles Morales
+              最能令她聯想到自己的父親。她說：「他的角色被人輕視，但總是在保護人民。」她表示希望自己能擁有 Glitch 的超能力。至於
+              Kevin Hart 則開玩笑說自己想得到能令孩子們聽話的超能力。, key: 3d6d71ae
+            label: Text
+            name: 3d6d71ae
+            widget: text
+          - hint: 'Original text: 「既然我能夠發聲，我就要用它帶來改變。」, key: -6bbb0b3a'
+            label: Text
+            name: '-6bbb0b3a'
+            widget: string
+          - hint: >-
+              Original text: 「當你有能力時，就有責任用它帶來改變。」Nour Arida
+              如是說。對於這位居住在巴黎，來自黎巴嫩的設計師、模特兒及女權主義者來說，在貝魯特（Beirut）成長使她勇於提出改變。, key:
+              284a6eae
+            label: Text
+            name: 284a6eae
+            widget: string
+          - hint: >-
+              Original text: Nour Arida 因其努力地保護當地婦女的而獲頒「Arab Woman of the Year
+              2023」，她表示：「在那個女性不受保護的地方，我一直努力地捍衛她們的身體和權益。」, key: 9ac7b02
+            label: Text
+            name: 9ac7b02
+            widget: text
+          - hint: >-
+              Original text: Nour 的名字取自她視為超級英雄的祖母。"Nour"
+              在阿拉伯語中代表「光」，有著要成為照亮人們生命那束光的意思。在她的人生中，家人扮演著不可或缺的角色。她表示：「每隔六星期回到貝魯特的時光對我的心靈非常重要。」對靈性方面的好奇，使
+              Nour Arida 想要獲得通靈的超能力，而她給予大家的建議是：「你比你想像的要強大得多。」, key: -318187b5
+            label: Text
+            name: '-318187b5'
+            widget: text
+          - hint: 'Original text: 「（從超級英雄身上）我獲得了很多安全感、智慧和世界觀。」, key: 1ffb2cb9'
+            label: Text
+            name: 1ffb2cb9
+            widget: string
+          - hint: >-
+              Original text: 蜘蛛俠是一位超越幾代人的超級英雄。在 Loyle Carner
+              的生命中，從看到自己的弟弟擁有蜘蛛俠的戰衣，到現在他的兒子同樣為之而興奮不已，就足以證明了這個角色在童年成長帶來的影響，「每個人都夢想成為像蜘蛛俠那樣的人。」他如說。,
+              key: 4c627b6c
+            label: Text
+            name: 4c627b6c
+            widget: text
+          - hint: >-
+              Original text:
+              與其他才華橫溢的音樂人一樣，倫敦南部的多元化環境，在這位新進英國音樂人的視野中扮演著舉足輕重的角色，而正是這種獨特的氛圍將其與其他城市地區劃分。除了發展音樂之外，他還在
+              2016 年創辦了 Chilli Con Carner，一間專門為患有專注力失調的年青人而設的烹飪學校。, key:
+              524e560c
+            label: Text
+            name: 524e560c
+            widget: text
+          - hint: >-
+              Original text:
+              作為一個被診斷出患有這種障礙的人，並且有一位擔任特殊教育老師的母親－「幫助我明白大腦的功能與運作」，Loyle Carner
+              了解到主動的重要性。
+              為孩子們提供學習、溝通及創造的空間是成立學校的主要目的，然而對他來說，能夠與年青人相處的機會同樣重要。「他們充滿創意，不想墨守成規。」他如是說。,
+              key: -1affdbbd
+            label: Text
+            name: '-1affdbbd'
+            widget: text
+          - hint: >-
+              Original text: 愛彼 x Marvel Royal Oak Concept 皇家橡樹概念系列, key:
+              44d83ec8
+            label: Text
+            name: 44d83ec8
+            widget: string
+          - hint: >-
+              Original text: 限量發行 250 枚的 Royal Oak Concept皇家橡樹概念陀飛輪《蜘蛛俠》腕錶，採用 42
+              毫米鈦金屬錶殼、搭配黑色陶瓷錶圈，以及愛彼全新 2974 手動上鍊機芯，彰顯其精湛工藝。精密的鏤空機芯設計，使蜘蛛俠能夠以 3D
+              形式在腕錶上栩栩如生地呈現。, key: -64c18f38
+            label: Text
+            name: '-64c18f38'
+            widget: text
+          - hint: >-
+              Original text:
+              經由人手處理的加工程序，帶來經典的啞光紅、電光藍雙色對比的蜘蛛俠戰衣。錶盤配備黑色鍍膜白金時針及阿拉伯數字，外覆白色夜光塗層，在黑暗環境下會轉變成藍色。此外，手錶還備有取材自蜘蛛俠戰衣設計的黑灰色及黑紅色兩款易換式橡膠錶帶，搭配AP字樣折疊扣。,
+              key: -4f2d4fe7
+            label: Text
+            name: '-4f2d4fe7'
+            widget: text
+          - hint: >-
+              Original text: 就如於 2021 年推出的《黑豹》腕錶一樣，Royal Oak Concept
+              皇家橡樹概念系列陀飛輪「SPIDER-MAN」腕錶以拍賣形式發售，為非牟利組織 First Book 及 Ashoka
+              籌集資金，幫助貧困青年改善自己的社區, key: 2653a079
+            label: Text
+            name: 2653a079
+            widget: text
+          - hint: 'Original text: 蜘蛛俠的必備武器, key: 3fb3695d'
+            label: Text
+            name: 3fb3695d
+            widget: string
+          - hint: 'Original text: 八爪魚博士機械手, key: -482fa872'
+            label: Text
+            name: '-482fa872'
+            widget: string
+          - hint: 'Original text: 毒魔, key: da9c2'
+            label: Text
+            name: da9c2
+            widget: string
+          - hint: 'Original text: 彼得的相機, key: 6ecbde70'
+            label: Text
+            name: 6ecbde70
+            widget: string
+          - hint: 'Original text: 南瓜炸彈, key: 27a70cb5'
+            label: Text
+            name: 27a70cb5
+            widget: string
+          - hint: 'Original text: 蛛網發射器, key: -58b8cf37'
+            label: Text
+            name: '-58b8cf37'
+            widget: string
+          - hint: >-
+              Original text:
+              愛彼與漫威破天荒合作打造的第二款作品，集傳統工藝與尖端科技於一身，令深受大眾喜愛的蜘蛛俠置身在錶盤正中央。, key:
+              -4fe34bf
+            label: Text
+            name: '-4fe34bf'
+            widget: string
+          - hint: 'Original text: 鏤空機芯錶面設計讓蜘蛛俠以立體的形式呈現。, key: -57c2b14e'
+            label: Text
+            name: '-57c2b14e'
+            widget: string
+          - hint: 'Original text: 蜘蛛俠的戰衣經過激光雕刻處理，以細緻工藝將戰衣的獨特質感呈現。, key: -52e595b5'
+            label: Text
+            name: '-52e595b5'
+            widget: string
+          - hint: 'Original text: 全球限量 250 枚。, key: -1557791f'
+            label: Text
+            name: '-1557791f'
+            widget: string
+          - hint: >-
+              Original text: 最初由岳圖·岡瑟·奧克塔維斯博士（Dr. Otto
+              Octavius）設計，旨在促進放射性物質的安全處理，一場失控的實驗室意外將這些手臂與這位「非傳統的」的科學家合而為一。, key:
+              3dc48eaa
+            label: Text
+            name: 3dc48eaa
+            widget: string
+          - hint: 'Original text: 每條手臂均由鈦鋼合金製成，具有伸縮臂，而前端則備有三個鉗子。, key: 6c535421'
+            label: Text
+            name: 6c535421
+            widget: string
+          - hint: 'Original text: 用以推動手臂的摩打由核能熱力發電機提供能量。, key: -5e2521a8'
+            label: Text
+            name: '-5e2521a8'
+            widget: string
+          - hint: >-
+              Original text: 毒魔是由 Eddie Brock 與外星共生體結合而成的致命組合，兩者都對蜘蛛俠存有敵意。, key:
+              25a550c7
+            label: Text
+            name: 25a550c7
+            widget: string
+          - hint: 'Original text: 這種共生體具有自我修復、變形以及將自身物質操縱成武器的能力。, key: 5892f53e'
+            label: Text
+            name: 5892f53e
+            widget: string
+          - hint: 'Original text: 聲音是共生體的弱點，亦成為了蜘蛛俠對付毒魔的方法。, key: 4fa6db83'
+            label: Text
+            name: 4fa6db83
+            widget: string
+          - hint: 'Original text: 與其他共生體一樣，毒魔具有繁殖後代的能力。, key: 6d51e12a'
+            label: Text
+            name: 6d51e12a
+            widget: string
+          - hint: >-
+              Original text: 彼得·帕克（Peter
+              Parker）不僅是一名科學奇才，還擅長攝影，利用他的才能以兼職報紙攝影師的身份為生。, key: 5e17b218
+            label: Text
+            name: 5e17b218
+            widget: string
+          - hint: 'Original text: 彼得經常不情願地將自己扮成蜘蛛俠的照片賣給《號角日報》的喬納·詹姆森。, key: -63f329c1'
+            label: Text
+            name: '-63f329c1'
+            widget: string
+          - hint: 'Original text: 他用的是備有伸縮廣角鏡頭的傳統 35 毫米相機。, key: -72a9d2af'
+            label: Text
+            name: '-72a9d2af'
+            widget: string
+          - hint: 'Original text: 彼得經常使用他在高中時可用的機器親自沖曬照片。, key: -1c1836d6'
+            label: Text
+            name: '-1c1836d6'
+            widget: string
+          - hint: >-
+              Original text: 南瓜炸彈是綠魔俠的首選武器，最初由諾曼·奧斯本（Norman Osborn）開發 -
+              用以協助自己對付蜘蛛俠！, key: 4ae71f26
+            label: Text
+            name: 4ae71f26
+            widget: string
+          - hint: 'Original text: 它的形狀像一個淘氣的南瓜燈，內含強力炸藥。, key: 71725e86'
+            label: Text
+            name: '71725e86'
+            widget: string
+          - hint: 'Original text: 可以將南瓜頂部上的桿旋轉到所需位置來調整爆炸設置。, key: -2ef7ef82'
+            label: Text
+            name: '-2ef7ef82'
+            widget: string
+          - hint: 'Original text: 綠魔俠在多次嘗試擊敗蜘蛛俠時調整了他使用的炸藥類型。, key: -7974e78a'
+            label: Text
+            name: '-7974e78a'
+            widget: string
+          - hint: >-
+              Original text: 由彼得·帕克（Peter Parker）親自設計的腕戴式設備。
+              用以發射粘性的蛛網來纏住敵人，並讓自己在城市中穿梭。, key: -6e2807f1
+            label: Text
+            name: '-6e2807f1'
+            widget: string
+          - hint: >-
+              Original text: 利用蜘蛛俠手掌上的扳機發射，織帶具有令人難以置信的拉伸強度，可以創造出各種複雜的織網圖案。, key:
+              6d8afe9e
+            label: Text
+            name: 6d8afe9e
+            widget: string
+          - hint: 'Original text: 纖網流體經過細小的渦輪泵靜脈壓縮，並透過受壓的噴嘴中發射。, key: -50b3bd41'
+            label: Text
+            name: '-50b3bd41'
+            widget: string
+          - hint: >-
+              Original text: 更多關於Royal Oak Concept
+              皇家橡樹概念系列陀飛輪「SPIDER-MAN」腕錶的資訊可登上愛彼官方網站瀏覽。, key: 1ce39e49
+            label: Text
+            name: 1ce39e49
+            widget: string
+          - hint: 'Original text: 了解更多, key: 25c44983'
+            label: Text
+            name: 25c44983
+            widget: string
+          - hint: 'Original text: 製作人員名單, key: 46327167'
+            label: Text
+            name: '46327167'
+            widget: string
+          - hint: 'Original text: Kevin Hart 的部份, key: 70d124f3'
+            label: Text
+            name: 70d124f3
+            widget: string
+          - hint: 'Original text: Nour Arida 的部份, key: -1c7922b4'
+            label: Text
+            name: '-1c7922b4'
+            widget: string
+          - hint: 'Original text: Loyle Carner 的部份, key: -3cf0180f'
+            label: Text
+            name: '-3cf0180f'
+            widget: string
+          - hint: 'Original text: 後期製作, key: 2d02e652'
+            label: Text
+            name: 2d02e652
+            widget: string
+          - hint: 'Original text: 特別鳴謝, key: 35513875'
+            label: Text
+            name: '35513875'
+            widget: string
+          - hint: 'Original text: 返回頂部, key: 42ba8030'
+            label: Text
+            name: 42ba8030
+            widget: string
+          - hint: 'Original text: Page Not Found, key: -40b0787c'
+            label: Text
+            name: '-40b0787c'
+            widget: string
+          - hint: >-
+              Original text: The page you are looking for doesn't exist or has
+              been moved, key: 556d64d8
+            label: Text
+            name: 556d64d8
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: #kevin-hart, key: 478f772a'
+            label: Link
+            name: 478f772a
+            widget: string
+          - hint: 'Original link: #nour-arida, key: -8ba8937'
+            label: Link
+            name: '-8ba8937'
+            widget: string
+          - hint: 'Original link: #loyle-carner, key: 6465bd28'
+            label: Link
+            name: 6465bd28
+            widget: string
+          - hint: 'Original link: #the-watch, key: -51ec850'
+            label: Link
+            name: '-51ec850'
+            widget: string
+          - hint: 'Original link: #Spider-Man-Essentials, key: -72363303'
+            label: Link
+            name: '-72363303'
+            widget: string
+          - hint: 'Original link: http://www.hypebeast.com, key: 202d1a83'
+            label: Link
+            name: 202d1a83
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: http://bit.ly/46fhsae, key: 52ac1224'
+            label: Link
+            name: 52ac1224
+            widget: string
+          - hint: 'Original link: #title-section, key: -25d0c2d3'
+            label: Link
+            name: '-25d0c2d3'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: i2d385d32
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1e2ff50b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1e5a3b8e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i6dbfd645
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i55ef36a2
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6eddcf5b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7d34db55'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5608329b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-8b3c84d'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3a2a35cc
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-24fffe27'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 52170a61
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 61e6cbe
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-8cee33d'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7255f493'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3cef7e4b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-46f41e29'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4c826482'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-22db5a84'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3094e597'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-76898a01'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-5b05b559'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3249be36'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-71d9a971'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5eabd74b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 7209583d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 7dbfe71e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-57959fbb'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 69c3ef85
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 61f971b7
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4c907c03'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6363cfb4
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-31f5376f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1e4c240d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3c546388'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-11b8bdbf'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-34451834'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-6a30db0f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-34614736'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1ddfdda5
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: ded0848
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1b9ed741
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1b7490be
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 9b213ff
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3e78cf5'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3f5a476'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-449fb13b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-6087357f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
