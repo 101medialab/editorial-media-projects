@@ -121,7 +121,7 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 1.35em;
   font-weight: 400;
@@ -141,7 +141,7 @@ blockquote {
 
 .heading-03 {
   display: flex;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 0.9vw;
   font-weight: 400;
@@ -149,7 +149,7 @@ blockquote {
 }
 
 .heading-04 {
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 0.9em;
   font-weight: 400;
@@ -203,7 +203,7 @@ blockquote {
 
 .body-03 {
   padding-right: 3em;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 1em;
   line-height: 1.4;
@@ -234,7 +234,7 @@ blockquote {
   width: 100vw;
   padding-top: 3em;
   padding-bottom: 1.2em;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #fff;
   font-size: 0.6em;
   font-weight: 400;
@@ -1319,7 +1319,7 @@ blockquote {
 }
 
 .heading-5 {
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 0.9em;
   font-weight: 400;
@@ -1337,7 +1337,7 @@ blockquote {
 
 .body-7 {
   padding-right: 3em;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #525252;
   font-size: 1em;
   line-height: 1.4;
@@ -1522,7 +1522,7 @@ blockquote {
   width: 100vw;
   padding-top: 3em;
   padding-bottom: 1.2em;
-  font-family: 'Century gothic', sans-serif;
+  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   color: #fff;
   font-size: 0.6em;
   font-weight: 400;
@@ -3982,31 +3982,31 @@ blockquote {
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Century gothic';
+/* @font-face {
+  font-family: 'itc-avant-garde-gothic-pro';
   src: url("/assets/fonts/century-gothic-bold-italic.otf") format('opentype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Century gothic';
+  font-family: 'itc-avant-garde-gothic-pro';
   src: url("/assets/fonts/century-gothic-bold.otf") format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Century gothic';
+  font-family: 'itc-avant-garde-gothic-pro';
   src: url("/assets/fonts/century-gothic.otf") format('opentype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Century gothic';
+  font-family: 'itc-avant-garde-gothic-pro';
   src: url("/assets/fonts/century-gothic-italic.otf") format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-}
+} */
