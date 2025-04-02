@@ -24,7 +24,7 @@
             <template #badge>
               <img
                 v-if="winnerBadgePath !== ''"
-                :src="winnerBadgePath"
+                :src="`${PUBLIC_URL}${winnerBadgePath}`"
                 class="absolute top-[5.1%] left-[10.7%] z-20 w-[21%]"
               />
             </template>
@@ -38,7 +38,7 @@
 <script setup>
 import { computed } from 'vue'
 import SectionItem from '~/components/Result/SectionItem.vue'
-import { WINNER_BADGE } from '~/constants'
+import { WINNER_BADGE, PUBLIC_URL } from '~/constants'
 
 const { config } = defineProps({
   config: {

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/202503-most-hearted-awards/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && ../../deploy.sh $(pwd) dist 202503-most-hearted-awards"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.11",
