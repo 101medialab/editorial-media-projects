@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-bodndi: 'bodoni-pt-variable', sans-serif;
+  --font-notos-tc: 'Noto Sans TC', sans-serif;
+  --font-primary:
+    'Helvetica Neue', Helvetica, 'Noto Sans TC', Arial, sans-serif;
+  --color-categories: #aeaa9d;
+  --color-celebrities: #889370;
+  --color-fashion: #849ca0;
+  --color-jewellery: #566270;
+  --color-brands: #b1ada2;
+  --color-trends: #5c494c;
+  --color-sportswear: #657765;
+  --color-beauty: #6e6171;
+
+  /* --breakpoint-sm: 90rem;
+  --breakpoint-md: 90rem;
+  --breakpoint-lg: 90rem;
+  --breakpoint-xl: 90rem;
+  --breakpoint-2xl: 100rem; */
+}
+
+@utility container {
+  @apply mx-auto px-[15px] md:px-[30px];
+}
+
+@layer base {
+  html {
+    @apply font-primary scroll-smooth text-white antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bodndi leading-none -tracking-[-1px];
+  }
+}
+
+@utility mask-image-frame {
+  mask-image: var(--mask-asset-url);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}

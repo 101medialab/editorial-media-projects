@@ -1,0 +1,660 @@
+[
+  {
+    "id": "celebrities",
+    "bg-color": "bg-celebrities",
+    "short-name": "Celebrities",
+    "name": "Favourite Celebrities",
+    "image": "celebrities.jpg",
+    "winner-badge": "light",
+    "items": [
+      {
+        "id": "han-so-hee",
+        "image": "celebrities/han-so-hee.jpg",
+        "name": "韓韶禧",
+        "text": "韓國女演員，代表作包括《以吾之名》、《無法抗拒的他》、《京城怪物》聞名，紮實演技加上亮麗外表收獲一眾粉絲歡心。",
+        "selected": false
+      },
+      {
+        "id": "lisa",
+        "image": "celebrities/lisa.jpg",
+        "name": "Lisa",
+        "text": "BLACKPINK 成員，舞技超群單飛後更先後推出單曲〈ROCKSTAR〉及〈NEW WOMAN〉大獲成功。",
+        "selected": true
+      },
+      {
+        "id": "rose",
+        "image": "celebrities/rose.jpg",
+        "name": "Rosé",
+        "text": "BLACKPINK 主唱，透過 2024 年末作品〈APT.〉及專輯《Rosie》再次展現過人音樂實力。",
+        "selected": false
+      },
+      {
+        "id": "taylor-swift",
+        "image": "celebrities/taylor-swift.jpg",
+        "name": "Taylor Swift",
+        "text": "美國創作歌手，流行音樂巨星，屢次打破不同音樂獎項歷史，其 ERA Tour 巡演更為多個地區帶來經濟增長，影響力驚人。",
+        "selected": false
+      },
+      {
+        "id": "kim-ji-won",
+        "image": "celebrities/kim-ji-won.jpg",
+        "name": "金智媛",
+        "text": "韓國女演員，代表作包括《太陽的後裔》、《繼承者們》，2024 年更以《淚之女王》再度備受矚目。",
+        "selected": true
+      },
+      {
+        "id": "jennie",
+        "image": "celebrities/jennie.jpg",
+        "name": "Jennie",
+        "text": "BLACKPINK 成員，同時兼顧時尚與音樂活動的她，除了活躍秀場 front row，更以〈MANTRA〉於年末帶來一場視覺與聽覺盛宴。",
+        "selected": false
+      },
+      {
+        "id": "song-hye-kyo",
+        "image": "celebrities/song-hye-kyo.jpg",
+        "name": "宋慧喬",
+        "text": "韓國頂級演員，代表作包括《藍色生死戀》及《黑暗榮耀》，活躍韓劇圈逾 15 年，每部作品均為大熱話題作。",
+        "selected": false
+      },
+      {
+        "id": "g-dragon",
+        "image": "celebrities/g-dragon.jpg",
+        "name": "G-Dragon",
+        "text": "BIGBANG 隊長，韓國流行音樂與時尚指標，2024 年再度帶來個人新作〈POWER〉，魅力不減。",
+        "selected": false
+      },
+      {
+        "id": "iu",
+        "image": "celebrities/iu.jpg",
+        "name": "IU",
+        "text": "韓國歌手兼演員，代表作包括《Palette》、《The Winning》。涉獵影視後事業再創高蜂，多次演出話題韓劇。",
+        "selected": true
+      },
+      {
+        "id": "hyun-bin-and-son-ye-jin",
+        "image": "celebrities/hyun-bin-and-son-ye-jin.jpg",
+        "name": "玄彬 孫藝珍",
+        "text": "兩位均為精湛演技受肯定的演員，自《愛的迫降》後戲假情真，婚後仍然活躍韓國影視圈。",
+        "selected": false
+      },
+      {
+        "id": "zendaya",
+        "image": "celebrities/zendaya.jpg",
+        "name": "Zendaya",
+        "text": "美國女演員，主演《蜘蛛俠》系列及以《Euphoria》屢獲艾美獎，戲外與 Tom Holland 的甜蜜互動仍為人樂道。",
+        "selected": false
+      },
+      {
+        "id": "selena-gomez",
+        "image": "celebrities/selena-gomez.jpg",
+        "name": "Selena Gomez",
+        "text": "美國歌手兼演員，活躍歐美音樂圈並於 2024 年帶來新作《艾美利亞變奏曲》。成立個人美妝品牌 Rare Beauty 大獲成功，影響力延伸至美妝界。",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "fashion",
+    "bg-color": "bg-fashion",
+    "short-name": "Fashion",
+    "name": "Fashion Items",
+    "image": "fashion.jpg",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "goyard-hobo-bag",
+        "image": "fashion/goyard-hobo.jpg",
+        "name": "Goyard\nHobo Bag",
+        "text": "以輕盈、柔韌和安全為特色，配有拉鍊開合和寬肩帶，佩戴舒適。",
+        "selected": false
+      },
+      {
+        "id": "miu-miu-beau",
+        "image": "fashion/miu-miu-beau.jpg",
+        "name": "Miu Miu\nBeau Bag",
+        "text": "以其獨特設計和高品質材質著稱，展現品牌的年輕活力和時尚感。",
+        "selected": false
+      },
+      {
+        "id": "balenciaga-rodeo",
+        "image": "fashion/balenciaga-rodeo.jpg",
+        "name": "Balenciaga\nRodeo Bag",
+        "text": "融合了現代設計與實用性，展現品牌前衛風格。",
+        "selected": true
+      },
+      {
+        "id": "hermes-herbag-mini",
+        "image": "fashion/hermes-herbag-mini.jpg",
+        "name": "Hermès\nHerbag Mini",
+        "text": "以全新尺寸重新演繹系列經典設計，體現品牌優雅傳統同時增添活力。",
+        "selected": true
+      },
+      {
+        "id": "dior-camp",
+        "image": "fashion/dior-camp.jpg",
+        "name": "Dior\nCamp Bag",
+        "text": "以其軍事風格和實用設計，融合品牌的奢華與實用性。",
+        "selected": false
+      },
+      {
+        "id": "bottega-veneta-andiamo",
+        "image": "fashion/bottega-veneta-andiamo.jpg",
+        "name": "Bottega Veneta\nAndiamo Bag",
+        "text": "以精緻的編織工藝和簡約設計，展現品牌的低調奢華。",
+        "selected": false
+      },
+      {
+        "id": "loewe-puzzle-bag",
+        "image": "fashion/loewe-puzzle-bag.jpg",
+        "name": "Loewe Puzzle Bag",
+        "text": "獨特的幾何拼接設計和多功能背法，成為品牌的標誌性作品。",
+        "selected": false
+      },
+      {
+        "id": "chanel-flap",
+        "image": "fashion/chanel-flap.jpg",
+        "name": "Chanel\nFlap Bag",
+        "text": "經典的翻蓋設計和菱格紋縫線，象徵永恆的優雅與時尚。",
+        "selected": false
+      },
+      {
+        "id": "louis-vuitton-x-murukami-speedy",
+        "image": "fashion/louis-vuitton-x-murukami-speedy.jpg",
+        "name": "Louis Vuitton x Murukami Speedy",
+        "text": "重新演繹 20 年前多彩的Monogram圖案，融合藝術與時尚，再次掀起熱潮。",
+        "selected": false
+      },
+      {
+        "id": "celine-teen-nino",
+        "image": "fashion/celine-teen-nino.jpg",
+        "name": "Celine\nTeen Nino Bag",
+        "text": "簡約的設計和實用性，體現品牌的極簡美學。",
+        "selected": true
+      },
+      {
+        "id": "loro-piana-loom",
+        "image": "fashion/loro-piana-loom.jpg",
+        "name": "Loro Piana\nLoom Bag",
+        "text": "高品質的材質和手工編織工藝，展現品牌的奢華與精緻。",
+        "selected": false
+      },
+      {
+        "id": "prada-bonnie",
+        "image": "fashion/prada-bonnie.jpg",
+        "name": "Prada\nBonnie Bag",
+        "text": "簡約的線條和實用的設計，體現品牌的現代優雅。",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "jewellery",
+    "bg-color": "bg-jewellery",
+    "short-name": "Jewellery",
+    "name": "Jewellery",
+    "image": "jewellery.jpg",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "cartier-trinity-bracelet",
+        "image": "jewellery/cartier-trinity-bracelet.jpg",
+        "name": "Cartier\nTrinity Bracelet",
+        "text": "經典三色金設計，象徵愛、忠誠與友情，極具標誌性。",
+        "selected": false
+      },
+      {
+        "id": "van-cleef-alhambra-collection",
+        "image": "jewellery/van-cleef-alhambra-collection.jpg",
+        "name": "Van Cleef & Arpels\nAlhambra Collection",
+        "text": "四葉幸運草設計，融合優雅與精緻工藝，是品牌的代表作。",
+        "selected": true
+      },
+      {
+        "id": "chaumet-bee-my-love",
+        "image": "jewellery/chaumet-bee-my-love.jpg",
+        "name": "Chaumet\nBee My Love",
+        "text": "靈感來自蜂巢的幾何設計，象徵愛情與自然的完美結合。",
+        "selected": true
+      },
+      {
+        "id": "chopard-ice-cube-ring",
+        "image": "jewellery/chopard-ice-cube-ring.jpg",
+        "name": "Chopard\nIce Cube Ring",
+        "text": "俐落方形設計，展現現代極簡風格，適合日常與正式場合。",
+        "selected": false
+      },
+      {
+        "id": "boucheron-quatre-double-white",
+        "image": "jewellery/boucheron-quatre-double-white.jpg",
+        "name": "Boucheron\nQuatre Double White",
+        "text": "融合不同材質與紋理，獨特層次感展現個性風格。",
+        "selected": false
+      },
+      {
+        "id": "buccellati-eternelle-ring",
+        "image": "jewellery/buccellati-eternelle-ring.jpg",
+        "name": "Buccellati\nEternelle Ring ",
+        "text": "意大利頂級工藝，雕刻細膩，展現永恆愛意與奢華。",
+        "selected": false
+      },
+      {
+        "id": "tiffany-lock-collection",
+        "image": "jewellery/tiffany-lock-collection.jpg",
+        "name": "Tiffany & Co.\nLock Collection",
+        "text": "象徵聯繫與守護的鎖扣設計，簡約時尚，適合日常佩戴。",
+        "selected": false
+      },
+      {
+        "id": "bvlgari-b-zero1-necklace",
+        "image": "jewellery/bvlgari-b-zero1-necklace.jpg",
+        "name": "Bvlgari\nB.zero1 Necklace",
+        "text": "靈感來自羅馬圓形競技場，經典螺旋設計展現大膽風格。",
+        "selected": false
+      },
+      {
+        "id": "chanel-coco-crush-collection",
+        "image": "jewellery/chanel-coco-crush-collection.jpg",
+        "name": "Chanel\nCoco Crush Collection",
+        "text": "菱格紋雕刻設計，延續香奈兒經典風格，低調卻極具辨識度。",
+        "selected": false
+      },
+      {
+        "id": "cartier-love-bracelet",
+        "image": "jewellery/cartier-love-bracelet.jpg",
+        "name": "Cartier\nLove Bracelet",
+        "text": "螺絲設計象徵愛情的承諾，奢華且極具收藏價值。",
+        "selected": true
+      },
+      {
+        "id": "chrome-hearts-cross-ring",
+        "image": "jewellery/chrome-hearts-cross-ring.jpg",
+        "name": "Chrome Hearts\nCross Ring",
+        "text": "標誌性哥德風格銀飾，硬派設計深受潮流人士喜愛。",
+        "selected": false
+      },
+      {
+        "id": "ctf-bond-collection",
+        "image": "jewellery/ctf-bond-collection.jpg",
+        "name": "CTF\nBond Collection",
+        "text": "展現現代愛情觀，以大膽設計與寓意深遠的細節詮釋愛意。",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "brands",
+    "bg-color": "bg-brands",
+    "short-name": "Up&Coming Brands",
+    "name": "Up & Coming Brands",
+    "image": "brands.jpg",
+    "winner-badge": "light",
+    "items": [
+      {
+        "id": "toteme",
+        "image": "brands/toteme.jpg",
+        "name": "Toteme",
+        "text": "瑞典品牌，主打極簡風格，提供高品質且百搭的女裝單品。",
+        "selected": true
+      },
+      {
+        "id": "alaia",
+        "image": "brands/alaia.jpg",
+        "name": "Alaïa",
+        "text": "法國奢侈品牌，由設計師 Azzedine Alaïa 創立，以精湛剪裁和貼身設計聞名。",
+        "selected": false
+      },
+      {
+        "id": "khaite",
+        "image": "brands/khaite.jpg",
+        "name": "Khaite",
+        "text": "美國品牌，融合現代感與經典元素，提供高品質女裝，強調細節與剪裁。",
+        "selected": false
+      },
+      {
+        "id": "kimhekim",
+        "image": "brands/kimhekim.jpg",
+        "name": "Kimhēkim",
+        "text": "專注於美學的時尚品牌，以獨特的設計和精緻的工藝，呈現夢幻與現實之間的美感。",
+        "selected": false
+      },
+      {
+        "id": "lemaire",
+        "image": "brands/lemaire.jpg",
+        "name": "Lemaire",
+        "text": "法國品牌，強調簡約設計和高品質材質，風格低調且實穿。",
+        "selected": true
+      },
+      {
+        "id": "ganni",
+        "image": "brands/ganni.jpg",
+        "name": "Ganni",
+        "text": "丹麥品牌，以活潑、年輕的設計風格著稱，提供多樣且易於搭配的女裝。",
+        "selected": false
+      },
+      {
+        "id": "shu-shu-tong",
+        "image": "brands/shu-shu-tong.jpg",
+        "name": "Shushu/Tong",
+        "text": "融合現代設計與傳統元素的時尚品牌，專注於創造獨特且富有藝術感的服裝作品。",
+        "selected": false
+      },
+      {
+        "id": "glowny",
+        "image": "brands/glowny.jpg",
+        "name": "Glowny",
+        "text": "韓國品牌，提供簡約且實用的女裝，強調舒適與日常穿搭。",
+        "selected": false
+      },
+      {
+        "id": "coperni",
+        "image": "brands/coperni.jpg",
+        "name": "Coperni",
+        "text": "法國品牌，以現代、極簡設計聞名，融合科技感與時尚元素。",
+        "selected": true
+      },
+      {
+        "id": "polene",
+        "image": "brands/polene.jpg",
+        "name": "Polène",
+        "text": "法國手工皮具品牌，專注於簡約且優雅的包款設計，品質精良。",
+        "selected": false
+      },
+      {
+        "id": "not-your-rose",
+        "image": "brands/not-your-rose.jpg",
+        "name": "Not Your Rose",
+        "text": "新興品牌，主打獨特設計和高品質材質，風格前衛且富有個性。",
+        "selected": false
+      },
+      {
+        "id": "courreges",
+        "image": "brands/courreges.jpg",
+        "name": "Courreges",
+        "text": "法國品牌，以 1960 年代的未來主義設計聞名，風格前衛且充滿創新。",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "trends",
+    "bg-color": "bg-trends",
+    "short-name": "Trends",
+    "name": "Trends",
+    "image": "trends.jpg",
+    "winner-badge": "light",
+    "items": [
+      {
+        "id": "quiet-luxury",
+        "image": "trends/quiet-luxury.jpg",
+        "name": "Quiet Luxury",
+        "text": "低調奢華，強調高品質、低調設計與經典剪裁，展現內斂品味。",
+        "selected": false
+      },
+      {
+        "id": "balletcore",
+        "image": "trends/balletcore.jpg",
+        "name": "Balletcore",
+        "text": "靈感來自芭蕾舞，運用輕盈材質、粉色調與綁帶設計，展現優雅氛圍。",
+        "selected": false
+      },
+      {
+        "id": "bowcore",
+        "image": "trends/bowcore.jpg",
+        "name": "Bowcore",
+        "text": "以蝴蝶結為核心元素，營造甜美、浪漫且女性化的穿搭風格。",
+        "selected": false
+      },
+      {
+        "id": "stewart-style",
+        "image": "trends/stewart-style.jpg",
+        "name": "Stewart Style",
+        "text": "以蘇格蘭格紋為特色，融合英倫學院風與傳統貴族氣息。",
+        "selected": false
+      },
+      {
+        "id": "luxury-fashion",
+        "image": "trends/luxury-fashion.jpg",
+        "name": "Luxury Fashion",
+        "text": "高端時尚，涵蓋奢侈品牌與頂級設計，強調精緻工藝與品質。",
+        "selected": true
+      },
+      {
+        "id": "y3k-style",
+        "image": "trends/y3k-style.jpg",
+        "name": "Y3K Style",
+        "text": "靈感來自 2000 年代未來感，融合金屬色、科技元素與誇張剪裁。",
+        "selected": false
+      },
+      {
+        "id": "barn-style",
+        "image": "trends/barn-style.jpg",
+        "name": "Barn Style",
+        "text": "農舍風格，強調天然材質、寬鬆剪裁與舒適的鄉村風情。",
+        "selected": true
+      },
+      {
+        "id": "maillard-style",
+        "image": "trends/maillard-style.jpg",
+        "name": "Maillard Style",
+        "text": "以暖色系穿搭為主，如焦糖、咖啡、巧克力色調，展現秋冬氛圍。",
+        "selected": false
+      },
+      {
+        "id": "mob-wife-style",
+        "image": "trends/mob-wife-style.jpg",
+        "name": "Mob Wife Style",
+        "text": "靈感來自黑幫妻子造型，融合皮草、大金飾與性感剪裁，展現霸氣。",
+        "selected": false
+      },
+      {
+        "id": "dress-over-pants",
+        "image": "trends/dress-over-pants.jpg",
+        "name": "Dress Over pants",
+        "text": "洋裝搭配長褲的層次穿搭風格，兼具時尚感與實用性。",
+        "selected": true
+      },
+      {
+        "id": "denim-on-denim",
+        "image": "trends/denim-on-denim.jpg",
+        "name": "Denim On Denim",
+        "text": "全身牛仔穿搭，以不同深淺、層次搭配展現率性與個性。",
+        "selected": false
+      },
+      {
+        "id": "minimalism",
+        "image": "trends/minimalism.jpg",
+        "name": "Minimalism",
+        "text": "極簡風格，強調簡約設計、乾淨線條與低飽和色調，展現高級感。",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "sportswear",
+    "bg-color": "bg-sportswear",
+    "short-name": "Sportswear Items",
+    "name": "Sportswear Items",
+    "image": "sportswear.jpg",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "nike-x-jacquemus-j-force-1-low-lx",
+        "image": "sportswear/nike-x-jacquemus-j-force-1-low-lx.jpg",
+        "name": "Nike x Jacquemus\nJ Force 1 Low LX",
+        "text": "Nike 與 Jacquemus 聯名款，將 Air Force 1 與 ACG Terra 結合，特色為手工編織鞋面與倒置 Logo。",
+        "selected": false
+      },
+      {
+        "id": "puma-speed-cat",
+        "image": "sportswear/puma-speed-cat.jpg",
+        "name": "Puma\nSpeed Cat",
+        "text": "受賽車運動啟發的經典鞋款，擁有低調設計與纖薄外型，適合日常穿搭。",
+        "selected": true
+      },
+      {
+        "id": "adidas-samba",
+        "image": "sportswear/adidas-samba.jpg",
+        "name": "Adidas\nSamba",
+        "text": "原為室內足球鞋，現已成為經典休閒鞋，以簡約設計和橡膠外底聞名。",
+        "selected": false
+      },
+      {
+        "id": "lululemon",
+        "image": "sportswear/lululemon.jpg",
+        "name": "Lululemon\nDefine Collection",
+        "text": "專為日常活動設計的服飾系列，採用柔軟、輕盈的面料，提供極致舒適感。",
+        "selected": false
+      },
+      {
+        "id": "salomon-speedcross-ribbon-sandy-liang",
+        "image": "sportswear/salomon-speedcross-ribbon-sandy-liang.jpg",
+        "name": "Salomon x Sandy Liang\nSpeedcross 3 Ribbon",
+        "text": "Salomon 與設計師 Sandy Liang 合作款，融合 Speedcross 越野跑鞋的功能性與獨特美學設計。",
+        "selected": false
+      },
+      {
+        "id": "converse-all-star-r-trekwave-z-hi",
+        "image": "sportswear/converse-all-star-r-trekwave-z-hi.jpg",
+        "name": "Converse All Sta\nTrekwave Z HI",
+        "text": "Converse 經典高筒鞋款，結合現代元素與戶外風格，適合多種場合穿著。",
+        "selected": false
+      },
+      {
+        "id": "new-balance-1906r",
+        "image": "sportswear/new-balance-1906r.jpg",
+        "name": "New Balance\n1906R",
+        "text": "復刻自 2000 年代的跑鞋，融合現代技術與復古設計，提供舒適與支撐。",
+        "selected": false
+      },
+      {
+        "id": "the-north-face-x-comme-des-garcons",
+        "image": "sportswear/the-north-face-x-comme-des-garcons.jpg",
+        "name": "The North Face x\nComme Des Garçons",
+        "text": "The North Face 與 COMME des GARÇONS 聯名系列，將功能性戶外服飾與前衛時尚設計相結合。",
+        "selected": false
+      },
+      {
+        "id": "hoka-bondi-9",
+        "image": "sportswear/hoka-bondi-9.jpg",
+        "name": "Hoka\nBondi 9",
+        "text": "品牌緩震跑鞋系列，以厚實中底和舒適腳感著稱，適合長距離跑步。",
+        "selected": false
+      },
+      {
+        "id": "on-x-loewe",
+        "image": "sportswear/on-x-loewe.jpg",
+        "name": "On x Loewe\nSneakers",
+        "text": "瑞士運動品牌 On 與西班牙奢侈品牌 Loewe 合作，推出融合高性能與時尚設計的限量系列。",
+        "selected": true
+      },
+      {
+        "id": "asics-gel-kayano-14",
+        "image": "sportswear/asics-gel-kayano-14.jpg",
+        "name": "Asics\nGel-Kayano 14",
+        "text": "Asics 經典穩定型跑鞋，提供卓越支撐與舒適度，適合長距離跑者。",
+        "selected": false
+      },
+      {
+        "id": "onitsuka-tiger-x-patou-mexico-66",
+        "image": "sportswear/onitsuka-tiger-x-patou-mexico-66.jpg",
+        "name": "Onitsuka Tiger x Patou\nMexico 66",
+        "text": "Onitsuka Tiger 與法國品牌 Patou 聯名，重新演繹經典 Mexico 66 鞋款，融合法式優雅與日式簡約。",
+        "selected": true
+      }
+    ]
+  },
+  {
+    "id": "beauty",
+    "bg-color": "bg-beauty",
+    "short-name": "Beauty",
+    "name": "Beauty Products",
+    "image": "beauty.jpg",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "chanel-no-5",
+        "image": "beauty/chanel-no-5.jpg",
+        "name": "Chanel\nNo.5",
+        "text": "香奈兒經典香水，以獨特的繁花乙醛香調聞名，象徵法式優雅。",
+        "selected": false
+      },
+      {
+        "id": "byredo-blanche",
+        "image": "beauty/byredo-blanche.jpg",
+        "name": "Byredo\nBlanche",
+        "text": "清新潔淨的香氣，融合繁花與木質調，宛如純淨棉質衣物。",
+        "selected": false
+      },
+      {
+        "id": "cle-de-peau-the-serum",
+        "image": "beauty/cle-de-peau-the-serum.jpg",
+        "name": "Clé de Peau\nThe Serum",
+        "text": "高端精華，提升肌膚光澤與彈性，為後續保養打下基礎。",
+        "selected": true
+      },
+      {
+        "id": "clarins-new-double-serum",
+        "image": "beauty/clarins-new-double-serum.jpg",
+        "name": "Clarins\nNew Double Serum",
+        "text": "經典抗老修護精華，結合水性及油性精華，有效滋潤與抗老。",
+        "selected": false
+      },
+      {
+        "id": "torriden-dive-in-mask",
+        "image": "beauty/torriden-dive-in-mask.jpg",
+        "name": "Torriden\nDive-in Mask",
+        "text": "高效保濕面膜，迅速滲透肌膚，提供深層補水。",
+        "selected": false
+      },
+      {
+        "id": "le-labo-coriandre-39",
+        "image": "beauty/le-labo-coriandre-39.jpg",
+        "name": "Le Labo\nCoriandre 39",
+        "text": "以香菜為靈感的獨特香氛，融合辛香調，個性鮮明。",
+        "selected": true
+      },
+      {
+        "id": "aesop-eleos-aromatique-hand-balm",
+        "image": "beauty/aesop-eleos-aromatique-hand-balm.jpg",
+        "name": "Aesop\nEleos Aromatique Hand Balm",
+        "text": "質地濃潤的護手霜，蘊含草本香氣，深層滋養雙手。",
+        "selected": false
+      },
+      {
+        "id": "la-prairie-skin-caviar-luxe-eye-cream",
+        "image": "beauty/la-prairie-skin-caviar-luxe-eye-cream.jpg",
+        "name": "La Prairie\nSkin Caviar Luxe Eye Cream",
+        "text": "魚子精華眼霜，奢華抗老配方，有效緊緻眼周。",
+        "selected": false
+      },
+      {
+        "id": "la-mer-creme-de-la-mer",
+        "image": "beauty/la-mer-creme-de-la-mer.jpg",
+        "name": "La Mer\nCrème de la Mer",
+        "text": "經典海洋乳霜，以深層修復與保濕功效聞名，改善乾燥肌膚。",
+        "selected": true
+      },
+      {
+        "id": "prada-beauty-lip-balm",
+        "image": "beauty/prada-beauty-lip-balm.jpg",
+        "name": "Prada\nBeauty Lip Balm",
+        "text": "結合護唇與淡彩效果，質地細膩，提供持久滋潤。",
+        "selected": false
+      },
+      {
+        "id": "fwee-pudding-pot",
+        "image": "beauty/fwee-pudding-pot.jpg",
+        "name": "Fwee\nPudding Pot",
+        "text": "韓國人氣奶凍腮紅、唇膏兩用霜，水潤質地輕盈服貼，呈現自然紅潤感。",
+        "selected": false
+      },
+      {
+        "id": "hince-highlighter",
+        "image": "beauty/hince-highlighter.jpg",
+        "name": "Hince\nHighlighter",
+        "text": "極細緻光澤的打亮產品，營造柔和透亮的光影效果。",
+        "selected": false
+      }
+    ]
+  }
+]
