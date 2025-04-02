@@ -3,5 +3,4 @@
 .env.*
 !.env.dist
 node_modules
-public
 dist

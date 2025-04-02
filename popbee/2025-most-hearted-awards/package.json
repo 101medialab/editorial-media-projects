@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/202503-most-hearted/",
+    "build": "vite build --base=/202503-most-hearted-awards/",
     "preview": "vite preview"
   },
   "dependencies": {
