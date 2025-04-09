@@ -31,6 +31,7 @@
           </SectionItem>
         </div>
       </div>
+      <slot name="footer" />
     </div>
   </section>
 </template>

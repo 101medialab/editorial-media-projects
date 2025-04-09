@@ -15,11 +15,19 @@
 
     <div>
       <SectionCategory
-        v-for="item in config"
+        v-for="(item, index) in config"
         :id="`category-${item.id}`"
         :key="`section.category.${item.id}`"
         :config="item"
-      />
+      >
+        <template #footer>
+          <footer v-if="index === config.length - 1" class="mt-[60px]">
+            <small class="text-[11px]"
+              >* Images from Getty Images & Brands</small
+            >
+          </footer>
+        </template>
+      </SectionCategory>
     </div>
   </div>
 </template>
