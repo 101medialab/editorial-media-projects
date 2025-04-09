@@ -59,6 +59,6 @@ const { item, disabled } = defineProps({
 
 const image = computed(() => item.image)
 const name = computed(() => item.name)
-const text = computed(() => item.text)
+const text = computed(() => item.long_text ?? item.text)
 const selected = computed(() => item.selected ?? false)
 </script>
