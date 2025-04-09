@@ -19,15 +19,15 @@
         "image": "celebrities/lisa.jpg",
         "name": "Lisa",
         "text": "BLACKPINK 成員，舞技超群單飛後更先後推出單曲〈ROCKSTAR〉及〈NEW WOMAN〉大獲成功。",
-        "long_text": "BLACKPINK 主唱 Rosé 以獨特的嗓音和強烈的舞台魅力著稱，2024 年推出個人專輯《Rosie》及單曲〈APT.〉，展現更加成熟的音樂風格。她的創作才華與細膩情感表達，讓這張專輯成為全球樂迷的熱議焦點，進一步鞏固其「K-Pop 實力派主唱」的地位。",
-        "selected": true
+        "selected": false
       },
       {
         "id": "rose",
         "image": "celebrities/rose.jpg",
         "name": "Rosé",
         "text": "BLACKPINK 主唱，透過 2024 年末作品〈APT.〉及專輯《Rosie》再次展現過人音樂實力。",
-        "selected": false
+        "long_text": "BLACKPINK 主唱 Rosé 以獨特的嗓音和強烈的舞台魅力著稱，2024 年推出個人專輯《Rosie》及單曲〈APT.〉，展現更加成熟的音樂風格。她的創作才華與細膩情感表達，讓這張專輯成為全球樂迷的熱議焦點，進一步鞏固其「K-Pop 實力派主唱」的地位。",
+        "selected": true
       },
       {
         "id": "taylor-swift",

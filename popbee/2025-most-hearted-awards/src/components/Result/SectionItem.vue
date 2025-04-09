@@ -39,7 +39,7 @@
           {{ name }}
         </p>
       </div>
-      <p class="text-center text-[18px] leading-[23.4px]">
+      <p class="text-center text-base leading-[24px]">
         {{ text }}
       </p>
     </div>
