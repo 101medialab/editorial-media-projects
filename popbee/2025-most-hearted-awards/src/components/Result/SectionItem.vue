@@ -2,7 +2,7 @@
   <div class="group/item flex flex-col">
     <div class="flex flex-1 flex-col">
       <div class="mb-[15px] max-sm:px-[26px]">
-        <div class="relative">
+        <div class="group relative">
           <div class="absolute inset-0">
             <div
               :style="{
@@ -16,7 +16,7 @@
               style="mask-position: initial"
             >
               <img
-                class="w-full"
+                class="w-full transition-transform duration-300 group-hover:scale-105"
                 :src="`${PUBLIC_URL}${image}`"
                 :alt="name"
                 draggable="false"
@@ -30,6 +30,11 @@
             draggable="false"
           />
           <slot name="badge" />
+          <a
+            class="absolute inset-0 z-20 block"
+            :href="url"
+            target="_blank"
+          ></a>
         </div>
       </div>
       <div class="@container">
@@ -61,4 +66,5 @@ const image = computed(() => item.image)
 const name = computed(() => item.name)
 const text = computed(() => item.long_text ?? item.text)
 const selected = computed(() => item.selected ?? false)
+const url = computed(() => item.url)
 </script>
