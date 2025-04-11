@@ -18,7 +18,8 @@
       </p>
       <a
         class="inline-block min-w-[191px] rounded-full bg-white px-[40px] py-[11px] text-base font-medium text-[#333] hover:opacity-85"
-        href="/"
+        href="https://popbee.com/features/most-hearted-awards-2025"
+        target="_blank"
         >查看投票結果</a
       >
     </div>
