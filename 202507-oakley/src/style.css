@@ -1,0 +1,155 @@
+@import 'tailwindcss';
+
+@theme {
+  --text-responsive: clamp(1.2rem, 2.5vw, 2.7rem);
+  --text-m-responsive: clamp(1.1rem, 3.7vw, 1.8rem);
+  --font-roboto: 'Roboto Mono', sans-serif;
+}
+
+body {
+  @apply bg-[#000] text-[#fff];
+
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container-fluid {
+  @apply px-[15px] md:px-[25px];
+
+  &.full-desktop {
+    @apply md:px-0;
+  }
+}
+
+h1 {
+  @apply font-bold text-[43px] md:text-[65px] leading-[100%] md:leading-[110%] tracking-[-4%] md:tracking-normal;
+}
+
+h3 {
+  @apply text-[20px] md:text-[30px] leading-[110%] uppercase font-bold;
+}
+
+h2 {
+  @apply font-bold text-[30px] md:text-[49px] uppercase leading-[110%];
+}
+
+.image-background {
+  @apply relative w-full pb-[56.25%] bg-cover bg-center bg-no-repeat flex flex-col justify-between;
+}
+
+.section-1-container {
+  @apply relative w-full;
+
+  p {
+    @apply uppercase text-[10px] md:text-[15px] font-bold;
+  }
+
+  .image-background {
+    @apply pb-0;
+  }
+
+  .overlay-text {
+    @apply hidden lg:flex w-[50%] h-full absolute text-[#FFF] top-0 left-0 flex-col justify-between pl-[25px] pt-[57px] pb-[65px];
+
+    h3 {
+      @apply mt-[10px] max-w-[80%];
+    }
+  }
+
+  .mobile-title {
+    @apply lg:hidden py-[20px] text-center;
+  }
+
+  .mobile-meta {
+    @apply lg:hidden text-center;
+
+    h3 {
+      @apply mt-[24px] max-w-[320px] md:max-w-[500px] mx-auto mb-[20px];
+    }
+  }
+}
+
+.text-section {
+  @apply text-justify max-w-[640px] mx-auto my-[35px] px-[15px];
+
+  h2 {
+    @apply mb-[15px] tracking-[-2%] leading-[110%];
+  }
+
+  p {
+    @apply text-[12px] md:text-[14px] leading-[130%];
+
+    &:not(:last-child) {
+      @apply mb-[15px];
+    }
+  }
+}
+
+.section-2-container {
+  @apply my-[35px];
+
+  .bg-wrapper {
+    @apply pb-[113%] md:pb-[56.25%];
+
+    background-image: url('~/assets/oakley-03.jpg');
+
+    p {
+      @apply text-m-responsive md:text-responsive absolute top-0 left-0 leading-[110%] font-bold text-justify w-full px-[18px] md:px-[40px] h-full flex items-center;
+    }
+  }
+}
+
+.inner-image {
+  @apply max-w-[200px] md:max-w-[285px] mx-auto;
+}
+
+.section-3-container {
+  .bg-wrapper {
+    @apply relative;
+
+    background-image: url('~/assets/oakley-07.jpg');
+  }
+
+  .overlay-text {
+    @apply absolute top-0 right-0 h-full w-[50%] flex justify-center items-center text-right px-[15px] md:px-[60px];
+
+    h2 {
+      @apply md:max-w-[545px] md:text-[30px] lg:text-[49px] text-[22px];
+    }
+  }
+}
+
+.section-4-container {
+  .bg-wrapper {
+    @apply relative;
+
+    background-image: url('~/assets/oakley-12.jpg');
+  }
+
+  .overlay-text {
+    @apply absolute top-0 left-0 h-full w-[50%] flex justify-center items-center px-[15px] md:px-[60px];
+
+    h2 {
+      @apply md:max-w-[545px] md:text-[30px] lg:text-[49px] text-[22px];
+    }
+  }
+}
+
+.section-5-container {
+  .bg-wrapper {
+    @apply relative;
+
+    background-image: url('~/assets/oakley-16.jpg');
+  }
+
+  .overlay-text {
+    @apply absolute top-0 left-0 h-full w-[50%] flex justify-center items-center px-[30px] md:px-[60px];
+
+    h2 {
+      @apply md:max-w-[545px] md:text-[30px] lg:text-[49px] text-[22px];
+    }
+  }
+
+  .overlay-image {
+    @apply absolute top-0 right-0 h-full w-[50%] flex justify-center items-center px-[30px] md:px-[60px];
+  }
+}

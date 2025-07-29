@@ -1,0 +1,24 @@
+{
+  "name": "2507-oakley",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/202507-oakley/",
+    "preview": "vite preview",
+    "deploy": "npm run build && ../../deploy.sh $(pwd) dist 202507-oakley"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.11",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/upgrade": "^4.1.11",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "vite": "^7.0.4"
+  }
+}
