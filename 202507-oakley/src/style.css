@@ -88,12 +88,12 @@ h2 {
   @apply my-[35px];
 
   .bg-wrapper {
-    @apply pb-[113%] md:pb-[56.25%];
+    @apply pb-0;
 
     background-image: url('~/assets/oakley-03.jpg');
 
     p {
-      @apply text-m-responsive md:text-responsive absolute top-0 left-0 leading-[110%] font-bold text-justify w-full px-[18px] md:px-[40px] h-full flex items-center;
+      @apply py-[30px] text-m-responsive md:text-responsive leading-[110%] font-bold text-justify w-full px-[18px] md:px-[40px] h-full flex items-center;
     }
   }
 }
