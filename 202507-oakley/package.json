@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "vite build --base=/202507-oakley/",
     "preview": "vite preview",
-    "deploy": "npm run build && ../../deploy.sh $(pwd) dist 202507-oakley"
+    "deploy": "npm run build && ../deploy.sh $(pwd) dist 202507-oakley"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "autoprefixer": "^10.4.21",
+    "pym.js": "^1.3.2",
     "tailwindcss": "^4.1.11",
     "vue": "^3.5.17"
   },
