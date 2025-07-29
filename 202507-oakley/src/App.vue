@@ -207,7 +207,7 @@
       </picture>
       <picture>
         <source media="(min-width: 768px)" :srcset="img11" />
-        <img class="w-full" :src="img11" alt="Oakley Future Genesis" />
+        <img class="w-full object-cover h-full" :src="img11" alt="Oakley Future Genesis" />
       </picture>
     </div>
   </section>
