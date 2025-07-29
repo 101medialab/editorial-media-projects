@@ -26,7 +26,8 @@
       Brushed Nickel frames with the Plasma lenses and spent all summer working to buy them. The euphoria I felt
       unboxing my pair was a sign of the times. Whether or not we realized it then, Oakley was (and is) embedded in
       countless core millennial cultural memories, and is an inseparable part of the era’s style identity. Michael
-      Jordan and Dennis Rodman on a championship run. Brad Pitt in Fight Club; Wesley Snipes in Blade. Ato Boldon at the
+      Jordan and Dennis Rodman on a championship run. Brad Pitt in <i>Fight Club</i>; Wesley Snipes in <i>Blade</i>. Ato
+      Boldon at the
       Sydney Olympics. The list goes on. And, back then, wearing a pair was a chance to feel some of that magic—to touch
       the same zeitgeist wave.</p>
     <p>Our Oakley fixation in the contemporary traces its roots directly back to that era, when wrap-around frames
@@ -51,8 +52,8 @@
       focuses on resurfacing and revamping choice archival items. “But through the dormant years, the brand was relooked
       at as having the most progressive designs out there. Now both subcultures and the mainstream love them.”</p>
     <p>With an identity so firmly pegged to the ‘90s and Y2K, it was inevitable for Oakley to reappear as part of the
-      trend cycle. In the late 2010s, as Gen-Z discovered early aughts style and began unearthing Millennial relics,
-      deadstock pairs of X-Metal Romeo, Juliet, and Mars frames started showing up on marketplaces with asking prices
+      trend cycle. In the late 2010s, as Gen-Z discovered early aughts style and began unearthing Millennial relics.
+      Deadstock pairs of X-Metal Romeo, Juliet, and Mars frames started showing up on marketplaces with asking prices
       hundreds of dollars over their original MSRPs.</p>
     <p>The hype returned, ushered in by a generation too young to fully recall Oakley’s ‘90s conquest. And, as they
       showed off their rare finds and moodboards built from archival brand imagery, Millennials were also reminded of a
@@ -130,7 +131,8 @@
     <p>Kyle is the co-founder and creative director of Brain Dead and heads up Oakley Factory Team, an ongoing
       collaborative project that reinterprets iconic Oakley models for the present.</p>
 
-    <p>You’re a subcultures guy. What’s your perspective on Oakley’s role within ‘90s and early ‘00s subcultures?
+    <p><span class="uppercase">You’re a subcultures guy. What’s your perspective on Oakley’s role within ‘90s and early
+        ‘00s subcultures?</span><br />
       Oakley’s design language has resonated with so many subcultures, from sports to the avant-garde. The futuristic
       functional design has inspired all types of creatives for years. Oakley just did what they wanted. During the
       ‘90s, postmodernism was the wave, allowing people to be playful with design language. Oakley was a child of that.
@@ -232,7 +234,8 @@
       approach
       every decision — through the lens of function and feeling.</p>
 
-    <p>Your most recent collaboration featured the Oakley Plantaris frames. Tell me about them.<br />
+    <p><span class="uppercase">Your most recent collaboration featured the Oakley Plantaris frames. Tell me about
+        them.</span><br />
       Oakley has decades of experience in optics and material innovation, things we wouldn’t be able to develop at the
       same scale. Good running eyewear should disappear when you wear it. It shouldn’t bounce, fog up, or distort your
       vision. The Plantaris nails that. It’s ultra-light, wraps perfectly to the face, and the optics are crystal clear
@@ -243,7 +246,8 @@
       something
       with attitude. That balance is why we chose it. It’s pure Oakley, but it also feels unmistakably SATISFY. </p>
 
-    <p>What do you hope your customers are discovering through each of the collaborative drops?<br />
+    <p><span class="uppercase">What do you hope your customers are discovering through each of the collaborative
+        drops?</span><br />
       Every drop is an opportunity to rethink what performance looks like. It’s not about following the same formulas.
       It’s about giving people gear that enhances their experience while staying true to who they are. If a runner puts
       on
@@ -264,14 +268,14 @@
 
     <p><span class="uppercase">How would you describe Oakley’s design philosophy and aesthetic?</span><br />
       I think about philosophy, yes, but I would never begin with just aesthetics. If we are doing it correctly, we are
-      considering all aspects—function, emotion,z and aesthetics. Did I mention the fourth aspect? Not following the
+      considering all aspects—function, emotion, and aesthetics. Did I mention the fourth aspect? Not following the
       rules.</p>
 
-    <p><span class="uppercase">But, when I think about design philosophies throughout time that resonate with Oakley,
-        most of them stem from a
-        functional need and the enhancement of human performance—i.e. what is the problem that we need to
-        solve?</span><br />
-      Great designs center on functionality—solving the problem at hand for the wearer. Only then do we move on to
+    <p>But, when I think about design philosophies throughout time that resonate with Oakley,
+      most of them stem from a
+      functional need and the enhancement of human performance—i.e. what is the problem that we need to
+      solve?</p>
+    <p>Great designs center on functionality—solving the problem at hand for the wearer. Only then do we move on to
       aesthetics. That said, aesthetics are a huge part of the process because they do play a part in the psychosomatics
       of performance. Our designs help athletes perform, but they also have to look like they do, meaning they can’t
       just
@@ -321,22 +325,29 @@
     </div>
   </section>
   <section class="text-section">
-    <p><span class="uppercase">What role do collaborations play in furthering Oakley’s brand identity and design language? </span><br />
-    Collaborations are extremely important for us. But we have to be very selective about the brands we partner with. It
-    needs to be a steady balance and a very meaningful, relevant connection. I personally enjoy partnerships with brands
-    that have opinions about design and experience with the design process. Then, it is truly a collaborative effort at
-    the highest level of creativity. </p>
+    <p><span class="uppercase">What role do collaborations play in furthering Oakley’s brand identity and design
+        language? </span><br />
+      Collaborations are extremely important for us. But we have to be very selective about the brands we partner with.
+      It
+      needs to be a steady balance and a very meaningful, relevant connection. I personally enjoy partnerships with
+      brands
+      that have opinions about design and experience with the design process. Then, it is truly a collaborative effort
+      at
+      the highest level of creativity. </p>
 
-    <p><span class="uppercase">What are your hopes for the brand in the future, whether it’s product innovation, a dream brand you want to
-    collaborate with, or a design you want to re-introduce? </span><br />
-    We have a lot of projects that have never seen the light of day. Brilliant solutions and elegant executions, but
-    they’re just not ready for the world yet. I would love to see these great ideas come to fruition before relaunching
-    something we’ve already done.</p>
+    <p><span class="uppercase">What are your hopes for the brand in the future, whether it’s product innovation, a dream
+        brand you want to
+        collaborate with, or a design you want to re-introduce? </span><br />
+      We have a lot of projects that have never seen the light of day. Brilliant solutions and elegant executions, but
+      they’re just not ready for the world yet. I would love to see these great ideas come to fruition before
+      relaunching
+      something we’ve already done.</p>
   </section>
   <section class="section-5-container">
     <div class="image-background bg-wrapper">
       <div class="overlay-text">
-        <h2>“We’re not here to recreate the past because that’s not how you build a future.”<br />—NICK<br />Garfias</h2>
+        <h2>“We’re not here to recreate the past because that’s not how you build a future.”<br />—NICK<br />Garfias
+        </h2>
       </div>
       <div class="overlay-image">
         <picture>
