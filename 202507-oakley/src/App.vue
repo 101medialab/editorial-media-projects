@@ -196,14 +196,14 @@
     </p>
   </section>
   <section class="container-fluid">
-    <div class="flex md:gap-x-[40px] gap-x-[10px] object-cover h-full">
+    <div class="flex md:gap-x-[40px] gap-x-[10px]">
       <picture>
         <source media="(min-width: 768px)" :srcset="img09" />
         <img class="w-full hidden md:block" :src="img09" alt="Oakley Future Genesis" />
       </picture>
       <picture>
         <source media="(min-width: 768px)" :srcset="img10" />
-        <img class="w-full" :src="img10" alt="Oakley Future Genesis" />
+        <img class="w-full object-cover h-full" :src="img10" alt="Oakley Future Genesis" />
       </picture>
       <picture>
         <source media="(min-width: 768px)" :srcset="img11" />
