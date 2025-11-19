@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="container-fluid paragraph-section mt-[50px] md:mt-[90px]">
+  <div class="container-fluid paragraph-section mt-[50px] md:mt-[70px]">
     <div class="main-wrapper">
       <div class="content-wrapper">
         <p>At 8PM on a Tuesday night in Milton Keynes, United Kingdom, Yuki Tsunoda appears on-screen with the ease
@@ -62,7 +62,7 @@
       (Right) Jacket: Umbro x Slam Jam</div>
   </div>
 
-  <div class="container-fluid paragraph-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid paragraph-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <div class="content-wrapper">
         <p>The larger picture is no less complicated. Tsunoda’s seat for next season remains unconfirmed, and each race
@@ -109,7 +109,7 @@
     <div class="mobile-caption">(Right) Full Look: 424</div>
   </div>
 
-  <div class="container-fluid paragraph-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid paragraph-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <div class="content-wrapper">
         <p>Next weekend he will be in Las Vegas, driving a street race held beneath neon lights at hours that unsettle
@@ -143,7 +143,7 @@
     </div>
   </div>
 
-  <div class="container-fluid qa-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid qa-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <div class="content-wrapper">
         <h3>Christopher Morency: Yuki, what’s up? I apologize for this dark room in Amsterdam. Looks like it’s dark
@@ -198,7 +198,7 @@
       (Right) Top: _J.L-A.L_, Pants: 424, Shoes: Dr. Martens, Rings: Tom Wood, Necklaces: Chrome Hearts</div>
   </div>
 
-  <div class="container-fluid qa-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid qa-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <h2>“I’ve started to figure things out. I don’t try to force myself to be funny; that just feels exhausting.”</h2>
       <div class="content-wrapper">
@@ -245,10 +245,11 @@
           <img :src="bannerD" alt="YUKI" />
         </picture>
       </div>
+      <div class="text-[9px] md:text-[14px] mt-[10px] leading-[1.3em]">Jacket: Umbro x Slam Jam</div>
     </div>
   </div>
 
-  <div class="container-fluid qa-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid qa-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <h2>“I want to be world champion and the fastest.”</h2>
       <div class="content-wrapper">
@@ -302,7 +303,7 @@
     <div class="mobile-caption">(Right) Top: Hypebeast x Oracle Redbull Racing x Castore Polo Shirt, Hat: Oracle Red
       Bull Racing New Era 9FORTY Las Vegas GP Night Race Cap, Shoes: Reese Cooper</div>
   </div>
-  <div class="container-fluid qa-section mt-[30px] md:mt-[90px]">
+  <div class="container-fluid qa-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <h2>“With my busy schedule, there isn’t a lot of time to sit down, relax, or take a breath. I recently lost who I
         am.”</h2>

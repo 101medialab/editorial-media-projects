@@ -83,7 +83,7 @@ a {
 }
 
 #intro-section {
-  @apply pt-[50px] md:pt-[90px];
+  @apply pt-[50px] md:pt-[70px];
 
   .main-wrapper {
     @apply w-full lg:max-w-[820px] px-[15px] lg:px-[25px] md:mx-auto;
@@ -99,7 +99,7 @@ a {
 }
 
 .images-section {
-  @apply mt-[30px] md:mt-[90px];
+  @apply mt-[30px] md:mt-[70px];
 
   .main-wrapper {
     @apply px-[15px] lg:px-[25px] flex gap-x-[15px];
@@ -119,7 +119,7 @@ a {
 }
 
 .image-section {
-  @apply mt-[30px] md:mt-[90px];
+  @apply mt-[30px] md:mt-[70px];
 
   .main-wrapper {
     @apply px-[15px] lg:px-[25px];
