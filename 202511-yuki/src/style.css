@@ -110,7 +110,7 @@ a {
   }
 
   .mobile-caption {
-    @apply text-[9px] md:hidden leading-[1.3em];
+    @apply mt-[10px] px-[15px] lg:px-[25px] text-[9px] md:hidden leading-[1.3em];
   }
 }
 
