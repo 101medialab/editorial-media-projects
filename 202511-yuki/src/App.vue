@@ -334,7 +334,7 @@
 
       <div class="container-fluid">
         <div class="content-wrapper">
-          <div class="text-center uppercase text-[9px] leading-[1.3em] mt-[60px] md:mt-[70px]">Written By: Christopher
+          <div class="text-center uppercase text-[9px] leading-[1.3em] mt-[60px] md:mt-[70px] mb-[60px] md:mb-[70px]">Written By: Christopher
             Morency, Photographed By: Ellis Earl, Styled By: Talia Restrepo, Editor-In-Chief: Madrell Stinney, Executive
             Producer: Keana Sy, Senior Producer: Catriona McCormick, Global Creative Operations Manager: Gabriella
             Koppelman, Director of Video: Kyle Reyes, Video Producer: Afeez Amao and Anisah Moosa, Web Developer: Warren

@@ -179,37 +179,3 @@ a {
     @apply px-[15px] lg:px-[25px];
   }
 }
-
-#section-9 {
-  @apply mt-[60px] md:mt-[70px] pb-0 lg:pb-[40px];
-
-  .main-wrapper {
-    h2 {
-      @apply w-full lg:max-w-[840px] mx-auto px-[15px] lg:px-[25px] leading-[1em];
-    }
-
-    .content-wrapper {
-      h3 {
-        &:not(:first-child) {
-          @apply mt-[30px];
-        }
-
-        &:first-child {
-          @apply mt-[60px] md:mt-[70px];
-        }
-      }
-
-      p {
-        @apply mt-[5px];
-
-        &+p {
-          @apply mt-[30px];
-        }
-      }
-    }
-
-    .closing {
-      @apply text-center uppercase text-[9px] mt-[40px] md:mt-[70px] px-[15px] lg:px-0;
-    }
-  }
-}
