@@ -16,10 +16,6 @@ body {
   @apply max-w-full lg:max-w-[1600px] mx-auto;
 }
 
-.highlight {
-  @apply text-[#3773E1];
-}
-
 h2 {
   @apply text-center text-[22px] md:text-[36px] uppercase;
 }
@@ -29,7 +25,15 @@ h3 {
 }
 
 p {
-  @apply text-[18px] leading-[1.7em];
+  @apply text-[18px] leading-[1.7em] tracking-[-0.01em];
+
+  a {
+    @apply no-underline text-[#3773E1];
+
+    &:hover {
+      @apply opacity-80;
+    }
+  }
 }
 
 a {
@@ -41,12 +45,12 @@ a {
 
   h3 {
     &:not(:first-child) {
-      @apply mt-[30px];
+      @apply mt-[35px];
     }
   }
 
   h3+p {
-    @apply mt-[5px];
+    @apply mt-[10px];
   }
 }
 
@@ -155,7 +159,7 @@ a {
     .content-wrapper {
       h3 {
         &:not(:first-child) {
-          @apply mt-[30px];
+          @apply mt-[35px];
         }
 
         &:first-child {
@@ -164,10 +168,10 @@ a {
       }
 
       p {
-        @apply mt-[5px];
+        @apply mt-[10px];
 
         &+p {
-          @apply mt-[30px];
+          @apply mt-[35px];
         }
       }
     }

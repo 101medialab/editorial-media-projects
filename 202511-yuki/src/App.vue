@@ -30,8 +30,8 @@
           of someone accustomed to perpetual transit. The lighting is muted, the room behind him carries the neutral
           anonymity of a space used only briefly. He sits in a simply black t-shirt and a couple of Chrome Hearts
           chains he wears almost casually.</p>
-        <p>That same morning he arrived from Sāo Paolo, enduring what <span class="highlight">he later
-            described</span> as “one of the worst weekends” of his Formula 1 career. It was a race late in the
+        <p>That same morning he arrived from Sāo Paolo, enduring what <a href="https://www.formula1.com/en/latest/article/tsunoda-concedes-nothing-worked-in-sao-paulo-after-one-of-the-worst-weekends.5NWCW4jKmjcR3P43oEUJ1u" target="_blank">he later
+            described</a> as “one of the worst weekends” of his Formula 1 career. It was a race late in the
           season defined by a double time penalty, struggles with the grip, and an overall sense of frustration.</p>
       </div>
     </div>
