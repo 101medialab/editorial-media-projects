@@ -68,7 +68,7 @@
         <p>The larger picture is no less complicated. Tsunoda’s seat for next season remains unconfirmed, and each race
           now carries the implicit weight of evaluation. The position he occupies, often theatrically referred to as the
           “cursed second seat” within the Oracle Red Bull Racing team orbit, is one of the most scrutinized in sport. It
-          sits beside Dutch teammate Max Verstappen, now a three-time world champion, and has cycled through several
+          sits beside Dutch teammate Max Verstappen, now a four-time world champion, and has cycled through several
           talented drivers who struggled to withstand the comparison. Few environments ask more of a young driver, and
           fewer still allow so little margin for error.
         </p>
@@ -112,7 +112,7 @@
   <div class="container-fluid paragraph-section mt-[30px] md:mt-[70px]">
     <div class="main-wrapper">
       <div class="content-wrapper">
-        <p>Next weekend he will be in Las Vegas, driving a street race held beneath neon lights at hours that unsettle
+        <p>This weekend he will be in Las Vegas, driving a street race held beneath neon lights at hours that unsettle
           even the most seasoned drivers. “I never really see the city,” says Tsunoda. “You land, you go to the track,
           you do everything, and then you leave.”
         </p>
