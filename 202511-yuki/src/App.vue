@@ -54,12 +54,11 @@
           <source media="(min-width: 768px)" :srcset="bannerA2" />
           <img :src="bannerA2" alt="YUKI" />
         </picture>
-        <div class="caption">Jacket: Umbro x Slam Jam</div>
+        <!-- <div class="caption">Jacket: Umbro x Slam Jam</div> -->
       </div>
     </div>
     <div class="mobile-caption">(Left) Jacket: Spencer Badu x Alpha Industries, Pants: _J.L-A.L_, Shoes: 424, Rings:
-      Tom Wood, Necklaces: Chrome Hearts
-      (Right) Jacket: Umbro x Slam Jam</div>
+      Tom Wood, Necklaces: Chrome Hearts</div>
   </div>
 
   <div class="container-fluid paragraph-section mt-[30px] md:mt-[70px]">
