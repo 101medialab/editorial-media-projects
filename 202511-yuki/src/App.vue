@@ -136,7 +136,7 @@
 
   <div class="video-section">
     <div class="main-wrapper">
-      <video autoplay loop muted :poster="videoB">
+      <video class="mx-auto" autoplay loop muted :poster="videoB">
         <source src="https://hypebeast.com/image/2025/11/19/yuki-video-02.mp4" type="video/mp4">
         </source>
       </video>
