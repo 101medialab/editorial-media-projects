@@ -54,11 +54,12 @@
           <source media="(min-width: 768px)" :srcset="bannerA2" />
           <img :src="bannerA2" alt="YUKI" />
         </picture>
-        <!-- <div class="caption">Jacket: Umbro x Slam Jam</div> -->
+        <div class="caption">Jacket: Umbro x Slam Jam</div>
       </div>
     </div>
     <div class="mobile-caption">(Left) Jacket: Spencer Badu x Alpha Industries, Pants: _J.L-A.L_, Shoes: 424, Rings:
-      Tom Wood, Necklaces: Chrome Hearts</div>
+      Tom Wood, Necklaces: Chrome Hearts
+      (Right) Jacket: Umbro x Slam Jam</div>
   </div>
 
   <div class="container-fluid paragraph-section mt-[30px] md:mt-[70px]">
@@ -135,7 +136,7 @@
 
   <div class="video-section">
     <div class="main-wrapper">
-      <video class="mx-auto" autoplay loop muted :poster="videoB">
+      <video autoplay loop muted :poster="videoB">
         <source src="https://hypebeast.com/image/2025/11/19/yuki-video-02.mp4" type="video/mp4">
         </source>
       </video>
