@@ -7,7 +7,7 @@
         <div class="photography-by">Photography by<br />Ellis Earl<br />Styled By<br />Talia Restrepo</div>
       </div>
       <div class="image-wrapper">
-        <video autoplay loop muted :poster="videoA">
+        <video autoplay loop muted playsinline :poster="videoA">
           <source src="https://hypebeast.com/image/2025/11/19/yuki-video-01.mp4" type="video/mp4">
           </source>
         </video>
@@ -136,7 +136,7 @@
 
   <div class="video-section">
     <div class="main-wrapper">
-      <video class="mx-auto" autoplay loop muted :poster="videoB">
+      <video class="mx-auto" autoplay loop muted playsinline :poster="videoB">
         <source src="https://hypebeast.com/image/2025/11/19/yuki-video-02.mp4" type="video/mp4">
         </source>
       </video>
