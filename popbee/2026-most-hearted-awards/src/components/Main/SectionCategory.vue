@@ -1,20 +1,26 @@
 <template>
-  <section ref="el" :class="[bgColor]" class="py-[60px] text-center">
-    <div class="mx-auto max-w-[1600px] px-[15px] md:px-[30px]">
-      <header class="mb-[60px]">
-        <p
-          class="font-bodndi mb-[20px] text-[28px] leading-none tracking-[-1.44px] italic md:text-[36px]"
+  <section ref="el" :class="[bgColor]" class="py-[60px] md:py-[80px]">
+    <div
+      class="mx-auto flex max-w-[1600px] flex-col px-[15px] md:px-[30px]"
+      :class="isEven ? 'md:flex-row-reverse' : 'md:flex-row'"
+    >
+      <div
+        class="mb-[40px] text-center md:mb-0 md:flex md:w-[195px] md:shrink-0 md:items-start md:justify-center"
+      >
+        <h4
+          class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic md:text-[60px] md:leading-none md:tracking-[-2.4px]"
+          :class="isEven ? 'md:vertical-rl' : 'md:vertical-lr'"
         >
-          Most Hearted Awards
-        </p>
-        <h4 class="text-[46px] tracking-[-1.8px] uppercase md:text-[60px]">
           {{ name }}
         </h4>
-      </header>
+      </div>
 
-      <div class="group/category" :class="{ selected: selectedItems.length }">
+      <div
+        class="group/category flex-1"
+        :class="{ selected: selectedItems.length }"
+      >
         <div
-          class="grid grid-cols-2 justify-center gap-x-[15px] gap-y-[60px] sm:grid-cols-3 md:grid-cols-4 md:gap-x-[30px] xl:grid-cols-6"
+          class="grid grid-cols-2 gap-x-[15px] gap-y-[60px] sm:grid-cols-3 md:gap-x-[60px]"
         >
           <SectionItem
             v-for="item in items"
@@ -27,8 +33,9 @@
           />
         </div>
       </div>
-      <slot name="footer" />
+      <div class="hidden md:block md:w-[195px] md:shrink-0"></div>
     </div>
+    <slot name="footer" />
   </section>
 </template>
 
@@ -37,14 +44,20 @@ import { computed, ref, useTemplateRef, inject } from 'vue'
 import SectionItem from '~/components/Main/SectionItem.vue'
 import { VOTES_EACH_CATEGORY } from '~/constants'
 
-const { config } = defineProps({
+const { config, index } = defineProps({
   config: {
     type: Object,
     required: true,
   },
+  index: {
+    type: Number,
+    default: 0,
+  },
 })
 
 const emit = defineEmits(['selected-items', 'auto-next-section'])
+
+const isEven = computed(() => index % 2 !== 0)
 
 const selectedItems = ref([])
 const el = useTemplateRef('el')

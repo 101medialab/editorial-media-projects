@@ -1,14 +1,19 @@
 <template>
   <div ref="root">
-    <section>
-      <div
-        class="w-full h-64 md:h-96 bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center"
-      >
-        <h1 class="text-white text-4xl md:text-6xl font-bold text-center">
-          Most Hearted Awards 2026
-        </h1>
-      </div>
+    <section class="main-banner">
+      <img
+        :src="`${PUBLIC_URL}mob-hero-banner.jpg`"
+        alt="Most Hearted Awards 2026"
+        class="w-full sm:hidden"
+      />
+      <img
+        :src="`${PUBLIC_URL}hero-banner.jpg`"
+        alt="Most Hearted Awards 2026"
+        class="hidden w-full sm:block"
+      />
     </section>
+
+    <section class="intro"></section>
 
     <SectionCategories :config="config" />
     <div :class="{ 'pointer-events-none': completed || submitting }">
@@ -17,6 +22,7 @@
         :id="`category-${item.id}`"
         :key="`section.category.${item.id}`"
         :config="item"
+        :index="index"
         ref="sectionCategoriesEl"
         @selected-items="onSelected"
         @auto-next-section="onAutoNextSection"
@@ -63,7 +69,7 @@ import pym from 'pym.js'
 import SectionCategories from '~/components/Main/SectionCategories.vue'
 import SectionCategory from '~/components/Main/SectionCategory.vue'
 import config from '~/config.json'
-import { VOTES_EACH_CATEGORY, API_URL } from '~/constants'
+import { VOTES_EACH_CATEGORY, PUBLIC_URL, API_URL } from '~/constants'
 
 const votes = ref(new Map())
 const completed = ref(false)
@@ -227,6 +233,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.intro {
+  background-image: url('/intro-grain-bg.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
 .loader {
   width: 20px;
   display: inline-block;

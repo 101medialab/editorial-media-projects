@@ -6,44 +6,29 @@
   >
     <div class="flex flex-1 flex-col">
       <div class="mb-[20px]">
-        <div class="relative">
-          <div class="absolute inset-0 pr-[6.2%] pl-[6.2%]">
-            <div
-              :style="{ '--mask-asset-url': `url(${PUBLIC_URL}item/mask.svg)` }"
-              class="mask-image-frame img-container after:absolute after:inset-0 after:z-[1] after:bg-black/60 after:opacity-0 after:transition-opacity after:duration-300 after:content-['']"
-              :class="[
-                {
-                  'group-hover/category:group-[&:not(:hover)]/item:after:opacity-100 group-[&.selected]/category:group-[&:not(:hover)]/item:after:opacity-100':
-                    !selected,
-                },
-              ]"
-            >
-              <img
-                class="w-full"
-                :src="`${PUBLIC_URL}${image}`"
-                :alt="name"
-                draggable="false"
-              />
-            </div>
+        <div class="relative aspect-[226/293] w-full">
+          <div
+            class="absolute inset-0 overflow-hidden after:absolute after:inset-0 after:z-[1] after:bg-black/60 after:opacity-0 after:transition-opacity after:duration-300 after:content-['']"
+            style="clip-path: ellipse(50% 50% at 50% 50%)"
+            :class="[
+              {
+                'group-hover/category:group-[&:not(:hover)]/item:after:opacity-100 group-[&.selected]/category:group-[&:not(:hover)]/item:after:opacity-100':
+                  !selected,
+              },
+            ]"
+          >
             <img
-              class="absolute inset-0 w-full transition-opacity duration-300"
-              :class="[selected ? 'opacity-100' : 'opacity-0']"
-              :src="`${PUBLIC_URL}item/decor.svg`"
-              alt="decor"
+              class="h-full w-full object-cover"
+              :src="`${PUBLIC_URL}${image}`"
+              :alt="name"
               draggable="false"
             />
           </div>
-          <img
-            class="relative z-10 w-full"
-            :src="`${PUBLIC_URL}item/frame.svg`"
-            alt="frame"
-            draggable="false"
-          />
         </div>
       </div>
       <div class="@container">
         <p
-          class="mb-[10px] text-[17px] leading-[21.6px] font-medium whitespace-break-spaces"
+          class="mb-[10px] text-[17px] leading-[21.6px] font-medium whitespace-break-spaces text-center"
         >
           {{ name }}
         </p>

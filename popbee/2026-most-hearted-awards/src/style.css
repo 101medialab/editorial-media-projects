@@ -46,9 +46,12 @@
   }
 }
 
-@utility mask-image-frame {
-  mask-image: var(--mask-asset-url);
-  mask-size: cover;
-  mask-position: center;
-  mask-repeat: no-repeat;
+@utility vertical-lr {
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+}
+
+@utility vertical-rl {
+  writing-mode: sideways-rl;
+  text-orientation: mixed;
 }
