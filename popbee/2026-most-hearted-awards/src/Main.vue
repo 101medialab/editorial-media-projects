@@ -13,7 +13,19 @@
       />
     </section>
 
-    <section class="intro"></section>
+    <section class="intro gap-y-[15px] flex flex-col items-center justify-center text-base leading-6 py-[60px] text-[#1E3160] [text-shadow:1px_1px_1px_rgba(0,0,0,0.004)]">
+      <p
+        class="w-[800px] items-center text-center"
+      >
+        POPBEE 誠意呈獻—Most-Hearted
+        Award！這是一場由你決定的時尚與潮流大賞，我們精選了過去一年內在 POPBEE
+        網站上最受關注的關鍵字，並將它們分為 10
+        個不同類別，讓你來為最愛的選項送上「愛心」支持。</p>
+      <p class="w-[800px] items-center text-center">
+        我們還加入了編輯評分環節，讓專業觀點為這場投票增添更多參考依據。無論是引領潮流的時尚單品、不可或缺的美妝單品，還是備受矚目的運動單品、閃耀動人的珠寶、令人期待的新興品牌，以及城中熱門科技新品，這一次，你的選擇將決定誰是最受歡迎的
+        Most-Hearted 之選！
+      </p>
+    </section>
 
     <SectionCategories :config="config" />
     <div :class="{ 'pointer-events-none': completed || submitting }">
