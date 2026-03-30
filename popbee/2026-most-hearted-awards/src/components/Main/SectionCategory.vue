@@ -5,7 +5,7 @@
       :class="isEven ? 'md:flex-row-reverse' : 'md:flex-row'"
     >
       <div
-        class="mb-[40px] text-center md:mb-0 md:flex md:w-[195px] md:shrink-0 md:items-start md:justify-center"
+        class="title-wrapper mb-[40px] text-center md:mb-0 md:flex md:w-[195px] md:shrink-0 md:items-start md:justify-center"
       >
         <h4
           class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic md:text-[60px] md:leading-none md:tracking-[-2.4px]"
@@ -33,7 +33,7 @@
           />
         </div>
       </div>
-      <div class="hidden md:block md:w-[195px] md:shrink-0"></div>
+      <div class="cate-spacing hidden md:block md:w-[120px] md:shrink-0"></div>
     </div>
     <slot name="footer" />
   </section>
