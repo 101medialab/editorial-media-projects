@@ -4,7 +4,8 @@
     "bg-color": "bg-new-in-town-brands",
     "short-name": "New in Town Brands",
     "name": "New in Town Brands",
-    "image": "",
+    "image": "categories/new-in-town-brands.png",
+
     "winner-badge": "light",
     "items": [
       {
@@ -62,7 +63,7 @@
     "bg-color": "bg-fashion",
     "short-name": "Fashion",
     "name": "Fashion Items",
-    "image": "",
+    "image": "categories/fashion.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -120,7 +121,7 @@
     "bg-color": "bg-jewellery",
     "short-name": "Jewellery",
     "name": "Jewellery",
-    "image": "",
+    "image": "categories/jewellery.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -178,7 +179,7 @@
     "bg-color": "bg-sports-brands",
     "short-name": "Sports Brands",
     "name": "Sports Brands",
-    "image": "",
+    "image": "categories/sports-brands.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -236,7 +237,7 @@
     "bg-color": "bg-hotel",
     "short-name": "Hotel",
     "name": "Hotel",
-    "image": "",
+    "image": "categories/hotel.png",
     "winner-badge": "light",
     "items": [
       {
@@ -294,7 +295,7 @@
     "bg-color": "bg-tech-and-lifestyle",
     "short-name": "Tech & Lifestyle",
     "name": "Tech and Lifestyle",
-    "image": "",
+    "image": "categories/tech-and-lifestyle.png",
     "winner-badge": "light",
     "items": [
       {
@@ -352,7 +353,7 @@
     "bg-color": "bg-beauty-skincare",
     "short-name": "Beauty (Skincare)",
     "name": "Beauty (Skincare)",
-    "image": "",
+    "image": "categories/beauty-skincare.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -410,7 +411,7 @@
     "bg-color": "bg-beauty-makeup",
     "short-name": "Beauty (Makeup)",
     "name": "Beauty (Makeup)",
-    "image": "",
+    "image": "categories/beauty-makeup.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -468,7 +469,7 @@
     "bg-color": "bg-beauty-perfume",
     "short-name": "Beauty (Perfume)",
     "name": "Beauty (Perfume)",
-    "image": "",
+    "image": "categories/beauty-perfume.png",
     "winner-badge": "dark",
     "items": [
       {
@@ -526,7 +527,7 @@
     "bg-color": "bg-beauty-device",
     "short-name": "Beauty (Device)",
     "name": "Beauty (Device)",
-    "image": "",
+    "image": "categories/beauty-device.png",
     "winner-badge": "dark",
     "items": [
       {

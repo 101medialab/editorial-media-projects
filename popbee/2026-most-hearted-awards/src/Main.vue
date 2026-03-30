@@ -14,10 +14,10 @@
     </section>
 
     <section
-      class="intro flex flex-col items-center justify-center gap-y-[15px] pt-[60px] text-base leading-6 text-[#1E3160] [text-shadow:1px_1px_1px_rgba(0,0,0,0.004)]"
+      class="intro flex flex-col items-center justify-center gap-y-[55px] pt-[60px] text-base leading-6 text-[#1E3160] [text-shadow:1px_1px_1px_rgba(0,0,0,0.004)]"
     >
       <div class="md:max-w-[800px] w-full px-[15px] items-center text-center">
-        <p>
+        <p class="mb-[15px]">
           POPBEE 誠意呈獻—Most-Hearted
           Award！這是一場由你決定的時尚與潮流大賞，我們精選了過去一年內在 POPBEE
           網站上最受關注的關鍵字，並將它們分為 10
@@ -76,6 +76,9 @@
           </footer>
         </template>
       </SectionCategory>
+      <div class="closing">
+
+      </div>
     </div>
   </div>
 </template>

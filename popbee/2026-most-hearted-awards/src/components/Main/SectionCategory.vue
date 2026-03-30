@@ -1,5 +1,5 @@
 <template>
-  <section ref="el" :class="[bgColor]" class="py-[60px] md:py-[80px]">
+  <section ref="el" class="py-[60px] md:py-[80px]">
     <div
       class="mx-auto flex max-w-[1600px] flex-col px-[15px] md:px-[30px]"
       :class="isEven ? 'md:flex-row-reverse' : 'md:flex-row'"
@@ -64,7 +64,6 @@ const el = useTemplateRef('el')
 const sectionItems = useTemplateRef('sectionItems')
 
 const id = computed(() => config.id)
-const bgColor = computed(() => config['bg-color'])
 const name = computed(() => config.name)
 const items = computed(() => config.items)
 
