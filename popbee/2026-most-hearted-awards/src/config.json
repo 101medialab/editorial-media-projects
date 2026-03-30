@@ -1,17 +1,14 @@
 [
   {
     "id": "new-in-town-brands",
-    "bg-color": "bg-new-in-town-brands",
     "short-name": "New in Town Brands",
     "name": "New in Town Brands",
     "image": "categories/new-in-town-brands.png",
-
     "winner-badge": "light",
     "items": [
       {
         "id": "fwee",
         "image": "new-in-town-brands/fwee.jpg",
-        "background-color": "",
         "name": "Fwee",
         "text": "",
         "selected": false
@@ -19,7 +16,6 @@
       {
         "id": "3coins",
         "image": "",
-        "background-color": "",
         "name": "3coins",
         "text": "",
         "selected": false
@@ -27,7 +23,6 @@
       {
         "id": "hetras",
         "image": "",
-        "background-color": "",
         "name": "Hetras",
         "text": "",
         "selected": false
@@ -35,7 +30,6 @@
       {
         "id": "subdued",
         "image": "",
-        "background-color": "",
         "name": "Subdued",
         "text": "",
         "selected": false
@@ -43,7 +37,6 @@
       {
         "id": "carlyn",
         "image": "",
-        "background-color": "",
         "name": "Carlyn",
         "text": "",
         "selected": false
@@ -51,7 +44,6 @@
       {
         "id": "apee",
         "image": "",
-        "background-color": "",
         "name": "APEE",
         "text": "",
         "selected": false
@@ -60,16 +52,14 @@
   },
   {
     "id": "fashion",
-    "bg-color": "bg-fashion",
     "short-name": "Fashion",
     "name": "Fashion Items",
-    "image": "categories/fashion.png",
+    "image": "categories/fashion-item.png",
     "winner-badge": "dark",
     "items": [
       {
         "id": "bottega-veneta-veneta-bag",
         "image": "",
-        "background-color": "",
         "name": "Bottega Veneta\nVeneta Bag",
         "text": "",
         "selected": false
@@ -77,7 +67,6 @@
       {
         "id": "louis-vuitton-murakami-collection",
         "image": "",
-        "background-color": "",
         "name": "Louis Vuitton\nMurakami Collection",
         "text": "",
         "selected": false
@@ -85,7 +74,6 @@
       {
         "id": "dior-voyage-bag",
         "image": "",
-        "background-color": "",
         "name": "Dior\nVoyage Bag",
         "text": "",
         "selected": false
@@ -93,7 +81,6 @@
       {
         "id": "miu-miu-leather-loafers-with-strap",
         "image": "",
-        "background-color": "",
         "name": "Miu Miu\nLeather Loafers with Strap",
         "text": "",
         "selected": false
@@ -101,7 +88,6 @@
       {
         "id": "longchamp-le-pliage-xtra",
         "image": "",
-        "background-color": "",
         "name": "Longchamp\nLe Pliage Xtra / Le Foulonné",
         "text": "",
         "selected": false
@@ -109,7 +95,6 @@
       {
         "id": "coach-empire-carryall",
         "image": "",
-        "background-color": "",
         "name": "Coach\nEmpire Carryall",
         "text": "",
         "selected": false
@@ -118,7 +103,6 @@
   },
   {
     "id": "jewellery",
-    "bg-color": "bg-jewellery",
     "short-name": "Jewellery",
     "name": "Jewellery",
     "image": "categories/jewellery.png",
@@ -127,7 +111,6 @@
       {
         "id": "cartier-love-unlimited",
         "image": "",
-        "background-color": "",
         "name": "Cartier\nLove Unlimited",
         "text": "",
         "selected": false
@@ -135,7 +118,6 @@
       {
         "id": "van-cleef-arpels-perlee-collection",
         "image": "",
-        "background-color": "",
         "name": "Van Cleef & Arpels\nPerlée® Collection",
         "text": "",
         "selected": false
@@ -143,7 +125,6 @@
       {
         "id": "chanel-coco-crush",
         "image": "",
-        "background-color": "",
         "name": "Chanel\nCoco Crush",
         "text": "",
         "selected": false
@@ -151,7 +132,6 @@
       {
         "id": "harry-winston-cluster-collection",
         "image": "",
-        "background-color": "",
         "name": "Harry Winston\nCluster Collection",
         "text": "",
         "selected": false
@@ -159,7 +139,6 @@
       {
         "id": "messika-move-collection",
         "image": "",
-        "background-color": "",
         "name": "Messika\nMove Collection",
         "text": "",
         "selected": false
@@ -167,7 +146,6 @@
       {
         "id": "tiffany-knot-collection",
         "image": "",
-        "background-color": "",
         "name": "Tiffany & Co.\nKnot Collection",
         "text": "",
         "selected": false
@@ -176,7 +154,6 @@
   },
   {
     "id": "sports-brands",
-    "bg-color": "bg-sports-brands",
     "short-name": "Sports Brands",
     "name": "Sports Brands",
     "image": "categories/sports-brands.png",
@@ -185,7 +162,6 @@
       {
         "id": "on-running",
         "image": "",
-        "background-color": "",
         "name": "ON Running",
         "text": "",
         "selected": false
@@ -193,7 +169,6 @@
       {
         "id": "alo-sunset",
         "image": "",
-        "background-color": "",
         "name": "Alo\nSunset",
         "text": "",
         "selected": false
@@ -201,7 +176,6 @@
       {
         "id": "hoka-bondi-mary-jane",
         "image": "",
-        "background-color": "",
         "name": "HOKA\nBondi Mary Jane",
         "text": "",
         "selected": false
@@ -209,7 +183,6 @@
       {
         "id": "puma-h-street",
         "image": "",
-        "background-color": "",
         "name": "Puma\nH-Street",
         "text": "",
         "selected": false
@@ -217,7 +190,6 @@
       {
         "id": "nike-x-jacquemus-luna",
         "image": "",
-        "background-color": "",
         "name": "Nike x Jacquemus\nLuna",
         "text": "",
         "selected": false
@@ -225,7 +197,6 @@
       {
         "id": "new-balance-1906l-204l",
         "image": "",
-        "background-color": "",
         "name": "New Balance\n1906L / 204L",
         "text": "",
         "selected": false
@@ -234,7 +205,6 @@
   },
   {
     "id": "hotel",
-    "bg-color": "bg-hotel",
     "short-name": "Hotel",
     "name": "Hotel",
     "image": "categories/hotel.png",
@@ -243,7 +213,6 @@
       {
         "id": "kimpton",
         "image": "",
-        "background-color": "",
         "name": "Kimpton",
         "text": "",
         "selected": false
@@ -251,7 +220,6 @@
       {
         "id": "peninsula",
         "image": "",
-        "background-color": "",
         "name": "Peninsula",
         "text": "",
         "selected": false
@@ -259,7 +227,6 @@
       {
         "id": "shangri-la",
         "image": "",
-        "background-color": "",
         "name": "Shangri-La",
         "text": "",
         "selected": false
@@ -267,7 +234,6 @@
       {
         "id": "regent",
         "image": "",
-        "background-color": "",
         "name": "Regent",
         "text": "",
         "selected": false
@@ -275,7 +241,6 @@
       {
         "id": "dorsett",
         "image": "",
-        "background-color": "",
         "name": "Dorsett",
         "text": "",
         "selected": false
@@ -283,7 +248,6 @@
       {
         "id": "rosewood",
         "image": "",
-        "background-color": "",
         "name": "Rosewood",
         "text": "",
         "selected": false
@@ -292,7 +256,6 @@
   },
   {
     "id": "tech-and-lifestyle",
-    "bg-color": "bg-tech-and-lifestyle",
     "short-name": "Tech & Lifestyle",
     "name": "Tech and Lifestyle",
     "image": "categories/tech-and-lifestyle.png",
@@ -301,7 +264,6 @@
       {
         "id": "xiaomi-15-ultra",
         "image": "",
-        "background-color": "",
         "name": "Xiaomi\n15 Ultra",
         "text": "",
         "selected": false
@@ -309,7 +271,6 @@
       {
         "id": "apple-iphone-17-pro",
         "image": "",
-        "background-color": "",
         "name": "Apple\niPhone 17 Pro",
         "text": "",
         "selected": false
@@ -317,7 +278,6 @@
       {
         "id": "kodak-charmera",
         "image": "",
-        "background-color": "",
         "name": "Kodak\nCharmera",
         "text": "",
         "selected": false
@@ -325,7 +285,6 @@
       {
         "id": "nintendo-switch-2",
         "image": "",
-        "background-color": "",
         "name": "Nintendo\nSwitch 2",
         "text": "",
         "selected": false
@@ -333,7 +292,6 @@
       {
         "id": "samsung-galaxy-s25",
         "image": "",
-        "background-color": "",
         "name": "Samsung\nGalaxy S25",
         "text": "",
         "selected": false
@@ -341,7 +299,6 @@
       {
         "id": "leica-grip",
         "image": "",
-        "background-color": "",
         "name": "Leica\nGrip",
         "text": "",
         "selected": false
@@ -350,7 +307,6 @@
   },
   {
     "id": "beauty-skincare",
-    "bg-color": "bg-beauty-skincare",
     "short-name": "Beauty (Skincare)",
     "name": "Beauty (Skincare)",
     "image": "categories/beauty-skincare.png",
@@ -359,7 +315,6 @@
       {
         "id": "la-prairie",
         "image": "",
-        "background-color": "",
         "name": "La Prairie",
         "text": "",
         "selected": false
@@ -367,7 +322,6 @@
       {
         "id": "cle-de-peau-beaute",
         "image": "",
-        "background-color": "",
         "name": "Clé de Peau Beauté\n鉑鑽源亮細胞系列",
         "text": "",
         "selected": false
@@ -375,7 +329,6 @@
       {
         "id": "shu-uemura",
         "image": "",
-        "background-color": "",
         "name": "Shu Uemura\n琥珀山茶花養膚潔顏油",
         "text": "",
         "selected": false
@@ -383,7 +336,6 @@
       {
         "id": "sk-ii-skinpower",
         "image": "",
-        "background-color": "",
         "name": "SK-II\nSKINPOWER 煥顏能量精華霜",
         "text": "",
         "selected": false
@@ -391,7 +343,6 @@
       {
         "id": "pudori-hydra-refresh-lotion",
         "image": "",
-        "background-color": "",
         "name": "Pudori\nHydra Refresh Lotion 水潤清爽面霜",
         "text": "",
         "selected": false
@@ -399,7 +350,6 @@
       {
         "id": "la-mer-rejuvenating-night-cream",
         "image": "",
-        "background-color": "",
         "name": "La Mer\nTHE REJUVENATING NIGHT CREAM 精華修復晚霜",
         "text": "",
         "selected": false
@@ -408,7 +358,6 @@
   },
   {
     "id": "beauty-makeup",
-    "bg-color": "bg-beauty-makeup",
     "short-name": "Beauty (Makeup)",
     "name": "Beauty (Makeup)",
     "image": "categories/beauty-makeup.png",
@@ -417,7 +366,6 @@
       {
         "id": "nars-light-reflecting",
         "image": "",
-        "background-color": "",
         "name": "NARS\nLIGHT REFLECTING™原生光幻彩蜜粉餅",
         "text": "",
         "selected": false
@@ -425,7 +373,6 @@
       {
         "id": "dior-beauty-lip",
         "image": "",
-        "background-color": "",
         "name": "Dior Beauty\n傲姿舞台持色唇膏",
         "text": "",
         "selected": false
@@ -433,7 +380,6 @@
       {
         "id": "prada-beauty-lip-balm",
         "image": "",
-        "background-color": "",
         "name": "Prada Beauty\n藍色唇膏",
         "text": "",
         "selected": false
@@ -441,7 +387,6 @@
       {
         "id": "laura-mercier-setting-spray",
         "image": "",
-        "background-color": "",
         "name": "Laura Mercier\n鎖妝柔霧定妝噴霧",
         "text": "",
         "selected": false
@@ -449,7 +394,6 @@
       {
         "id": "charlotte-tilbury-powder",
         "image": "",
-        "background-color": "",
         "name": "Charlotte Tilbury\n輕盈零瑕蜜粉",
         "text": "",
         "selected": false
@@ -457,7 +401,6 @@
       {
         "id": "hourglass-vanish-concealer",
         "image": "",
-        "background-color": "",
         "name": "Hourglass\nVanish™ Airbrush Concealer",
         "text": "",
         "selected": false
@@ -466,7 +409,6 @@
   },
   {
     "id": "beauty-perfume",
-    "bg-color": "bg-beauty-perfume",
     "short-name": "Beauty (Perfume)",
     "name": "Beauty (Perfume)",
     "image": "categories/beauty-perfume.png",
@@ -475,7 +417,6 @@
       {
         "id": "byredo-blanche-absolu",
         "image": "",
-        "background-color": "",
         "name": "Byredo\nBlanche Absolu de Parfum",
         "text": "",
         "selected": false
@@ -483,7 +424,6 @@
       {
         "id": "le-labo-eucalyptus-20",
         "image": "",
-        "background-color": "",
         "name": "Le Labo\nEUCALYPTUS 20",
         "text": "",
         "selected": false
@@ -491,7 +431,6 @@
       {
         "id": "chanel-n5",
         "image": "",
-        "background-color": "",
         "name": "Chanel\nN°5",
         "text": "",
         "selected": false
@@ -499,7 +438,6 @@
       {
         "id": "jo-malone-raspberry-ripple",
         "image": "",
-        "background-color": "",
         "name": "Jo Malone\nRaspberry Ripple Cologne",
         "text": "",
         "selected": false
@@ -507,7 +445,6 @@
       {
         "id": "chloe-atelier-cedrus",
         "image": "",
-        "background-color": "",
         "name": "CHLOÉ\nATELIER CEDRUS",
         "text": "",
         "selected": false
@@ -515,7 +452,6 @@
       {
         "id": "diptyque-orpheon",
         "image": "",
-        "background-color": "",
         "name": "Diptyque\nOrphéon",
         "text": "",
         "selected": false
@@ -524,7 +460,6 @@
   },
   {
     "id": "beauty-device",
-    "bg-color": "bg-beauty-device",
     "short-name": "Beauty (Device)",
     "name": "Beauty (Device)",
     "image": "categories/beauty-device.png",
@@ -533,7 +468,6 @@
       {
         "id": "medicube-age-r-booster-pro",
         "image": "",
-        "background-color": "",
         "name": "Medicube\nAGE-R Booster Pro",
         "text": "",
         "selected": false
@@ -541,7 +475,6 @@
       {
         "id": "panasonic-vitalift-rf-ex",
         "image": "",
-        "background-color": "",
         "name": "Panasonic\nVITALIFT RF EX EH-SR86",
         "text": "",
         "selected": false
@@ -549,7 +482,6 @@
       {
         "id": "current-body-skin-led-mask",
         "image": "",
-        "background-color": "",
         "name": "Current Body\nSkin LED 6 合 1 光療面膜儀",
         "text": "",
         "selected": false
@@ -557,7 +489,6 @@
       {
         "id": "ghd-chronos-max",
         "image": "",
-        "background-color": "",
         "name": "GHD\nChronos Max 寬板高清亮澤造型夾",
         "text": "",
         "selected": false
@@ -565,7 +496,6 @@
       {
         "id": "dyson-supersonic-r",
         "image": "",
-        "background-color": "",
         "name": "Dyson\nSupersonic r",
         "text": "",
         "selected": false
@@ -573,7 +503,6 @@
       {
         "id": "refa-beautech-dryer-w",
         "image": "",
-        "background-color": "",
         "name": "ReFa\nBEAUTECH DRYER W",
         "text": "",
         "selected": false

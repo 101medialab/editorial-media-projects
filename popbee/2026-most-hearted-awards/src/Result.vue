@@ -2,9 +2,9 @@
   <div ref="root">
     <section>
       <div
-        class="w-full h-64 md:h-96 bg-gradient-to-r from-blue-500 to-teal-600 flex items-center justify-center"
+        class="flex h-64 w-full items-center justify-center bg-gradient-to-r from-blue-500 to-teal-600 md:h-96"
       >
-        <h1 class="text-white text-4xl md:text-6xl font-bold text-center">
+        <h1 class="text-center text-4xl font-bold text-white md:text-6xl">
           Results 2026
         </h1>
       </div>
@@ -20,7 +20,10 @@
         :config="item"
       >
         <template #footer>
-          <footer v-if="index === config.length - 1" class="mt-[60px]">
+          <footer
+            v-if="index === config.length - 1"
+            class="mt-[60px] text-center"
+          >
             <small class="text-[11px]"
               >* Design elements and background colors</small
             >

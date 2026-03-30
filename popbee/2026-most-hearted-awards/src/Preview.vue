@@ -2,9 +2,9 @@
   <div ref="root">
     <section>
       <div
-        class="w-full h-64 md:h-96 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center"
+        class="flex h-64 w-full items-center justify-center bg-gradient-to-r from-green-500 to-blue-500 md:h-96"
       >
-        <h1 class="text-white text-4xl md:text-6xl font-bold text-center">
+        <h1 class="text-center text-4xl font-bold text-white md:text-6xl">
           Preview 2026
         </h1>
       </div>
@@ -19,7 +19,10 @@
         :config="item"
       >
         <template #footer>
-          <footer v-if="index === config.length - 1" class="mt-[60px]">
+          <footer
+            v-if="index === config.length - 1"
+            class="mt-[60px] text-center"
+          >
             <div class="mb-[30px]">
               <button
                 class="pointer-events-none min-w-[191px] rounded-full bg-[#AAA] px-[40px] py-[11px] text-base font-medium text-white"

@@ -16,7 +16,7 @@
     <section
       class="intro flex flex-col items-center justify-center gap-y-[55px] pt-[60px] text-base leading-6 text-[#1E3160] [text-shadow:1px_1px_1px_rgba(0,0,0,0.004)]"
     >
-      <div class="md:max-w-[800px] w-full px-[15px] items-center text-center">
+      <div class="w-full items-center px-[15px] text-center md:max-w-[800px]">
         <p class="mb-[15px]">
           POPBEE 誠意呈獻—Most-Hearted
           Award！這是一場由你決定的時尚與潮流大賞，我們精選了過去一年內在 POPBEE
@@ -46,7 +46,10 @@
         @auto-next-section="onAutoNextSection"
       >
         <template #footer>
-          <footer v-if="index === config.length - 1" class="mt-[60px]">
+          <footer
+            v-if="index === config.length - 1"
+            class="mt-[60px] text-center"
+          >
             <div class="mb-[30px]">
               <button
                 v-if="!completed"
@@ -70,15 +73,13 @@
 
             <p>
               <small class="text-[11px]"
-                >* Design elements and background colors</small
+                >* Images from Getty Images & Brands</small
               >
             </p>
           </footer>
         </template>
       </SectionCategory>
-      <div class="closing">
-
-      </div>
+      <div class="closing"></div>
     </div>
   </div>
 </template>
