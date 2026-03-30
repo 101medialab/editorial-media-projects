@@ -1,5 +1,5 @@
 <template>
-  <section ref="el" :class="[bgColor]" class="py-[60px] text-center">
+  <section ref="el" class="py-[60px] text-center">
     <div class="mx-auto max-w-[1140px] px-[15px] md:px-[30px]">
       <header class="mb-[60px]">
         <p
@@ -49,7 +49,6 @@ const { config } = defineProps({
 })
 
 const id = computed(() => config.id)
-const bgColor = computed(() => config['bg-color'])
 const name = computed(() => config.name)
 const items = computed(() => config.items.filter(({ selected }) => selected))
 const winnerBadgePath = computed(

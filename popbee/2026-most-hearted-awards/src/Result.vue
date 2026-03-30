@@ -1,13 +1,16 @@
 <template>
   <div ref="root">
-    <section>
-      <div
-        class="flex h-64 w-full items-center justify-center bg-gradient-to-r from-blue-500 to-teal-600 md:h-96"
-      >
-        <h1 class="text-center text-4xl font-bold text-white md:text-6xl">
-          Results 2026
-        </h1>
-      </div>
+    <section class="main-banner">
+      <img
+          :src="`${PUBLIC_URL}mob-hero-banner.jpg`"
+          alt="Most Hearted Awards 2026"
+          class="w-full sm:hidden"
+      />
+      <img
+          :src="`${PUBLIC_URL}hero-banner.jpg`"
+          alt="Most Hearted Awards 2026"
+          class="hidden w-full sm:block"
+      />
     </section>
 
     <SectionCategories />
@@ -40,6 +43,7 @@ import pym from 'pym.js'
 import SectionCategories from '~/components/Result/SectionCategories.vue'
 import SectionCategory from '~/components/Result/SectionCategory.vue'
 import config from '~/config.json'
+import {PUBLIC_URL} from "~/constants.js";
 
 const pymChild = ref()
 const scrollOffset = ref(0)
