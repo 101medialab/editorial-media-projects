@@ -33,6 +33,9 @@
           </footer>
         </template>
       </SectionCategory>
+      <div class="closing mx-auto max-w-[1123px] px-[15px] pb-[60px]">
+        <img :src="`${PUBLIC_URL}luggage.png`" alt="" class="w-full" />
+      </div>
     </div>
   </div>
 </template>
