@@ -1,11 +1,12 @@
 <template>
   <section ref="el" class="py-[60px] md:py-[80px]">
     <div
-      class="mx-auto flex max-w-[1600px] flex-col px-[15px] md:px-[30px]"
+      class="mx-auto flex max-w-[1600px] flex-col px-[15px] md:px-[30px] justify-center"
       :class="isEven ? 'md:flex-row-reverse' : 'md:flex-row'"
     >
       <div
-        class="title-wrapper mb-[40px] text-center md:mb-0 md:flex md:w-[195px] md:shrink-0 md:items-start md:justify-center"
+        class="title-wrapper mb-[40px] text-center md:mb-0 md:flex md:w-fit md:shrink-0 md:items-start md:justify-center"
+        :class="isEven ? 'md:pl-[135px]' : 'md:pr-[135px]'"
       >
         <h4
           class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic md:text-[60px] md:leading-none md:tracking-[-2.4px]"
@@ -16,7 +17,7 @@
       </div>
 
       <div
-        class="group/category flex-1"
+        class="group/category flex-1 md:max-w-[900px]"
         :class="{ selected: selectedItems.length }"
       >
         <div
