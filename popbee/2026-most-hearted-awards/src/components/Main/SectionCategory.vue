@@ -1,27 +1,27 @@
 <template>
-  <section ref="el" class="py-[60px] md:py-[80px]">
+  <section ref="el" class="py-[60px] lg:py-[80px]">
     <div
-      class="mx-auto flex max-w-[1600px] flex-col px-[15px] md:px-[30px] justify-center"
-      :class="isEven ? 'md:flex-row-reverse' : 'md:flex-row'"
+      class="mx-auto flex max-w-[1600px] flex-col justify-center px-[15px] lg:px-[30px]"
+      :class="isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'"
     >
       <div
-        class="title-wrapper mb-[40px] text-center md:mb-0 md:flex md:w-fit md:shrink-0 md:items-start md:justify-center"
-        :class="isEven ? 'md:pl-[135px]' : 'md:pr-[135px]'"
+        class="title-wrapper mb-[40px] text-center lg:mb-0 lg:flex lg:w-fit lg:shrink-0 lg:items-start lg:justify-center"
+        :class="isEven ? 'lg:pl-[135px]' : 'lg:pr-[135px]'"
       >
         <h4
-          class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic md:text-[60px] md:leading-none md:tracking-[-2.4px]"
-          :class="isEven ? 'md:vertical-rl' : 'md:vertical-lr'"
+          class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic lg:text-[60px] lg:leading-none lg:tracking-[-2.4px]"
+          :class="isEven ? 'lg:vertical-rl' : 'lg:vertical-lr'"
         >
           {{ name }}
         </h4>
       </div>
 
       <div
-        class="group/category flex-1 md:max-w-[900px]"
+        class="group/category flex-1 lg:max-w-[900px]"
         :class="{ selected: selectedItems.length }"
       >
         <div
-          class="grid grid-cols-2 gap-x-[15px] gap-y-[60px] sm:grid-cols-3 md:gap-x-[60px]"
+          class="grid grid-cols-2 gap-x-[15px] gap-y-[60px] md:grid-cols-3 lg:gap-x-[60px]"
         >
           <SectionItem
             v-for="item in items"
@@ -34,7 +34,7 @@
           />
         </div>
       </div>
-      <div class="cate-spacing hidden md:block md:w-[120px] md:shrink-0"></div>
+      <div class="cate-spacing hidden lg:block lg:w-[120px] lg:shrink-0"></div>
     </div>
     <slot name="footer" />
   </section>

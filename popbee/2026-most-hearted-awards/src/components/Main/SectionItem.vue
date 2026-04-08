@@ -28,7 +28,7 @@
       </div>
       <div class="@container">
         <p
-          class="mb-[10px] text-[17px] leading-[21.6px] font-medium whitespace-break-spaces text-center"
+          class="mb-[10px] text-center text-[20px] leading-[21.6px] font-medium whitespace-break-spaces lg:text-[24px]"
         >
           {{ name }}
         </p>
@@ -41,7 +41,7 @@
       class="mt-[20px] flex cursor-pointer items-center justify-center gap-[5px] rounded-full border border-white px-[20px] py-[10px] font-medium"
       :class="{ 'bg-white text-black': selected }"
     >
-      <span v-show="selected"
+      <span v-if="selected"
         ><img :src="`${PUBLIC_URL}heart.svg`" alt="heart"
       /></span>
       <span>{{ buttonText }}</span>

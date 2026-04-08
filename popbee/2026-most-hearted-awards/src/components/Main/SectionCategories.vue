@@ -2,11 +2,11 @@
   <section class="section-categories pt-[61px] pb-[60px]">
     <div class="container mb-[30px]">
       <h2
-        class="font-bodndi mb-[20px] text-center text-[46px] tracking-normal normal-case italic md:text-[80px]"
+        class="font-bodndi mb-[20px] text-center text-[60px] tracking-normal normal-case italic md:text-[60px]"
       >
         Voting Categories
       </h2>
-      <p class="text-left text-base leading-6">
+      <p class="text-center text-base leading-6">
         我們從 10 個類別中精選出最受關注的選項，請於每個類別中選出 3
         個最喜愛的選項，為它們加油打氣。
       </p>
@@ -16,7 +16,7 @@
       <swiper-slide
         v-for="{ id, 'short-name': shortName, image } in config.slice(0, -3)"
         :key="`category-${id}`"
-        class="w-[160px] md:w-[220px]"
+        class="w-[160px] md:max-w-[167px]"
       >
         <div class="relative aspect-[3/4] overflow-hidden rounded-[20px]">
           <a
