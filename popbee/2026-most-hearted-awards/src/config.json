@@ -14,36 +14,36 @@
         "selected": true
       },
       {
-        "id": "3coins",
-        "image": "",
-        "name": "3coins",
+        "id": "ahres",
+        "image": "new-in-town-brands/ahres.jpg",
+        "name": "AHRES",
         "text": "",
         "selected": false
       },
       {
         "id": "hetras",
-        "image": "",
+        "image": "new-in-town-brands/hetras.jpg",
         "name": "Hetras",
         "text": "",
         "selected": false
       },
       {
         "id": "subdued",
-        "image": "",
+        "image": "new-in-town-brands/subdued.jpg",
         "name": "Subdued",
         "text": "",
         "selected": false
       },
       {
-        "id": "carlyn",
-        "image": "",
-        "name": "Carlyn",
+        "id": "ongo",
+        "image": "new-in-town-brands/ongo.jpg",
+        "name": "ONGO",
         "text": "",
         "selected": false
       },
       {
         "id": "apee",
-        "image": "",
+        "image": "new-in-town-brands/apee.jpg",
         "name": "APEE",
         "text": "",
         "selected": false
@@ -59,42 +59,42 @@
     "items": [
       {
         "id": "bottega-veneta-veneta-bag",
-        "image": "",
+        "image": "fashion/bv.jpg",
         "name": "Bottega Veneta\nVeneta Bag",
         "text": "",
         "selected": false
       },
       {
         "id": "louis-vuitton-murakami-collection",
-        "image": "",
+        "image": "fashion/lv.jpg",
         "name": "Louis Vuitton\nMurakami Collection",
         "text": "",
         "selected": false
       },
       {
         "id": "dior-voyage-bag",
-        "image": "",
+        "image": "fashion/dior.jpg",
         "name": "Dior\nVoyage Bag",
         "text": "",
         "selected": false
       },
       {
         "id": "miu-miu-leather-loafers-with-strap",
-        "image": "",
+        "image": "fashion/miu-miu.jpg",
         "name": "Miu Miu\nLeather Loafers with Strap",
         "text": "",
         "selected": false
       },
       {
         "id": "longchamp-le-pliage-xtra",
-        "image": "",
+        "image": "fashion/longchamp.jpg",
         "name": "Longchamp\nLe Pliage Xtra / Le Foulonné",
         "text": "",
         "selected": false
       },
       {
         "id": "coach-empire-carryall",
-        "image": "",
+        "image": "fashion/coach.jpg",
         "name": "Coach\nEmpire Carryall",
         "text": "",
         "selected": false
@@ -110,42 +110,42 @@
     "items": [
       {
         "id": "cartier-love-unlimited",
-        "image": "",
+        "image": "jewellery/cartier.jpg",
         "name": "Cartier\nLove Unlimited",
         "text": "",
         "selected": false
       },
       {
         "id": "van-cleef-arpels-perlee-collection",
-        "image": "",
+        "image": "jewellery/van-cleef-arpels.jpg",
         "name": "Van Cleef & Arpels\nPerlée® Collection",
         "text": "",
         "selected": false
       },
       {
         "id": "chanel-coco-crush",
-        "image": "",
+        "image": "jewellery/chanel.jpg",
         "name": "Chanel\nCoco Crush",
         "text": "",
         "selected": false
       },
       {
         "id": "harry-winston-cluster-collection",
-        "image": "",
+        "image": "jewellery/harry-winston.jpg",
         "name": "Harry Winston\nCluster Collection",
         "text": "",
         "selected": false
       },
       {
         "id": "messika-move-collection",
-        "image": "",
+        "image": "jewellery/messika-move.jpg",
         "name": "Messika\nMove Collection",
         "text": "",
         "selected": false
       },
       {
         "id": "tiffany-knot-collection",
-        "image": "",
+        "image": "jewellery/tiffany-co.jpg",
         "name": "Tiffany & Co.\nKnot Collection",
         "text": "",
         "selected": false
@@ -161,42 +161,42 @@
     "items": [
       {
         "id": "on-running",
-        "image": "",
+        "image": "sports-brands/on-running.jpg",
         "name": "ON Running",
         "text": "",
         "selected": false
       },
       {
         "id": "alo-sunset",
-        "image": "",
+        "image": "sports-brands/alo.jpg",
         "name": "Alo\nSunset",
         "text": "",
         "selected": false
       },
       {
         "id": "hoka-bondi-mary-jane",
-        "image": "",
+        "image": "sports-brands/hoka.jpg",
         "name": "HOKA\nBondi Mary Jane",
         "text": "",
         "selected": false
       },
       {
         "id": "puma-h-street",
-        "image": "",
+        "image": "sports-brands/puma.jpg",
         "name": "Puma\nH-Street",
         "text": "",
         "selected": false
       },
       {
         "id": "nike-x-jacquemus-luna",
-        "image": "",
+        "image": "sports-brands/nike-x-jacquemus.jpg",
         "name": "Nike x Jacquemus\nLuna",
         "text": "",
         "selected": false
       },
       {
         "id": "new-balance-1906l-204l",
-        "image": "",
+        "image": "sports-brands/new-balance.jpg",
         "name": "New Balance\n1906L / 204L",
         "text": "",
         "selected": false
@@ -212,42 +212,42 @@
     "items": [
       {
         "id": "kimpton",
-        "image": "",
+        "image": "hotel/kimpton.jpg",
         "name": "Kimpton",
         "text": "",
         "selected": false
       },
       {
         "id": "peninsula",
-        "image": "",
+        "image": "hotel/peninsula.jpg",
         "name": "Peninsula",
         "text": "",
         "selected": false
       },
       {
         "id": "shangri-la",
-        "image": "",
+        "image": "hotel/shangri-la.jpg",
         "name": "Shangri-La",
         "text": "",
         "selected": false
       },
       {
         "id": "regent",
-        "image": "",
+        "image": "hotel/regent.jpg",
         "name": "Regent",
         "text": "",
         "selected": false
       },
       {
         "id": "dorsett",
-        "image": "",
+        "image": "hotel/dorsett.jpg",
         "name": "Dorsett",
         "text": "",
         "selected": false
       },
       {
         "id": "rosewood",
-        "image": "",
+        "image": "hotel/rosewood.jpg",
         "name": "Rosewood",
         "text": "",
         "selected": false
@@ -263,42 +263,42 @@
     "items": [
       {
         "id": "xiaomi-15-ultra",
-        "image": "",
+        "image": "tech-and-lifestyle/xiaomi-15-ultra.jpg",
         "name": "Xiaomi\n15 Ultra",
         "text": "",
         "selected": false
       },
       {
         "id": "apple-iphone-17-pro",
-        "image": "",
+        "image": "tech-and-lifestyle/apple-iphone-17-pro.jpg",
         "name": "Apple\niPhone 17 Pro",
         "text": "",
         "selected": false
       },
       {
         "id": "kodak-charmera",
-        "image": "",
+        "image": "tech-and-lifestyle/kodak-charmera.jpg",
         "name": "Kodak\nCharmera",
         "text": "",
         "selected": false
       },
       {
         "id": "nintendo-switch-2",
-        "image": "",
+        "image": "tech-and-lifestyle/nintendo-switch-2.jpg",
         "name": "Nintendo\nSwitch 2",
         "text": "",
         "selected": false
       },
       {
         "id": "samsung-galaxy-s25",
-        "image": "",
+        "image": "tech-and-lifestyle/samsung-galaxy-s25.jpg",
         "name": "Samsung\nGalaxy S25",
         "text": "",
         "selected": false
       },
       {
         "id": "leica-grip",
-        "image": "",
+        "image": "tech-and-lifestyle/leica-grip.jpg",
         "name": "Leica\nGrip",
         "text": "",
         "selected": false
@@ -314,42 +314,42 @@
     "items": [
       {
         "id": "la-prairie",
-        "image": "",
+        "image": "skincare/la-prairie.jpg",
         "name": "La Prairie",
         "text": "",
         "selected": false
       },
       {
         "id": "cle-de-peau-beaute",
-        "image": "",
+        "image": "skincare/cle-de-peau-beaute.jpg",
         "name": "Clé de Peau Beauté\n鉑鑽源亮細胞系列",
         "text": "",
         "selected": false
       },
       {
         "id": "shu-uemura",
-        "image": "",
+        "image": "skincare/shu-uemura.jpg",
         "name": "Shu Uemura\n琥珀山茶花養膚潔顏油",
         "text": "",
         "selected": false
       },
       {
         "id": "sk-ii-skinpower",
-        "image": "",
+        "image": "skincare/sk-ii.jpg",
         "name": "SK-II\nSKINPOWER 煥顏能量精華霜",
         "text": "",
         "selected": false
       },
       {
         "id": "pudori-hydra-refresh-lotion",
-        "image": "",
+        "image": "skincare/pudori.jpg",
         "name": "Pudori\nHydra Refresh Lotion 水潤清爽面霜",
         "text": "",
         "selected": false
       },
       {
         "id": "la-mer-rejuvenating-night-cream",
-        "image": "",
+        "image": "skincare/la-mer.jpg",
         "name": "La Mer\nTHE REJUVENATING NIGHT CREAM 精華修復晚霜",
         "text": "",
         "selected": false
@@ -365,42 +365,42 @@
     "items": [
       {
         "id": "nars-light-reflecting",
-        "image": "",
+        "image": "makeup/nars.jpg",
         "name": "NARS\nLIGHT REFLECTING™原生光幻彩蜜粉餅",
         "text": "",
         "selected": false
       },
       {
         "id": "dior-beauty-lip",
-        "image": "",
+        "image": "makeup/dior.jpg",
         "name": "Dior Beauty\n傲姿舞台持色唇膏",
         "text": "",
         "selected": false
       },
       {
         "id": "prada-beauty-lip-balm",
-        "image": "",
+        "image": "makeup/prada.jpg",
         "name": "Prada Beauty\n藍色唇膏",
         "text": "",
         "selected": false
       },
       {
         "id": "laura-mercier-setting-spray",
-        "image": "",
+        "image": "makeup/laura-mercier.jpg",
         "name": "Laura Mercier\n鎖妝柔霧定妝噴霧",
         "text": "",
         "selected": false
       },
       {
         "id": "charlotte-tilbury-powder",
-        "image": "",
+        "image": "makeup/charlotte-tilbury.jpg",
         "name": "Charlotte Tilbury\n輕盈零瑕蜜粉",
         "text": "",
         "selected": false
       },
       {
         "id": "hourglass-vanish-concealer",
-        "image": "",
+        "image": "makeup/hourglass.jpg",
         "name": "Hourglass\nVanish™ Airbrush Concealer",
         "text": "",
         "selected": false
@@ -416,42 +416,42 @@
     "items": [
       {
         "id": "byredo-blanche-absolu",
-        "image": "",
+        "image": "perfume/byredo.jpg",
         "name": "Byredo\nBlanche Absolu de Parfum",
         "text": "",
         "selected": false
       },
       {
         "id": "le-labo-eucalyptus-20",
-        "image": "",
+        "image": "perfume/le-labo.jpg",
         "name": "Le Labo\nEUCALYPTUS 20",
         "text": "",
         "selected": false
       },
       {
         "id": "chanel-n5",
-        "image": "",
+        "image": "perfume/chanel-n5.jpg",
         "name": "Chanel\nN°5",
         "text": "",
         "selected": false
       },
       {
         "id": "jo-malone-raspberry-ripple",
-        "image": "",
+        "image": "perfume/jo-malone.jpg",
         "name": "Jo Malone\nRaspberry Ripple Cologne",
         "text": "",
         "selected": false
       },
       {
         "id": "chloe-atelier-cedrus",
-        "image": "",
+        "image": "perfume/chloe.jpg",
         "name": "CHLOÉ\nATELIER CEDRUS",
         "text": "",
         "selected": false
       },
       {
         "id": "diptyque-orpheon",
-        "image": "",
+        "image": "perfume/diptyque.jpg",
         "name": "Diptyque\nOrphéon",
         "text": "",
         "selected": false
@@ -467,42 +467,42 @@
     "items": [
       {
         "id": "medicube-age-r-booster-pro",
-        "image": "",
+        "image": "device/medicube.jpg",
         "name": "Medicube\nAGE-R Booster Pro",
         "text": "",
         "selected": false
       },
       {
         "id": "panasonic-vitalift-rf-ex",
-        "image": "",
+        "image": "device/panasonic.jpg",
         "name": "Panasonic\nVITALIFT RF EX EH-SR86",
         "text": "",
         "selected": false
       },
       {
         "id": "current-body-skin-led-mask",
-        "image": "",
+        "image": "device/current-body.jpg",
         "name": "Current Body\nSkin LED 6 合 1 光療面膜儀",
         "text": "",
         "selected": false
       },
       {
         "id": "ghd-chronos-max",
-        "image": "",
+        "image": "device/ghd.jpg",
         "name": "GHD\nChronos Max 寬板高清亮澤造型夾",
         "text": "",
         "selected": false
       },
       {
         "id": "dyson-supersonic-r",
-        "image": "",
+        "image": "device/dyson.jpg",
         "name": "Dyson\nSupersonic r",
         "text": "",
         "selected": false
       },
       {
         "id": "refa-beautech-dryer-w",
-        "image": "",
+        "image": "device/refa.jpg",
         "name": "ReFa\nBEAUTECH DRYER W",
         "text": "",
         "selected": false
