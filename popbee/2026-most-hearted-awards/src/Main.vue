@@ -83,11 +83,30 @@
         <img :src="`${PUBLIC_URL}luggage.png`" alt="" class="w-full" />
       </div>
     </div>
+
+    <transition name="fade">
+      <button
+        v-show="showBackToTop"
+        id="back-to-top"
+        @click="scrollToTop"
+        class="fixed right-[30px] bottom-[30px] z-50 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white p-3 shadow-lg transition-transform hover:scale-105 sm:flex"
+        aria-label="Back to top"
+      >
+        <img src="/up-arrow.svg" alt="" class="h-full w-full object-contain" />
+      </button>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, provide, useTemplateRef } from 'vue'
+import {
+  ref,
+  computed,
+  onMounted,
+  onUnmounted,
+  provide,
+  useTemplateRef,
+} from 'vue'
 import { ofetch } from 'ofetch'
 import pym from 'pym.js'
 import SectionCategories from '~/components/Main/SectionCategories.vue'
@@ -101,6 +120,7 @@ const submitting = ref(false)
 const pymChild = ref()
 const scrollOffset = ref(0)
 const currentSection = ref('')
+const showBackToTop = ref(false)
 const viewportInfo = ref({
   width: 0,
   height: 0,
@@ -151,7 +171,8 @@ const onAutoNextSection = () => {
       const scrollPosition =
         nextEl.getBoundingClientRect().top +
         window.pageYOffset -
-        scrollOffset.value + 80
+        scrollOffset.value +
+        80
 
       pymChild.value.scrollParentToChildPos(scrollPosition)
     }
@@ -244,15 +265,31 @@ const submitVote = async () => {
     })
 }
 
+const handleScroll = () => {
+  showBackToTop.value = window.scrollY > 300 || scrollOffset.value > 300
+}
+
+const scrollToTop = () => {
+  if (pymChild.value) {
+    pymChild.value.scrollParentToChildPos(0)
+  }
+}
+
 onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
   pymChild.value = new pym.Child({ polling: 500 })
   pymChild.value.onMessage('positionOffset', (offset) => {
     scrollOffset.value = +offset
+    handleScroll()
   })
   pymChild.value.onMessage('viewport-iframe-position', (payload) => {
     const [width, height] = payload.split(' ')
     viewportInfo.value = { width: +width, height: +height }
   })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
@@ -277,5 +314,15 @@ onMounted(() => {
   to {
     clip-path: inset(0 -34% 0 0);
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
