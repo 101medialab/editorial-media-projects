@@ -151,7 +151,7 @@ const onAutoNextSection = () => {
       const scrollPosition =
         nextEl.getBoundingClientRect().top +
         window.pageYOffset -
-        scrollOffset.value
+        scrollOffset.value + 80
 
       pymChild.value.scrollParentToChildPos(scrollPosition)
     }
