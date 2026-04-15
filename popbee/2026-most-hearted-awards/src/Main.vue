@@ -132,9 +132,9 @@ const onAutoNextSection = () => {
     const scrollPosition =
       footerEl.value[0].getBoundingClientRect().top +
       window.pageYOffset -
-      scrollOffset.value +
-      viewportInfo.value.height / 2 -
-      footerEl.value[0].offsetHeight / 2
+      scrollOffset.value -
+      (viewportInfo.value.height / 2) +
+      footerEl.value[0].offsetHeight
 
       // window.scrollTo({
       //   top: scrollPosition,
@@ -161,9 +161,8 @@ const onAutoNextSection = () => {
 
       const scrollPosition =
         nextEl.getBoundingClientRect().top +
-        window.pageYOffset -
-        scrollOffset.value +
-        80
+        window.scrollY -
+        scrollOffset.value
 
         // window.scrollTo({
         //   top: scrollPosition,
