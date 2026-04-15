@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/202603-most-hearted-awards/",
-    "preview": "vite preview",
+    "preview": "vite preview --base=/202603-most-hearted-awards/",
     "deploy": "npm run build && ../../deploy.sh $(pwd) dist 202603-most-hearted-awards"
   },
   "dependencies": {

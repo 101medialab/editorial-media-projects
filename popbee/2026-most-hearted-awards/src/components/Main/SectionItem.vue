@@ -12,7 +12,7 @@
             style="clip-path: ellipse(50% 50% at 50% 50%)"
             :class="[
               {
-                'group-hover/category:group-[&:not(:hover)]/item:after:opacity-100 group-[&.selected]/category:group-[&:not(:hover)]/item:after:opacity-100':
+                'group-hover/category:group-not-[&:hover]/item:after:opacity-100 group-[&.selected]/category:group-not-[&:hover]/item:after:opacity-100':
                   !selected,
               },
             ]"

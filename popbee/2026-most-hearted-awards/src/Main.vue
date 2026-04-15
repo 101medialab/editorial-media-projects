@@ -49,16 +49,17 @@
           <footer
             v-if="index === config.length - 1"
             class="mt-[60px] text-center"
+            ref="footerEl"
           >
             <div class="mb-[30px]">
               <button
                 v-if="!completed"
                 @click="submitVote"
                 :disabled="!isVotingFulfilled"
-                class="min-w-[191px] rounded-full bg-white px-[40px] py-[13.5px] text-base text-black not-disabled:cursor-pointer disabled:bg-[#AAA] disabled:text-white"
+                class="min-w-[191px] rounded-full bg-white px-[40px] py-[13.5px] text-base text-black not-disabled:cursor-pointer disabled:bg-[#AAA] disabled:text-white not-disabled:hover:opacity-70"
                 :class="{ 'opacity-65': submitting }"
               >
-                {{ submitButtonText }}<span v-if="submitting"><span class="loader"></span></span>
+                {{ submitButtonText }}<span v-show="submitting"><span class="loader"></span></span>
               </button>
               <button
                 v-else
@@ -112,6 +113,7 @@ const viewportInfo = ref({
 
 const root = useTemplateRef('root')
 const sectionCategoriesEl = useTemplateRef('sectionCategoriesEl')
+const footerEl = useTemplateRef('footerEl')
 
 provide('pymChild', pymChild)
 provide('scrollOffset', scrollOffset)
@@ -128,11 +130,16 @@ const onAutoNextSection = () => {
   // go to the submit button
   if (isVotingFulfilled.value) {
     const scrollPosition =
-      root.value.getBoundingClientRect().bottom -
-      viewportInfo.value.height +
-      window.pageYOffset +
-      scrollOffset.value
+      footerEl.value[0].getBoundingClientRect().top +
+      window.pageYOffset -
+      scrollOffset.value +
+      viewportInfo.value.height / 2 -
+      footerEl.value[0].offsetHeight / 2
 
+      // window.scrollTo({
+      //   top: scrollPosition,
+      //   behavior: 'smooth',
+      // })
     pymChild.value.scrollParentToChildPos(scrollPosition)
   } else {
     // go to next incomplete section
@@ -158,6 +165,10 @@ const onAutoNextSection = () => {
         scrollOffset.value +
         80
 
+        // window.scrollTo({
+        //   top: scrollPosition,
+        //   behavior: 'smooth',
+        // })
       pymChild.value.scrollParentToChildPos(scrollPosition)
     }
   }
@@ -297,7 +308,7 @@ onUnmounted(() => {})
   width: 16px;
   display: inline-block;
   aspect-ratio: 8;
-  background: radial-gradient(circle closest-side, #fff 90%, #fff0) 0 /
+  background: radial-gradient(circle closest-side, #000 90%, #0000) 0 /
     calc(100% / 3) 100% space;
   clip-path: inset(0 100% 0 0);
   animation: l1 1.3s steps(4) infinite;

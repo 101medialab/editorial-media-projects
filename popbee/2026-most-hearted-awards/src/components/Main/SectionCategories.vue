@@ -12,13 +12,13 @@
       </p>
     </div>
 
-    <swiper-container ref="swiperEl" init="false">
+    <swiper-container ref="swiperEl" init="false" class="group/categories">
       <swiper-slide
         v-for="{ id, 'short-name': shortName, image } in config.slice(0, -3)"
         :key="`category-${id}`"
-        class="w-[160px] md:max-w-[167px]"
+        class="w-[160px] md:max-w-[167px] group/item"
       >
-        <div class="relative aspect-[2/3] overflow-hidden rounded-[12px]">
+        <div class="relative aspect-[2/3] overflow-hidden rounded-[12px] after:absolute after:inset-0 after:z-[1] after:bg-black/60 after:opacity-0 after:transition-opacity after:duration-300 after:content-[''] group-hover/categories:group-not-[&:hover]/item:after:opacity-100">
           <a
             class="absolute inset-0 z-20"
             :href="`#category-${id}`"
