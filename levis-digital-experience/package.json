@@ -1,0 +1,7 @@
+{
+  "name": "levis-digital-experience",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "../deploy.sh $(pwd) . levis-digital-experience"
+  }
+}
