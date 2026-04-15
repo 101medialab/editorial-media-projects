@@ -2,7 +2,7 @@
   <section class="section-categories pt-[61px] pb-[60px]">
     <div class="container mb-[30px]">
       <h2
-        class="font-bodndi mb-[20px] text-center text-[60px] tracking-normal normal-case italic md:text-[60px]"
+        class="font-bodndi mb-[20px] text-center text-[60px] normal-case italic md:text-[60px] tracking-[-4%]"
       >
         Voting Categories
       </h2>
@@ -18,7 +18,7 @@
         :key="`category-${id}`"
         class="w-[160px] md:max-w-[167px]"
       >
-        <div class="relative aspect-[3/4] overflow-hidden rounded-[20px]">
+        <div class="relative aspect-[2/3] overflow-hidden rounded-[12px]">
           <a
             class="absolute inset-0 z-20"
             :href="`#category-${id}`"
@@ -30,7 +30,7 @@
             class="h-full w-full object-cover"
           />
           <p
-            class="font-bodndi absolute inset-0 z-10 flex items-center justify-center text-center text-[18px] leading-[1.2] text-white italic md:text-[22px]"
+            class="font-bodndi absolute inset-0 z-10 flex items-center justify-center text-center text-[18px] leading-[1.2] text-white italic md:text-[22px] tracking-[-4%]"
           >
             {{ shortName }}
           </p>
@@ -63,7 +63,7 @@ const swiperParams = {
     forceToAxis: true,
   },
   breakpoints: {
-    768: {
+    1024: {
       spaceBetween: 20,
       slidesOffsetBefore: 30,
       slidesOffsetAfter: 30,

@@ -28,14 +28,11 @@
       </div>
       <div class="@container">
         <p
-          class="mb-[10px] text-center text-[20px] leading-[21.6px] font-medium whitespace-break-spaces lg:text-[24px]"
+          class="mb-[10px] text-center text-[20px] leading-[1.2] font-medium whitespace-break-spaces lg:text-[24px]"
         >
           {{ name }}
         </p>
       </div>
-      <p class="text-justify text-[14px] leading-[18.2px]">
-        {{ text }}
-      </p>
     </div>
     <button
       class="mt-[20px] flex cursor-pointer items-center justify-center gap-[5px] rounded-full border border-white px-[20px] py-[10px] font-medium"

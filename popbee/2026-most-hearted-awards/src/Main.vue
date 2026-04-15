@@ -30,11 +30,11 @@
       </div>
 
       <img :src="`${PUBLIC_URL}mob-intro-img.png`" alt="" class="sm:hidden" />
-      <img :src="`${PUBLIC_URL}intro-img.png`" alt="" class="hidden sm:block" />
+      <img :src="`${PUBLIC_URL}intro-img.png`" alt="" class="hidden sm:block w-full" />
     </section>
 
     <SectionCategories :config="config" />
-    <div :class="{ 'pointer-events-none': completed || submitting }">
+    <div :class="{ 'pointer-events-none': completed || submitting }" class="pt-[60px] lg:pt-[80px]">
       <SectionCategory
         v-for="(item, index) in config"
         :id="`category-${item.id}`"
@@ -58,10 +58,7 @@
                 class="min-w-[191px] rounded-full bg-white px-[40px] py-[13.5px] text-base text-black not-disabled:cursor-pointer disabled:bg-[#AAA] disabled:text-white"
                 :class="{ 'opacity-65': submitting }"
               >
-                {{ submitButtonText }}
-                <span v-if="submitting"
-                  >&nbsp;<span class="loader"></span
-                ></span>
+                {{ submitButtonText }}<span v-if="submitting"><span class="loader"></span></span>
               </button>
               <button
                 v-else
@@ -207,7 +204,7 @@ const sendIncompleteSectionMessage = () => {
 }
 
 const submitButtonText = computed(() => {
-  if (submitting.value) return '提交中...'
+  if (submitting.value) return '提交中'
 
   return !isVotingFulfilled.value ? '請選擇所有類別' : '提交'
 })
@@ -297,7 +294,7 @@ onUnmounted(() => {})
 }
 
 .loader {
-  width: 20px;
+  width: 16px;
   display: inline-block;
   aspect-ratio: 8;
   background: radial-gradient(circle closest-side, #fff 90%, #fff0) 0 /

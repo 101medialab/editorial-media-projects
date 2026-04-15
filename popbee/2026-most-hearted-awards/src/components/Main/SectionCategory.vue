@@ -1,15 +1,15 @@
 <template>
-  <section ref="el" class="py-[60px] lg:py-[80px]">
+  <section ref="el" class="pb-[60px] lg:pb-[80px]">
     <div
       class="mx-auto flex max-w-[1600px] flex-col justify-center px-[15px] lg:px-[30px]"
       :class="isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'"
     >
       <div
-        class="title-wrapper mb-[40px] text-center lg:mb-0 lg:flex lg:w-fit lg:shrink-0 lg:items-start lg:justify-center"
+        class="title-wrapper mb-[30px] text-center lg:mb-0 lg:flex lg:w-fit lg:shrink-0 lg:items-start lg:justify-center"
         :class="isEven ? 'lg:pl-[135px]' : 'lg:pr-[135px]'"
       >
         <h4
-          class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic lg:text-[60px] lg:leading-none lg:tracking-[-2.4px]"
+          class="font-bodndi text-[46px] tracking-[-1.8px] text-white italic lg:text-[60px] lg:leading-none lg:tracking-[-4%]"
           :class="isEven ? 'lg:vertical-rl' : 'lg:vertical-lr'"
         >
           {{ name }}
