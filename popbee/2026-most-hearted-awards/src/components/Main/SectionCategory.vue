@@ -1,5 +1,5 @@
 <template>
-  <section ref="el" class="pb-[60px] lg:pb-[80px]">
+  <section ref="el">
     <div
       class="mx-auto flex max-w-[1600px] flex-col justify-center px-[15px] lg:px-[30px]"
       :class="isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'"

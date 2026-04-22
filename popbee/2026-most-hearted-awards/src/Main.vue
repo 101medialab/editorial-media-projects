@@ -34,7 +34,7 @@
     </section>
 
     <SectionCategories :config="config" />
-    <div :class="{ 'pointer-events-none': completed || submitting }" class="pt-[60px] lg:pt-[80px]">
+    <div :class="{ 'pointer-events-none': completed || submitting }" class="pt-[60px]">
       <SectionCategory
         v-for="(item, index) in config"
         :id="`category-${item.id}`"
@@ -44,6 +44,7 @@
         ref="sectionCategoriesEl"
         @selected-items="onSelected"
         @auto-next-section="onAutoNextSection"
+        :class="{'pb-[60px] lg:pb-[120px] mb-[60px] lg:mb-[120px] border-b border-white': index !== config.length - 1}"
       >
         <template #footer>
           <footer
