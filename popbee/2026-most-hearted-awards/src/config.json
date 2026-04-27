@@ -14,9 +14,9 @@
         "selected": true
       },
       {
-        "id": "ahres",
-        "image": "new-in-town-brands/ahres.jpg",
-        "name": "AHRES",
+        "id": "3coins",
+        "image": "new-in-town-brands/3coins.jpg",
+        "name": "3COINS",
         "text": "",
         "selected": false
       },
@@ -42,9 +42,9 @@
         "selected": false
       },
       {
-        "id": "apee",
-        "image": "new-in-town-brands/apee.jpg",
-        "name": "APEE",
+        "id": "ahres",
+        "image": "new-in-town-brands/ahres.jpg",
+        "name": "AHRES",
         "text": "",
         "selected": false
       }
@@ -88,7 +88,7 @@
       {
         "id": "longchamp-le-pliage-xtra",
         "image": "fashion/longchamp.jpg",
-        "name": "Longchamp\nLe Pliage Xtra / Le Foulonné",
+        "name": "Longchamp\nLe Pliage Xtra",
         "text": "",
         "selected": false
       },
@@ -109,9 +109,9 @@
     "winner-badge": "dark",
     "items": [
       {
-        "id": "cartier-love-unlimited",
+        "id": "cartier-love-unlimited-bracelet",
         "image": "jewellery/cartier.jpg",
-        "name": "Cartier\nLove Unlimited",
+        "name": "Cartier\nLove Unlimited Bracelet",
         "text": "",
         "selected": false
       },
@@ -123,9 +123,9 @@
         "selected": false
       },
       {
-        "id": "chanel-coco-crush",
+        "id": "chanel-coco-crush-collection",
         "image": "jewellery/chanel.jpg",
-        "name": "Chanel\nCoco Crush",
+        "name": "Chanel\nCoco Crush Collection",
         "text": "",
         "selected": false
       },
@@ -160,9 +160,9 @@
     "winner-badge": "dark",
     "items": [
       {
-        "id": "on-running",
+        "id": "on-cloudrunner-2",
         "image": "sports-brands/on-running.jpg",
-        "name": "ON Running",
+        "name": "ON\nCloudrunner 2",
         "text": "",
         "selected": false
       },
@@ -188,16 +188,16 @@
         "selected": false
       },
       {
-        "id": "nike-x-jacquemus-luna",
+        "id": "nike-x-jacquemus-moon-shoes",
         "image": "sports-brands/nike-x-jacquemus.jpg",
-        "name": "Nike x Jacquemus\nLuna",
+        "name": "Nike x Jacquemus\nMoon Shoes",
         "text": "",
         "selected": false
       },
       {
-        "id": "new-balance-1906l-204l",
+        "id": "new-balance-1906l",
         "image": "sports-brands/new-balance.jpg",
-        "name": "New Balance\n1906L / 204L",
+        "name": "New Balance\n1906L",
         "text": "",
         "selected": false
       }
@@ -218,13 +218,6 @@
         "selected": false
       },
       {
-        "id": "peninsula",
-        "image": "hotel/peninsula.jpg",
-        "name": "Peninsula",
-        "text": "",
-        "selected": false
-      },
-      {
         "id": "shangri-la",
         "image": "hotel/shangri-la.jpg",
         "name": "Shangri-La",
@@ -232,16 +225,23 @@
         "selected": false
       },
       {
-        "id": "regent",
-        "image": "hotel/regent.jpg",
-        "name": "Regent",
+        "id": "dorsett",
+        "image": "hotel/dorsett.jpg",
+        "name": "Dorsett",
         "text": "",
         "selected": false
       },
       {
-        "id": "dorsett",
-        "image": "hotel/dorsett.jpg",
-        "name": "Dorsett",
+        "id": "peninsula",
+        "image": "hotel/peninsula.jpg",
+        "name": "Peninsula",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "regent",
+        "image": "hotel/regent.jpg",
+        "name": "Regent",
         "text": "",
         "selected": false
       },
