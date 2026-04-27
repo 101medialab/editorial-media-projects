@@ -44,7 +44,7 @@
         ref="sectionCategoriesEl"
         @selected-items="onSelected"
         @auto-next-section="onAutoNextSection"
-        :class="{'pb-[60px] lg:pb-[120px] mb-[60px] lg:mb-[120px] border-b border-white': index !== config.length - 1}"
+        :class="{'pb-[60px] lg:pb-[120px] mb-[60px] lg:mb-[120px] border-b border-white/50': index !== config.length - 1}"
       >
         <template #footer>
           <footer
