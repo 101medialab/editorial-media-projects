@@ -1,56 +1,5 @@
 [
   {
-    "id": "new-in-town-brands",
-    "short-name": "New in Town Brands",
-    "name": "New in Town Brands",
-    "image": "categories/new-in-town-brands.png",
-    "winner-badge": "light",
-    "items": [
-      {
-        "id": "fwee",
-        "image": "new-in-town-brands/fwee.jpg",
-        "name": "Fwee",
-        "text": "",
-        "selected": true
-      },
-      {
-        "id": "3coins",
-        "image": "new-in-town-brands/3coins.jpg",
-        "name": "3COINS",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "hetras",
-        "image": "new-in-town-brands/hetras.jpg",
-        "name": "Hetras",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "subdued",
-        "image": "new-in-town-brands/subdued.jpg",
-        "name": "Subdued",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "ongo",
-        "image": "new-in-town-brands/ongo.jpg",
-        "name": "ONGO",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "ahres",
-        "image": "new-in-town-brands/ahres.jpg",
-        "name": "AHRES",
-        "text": "",
-        "selected": false
-      }
-    ]
-  },
-  {
     "id": "fashion",
     "short-name": "Fashion",
     "name": "Fashion Items",
@@ -147,6 +96,214 @@
         "id": "tiffany-knot-collection",
         "image": "jewellery/tiffany-co.jpg",
         "name": "Tiffany & Co.\nKnot Collection",
+        "text": "",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "beauty-skincare",
+    "short-name": "Beauty",
+    "group": "beauty",
+    "name": "Beauty (Skincare)",
+    "image": "categories/beauty-skincare.png",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "la-prairie",
+        "image": "skincare/la-prairie.jpg",
+        "name": "La Prairie\n魚子精華瓊貴透潤面霜",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "cle-de-peau-beaute",
+        "image": "skincare/cle-de-peau-beaute.jpg",
+        "name": "Clé de Peau Beauté\n鉑鑽源亮細胞系列",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "shu-uemura",
+        "image": "skincare/shu-uemura.jpg",
+        "name": "Shu Uemura\n琥珀山茶花養膚潔顏油",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "sk-ii-skinpower",
+        "image": "skincare/sk-ii.jpg",
+        "name": "SK-II\nSKINPOWER 煥顏能量精華霜",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "pudori-hydra-refresh-lotion",
+        "image": "skincare/pudori.jpg",
+        "name": "Pudori\nHydra Refresh Lotion 水潤清爽面霜",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "la-mer-rejuvenating-night-cream",
+        "image": "skincare/la-mer.jpg",
+        "name": "La Mer\nTHE REJUVENATING NIGHT CREAM 精華修復晚霜",
+        "text": "",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "beauty-makeup",
+    "short-name": "Beauty (Makeup)",
+    "group": "beauty",
+    "name": "Beauty (Makeup)",
+    "image": "categories/beauty-makeup.png",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "nars-light-reflecting",
+        "image": "makeup/nars.jpg",
+        "name": "NARS\nLIGHT REFLECTING™原生光幻彩蜜粉餅",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "dior-beauty-lip",
+        "image": "makeup/dior.jpg",
+        "name": "Dior Beauty\n傲姿舞台持色唇膏",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "prada-beauty-lip-balm",
+        "image": "makeup/prada.jpg",
+        "name": "Prada Beauty\n藍色唇膏",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "laura-mercier-setting-spray",
+        "image": "makeup/laura-mercier.jpg",
+        "name": "Laura Mercier\n鎖妝柔霧定妝噴霧",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "charlotte-tilbury-powder",
+        "image": "makeup/charlotte-tilbury.jpg",
+        "name": "Charlotte Tilbury\n輕盈零瑕蜜粉",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "hourglass-vanish-concealer",
+        "image": "makeup/hourglass.jpg",
+        "name": "Hourglass\nVanish™ Airbrush Concealer",
+        "text": "",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "beauty-perfume",
+    "short-name": "Beauty (Perfume)",
+    "group": "beauty",
+    "name": "Beauty (Perfume)",
+    "image": "categories/beauty-perfume.png",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "byredo-blanche-absolu",
+        "image": "perfume/byredo.jpg",
+        "name": "Byredo\nBlanche Absolu de Parfum",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "le-labo-eucalyptus-20",
+        "image": "perfume/le-labo.jpg",
+        "name": "Le Labo\nEUCALYPTUS 20",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "chanel-n5",
+        "image": "perfume/chanel-n5.jpg",
+        "name": "CHANEL Beauty\nN°5 Eau De Parfum",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "jo-malone-raspberry-ripple",
+        "image": "perfume/jo-malone.jpg",
+        "name": "Jo Malone\nRaspberry Ripple Cologne",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "chloe-atelier-cedrus",
+        "image": "perfume/chloe.jpg",
+        "name": "CHLOÉ\nATELIER CEDRUS",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "diptyque-orpheon",
+        "image": "perfume/diptyque.jpg",
+        "name": "Diptyque\nOrphéon",
+        "text": "",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "id": "beauty-device",
+    "short-name": "Beauty (Device)",
+    "group": "beauty",
+    "name": "Beauty (Device)",
+    "image": "categories/beauty-device.png",
+    "winner-badge": "dark",
+    "items": [
+      {
+        "id": "medicube-age-r-booster-pro",
+        "image": "device/medicube.jpg",
+        "name": "Medicube\nAGE-R Booster Pro",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "panasonic-vitalift-rf-ex",
+        "image": "device/panasonic.jpg",
+        "name": "Panasonic\nVITALIFT RF EX EH-SR86",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "current-body-skin-led-mask",
+        "image": "device/current-body.jpg",
+        "name": "Current Body\nSkin LED 6 合 1 光療面膜儀",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "ghd-chronos-max",
+        "image": "device/ghd.jpg",
+        "name": "GHD\nChronos Max 寬板高清亮澤造型夾",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "dyson-supersonic-r",
+        "image": "device/dyson.jpg",
+        "name": "Dyson\nSupersonic r",
+        "text": "",
+        "selected": false
+      },
+      {
+        "id": "refa-beautech-dryer-w",
+        "image": "device/refa.jpg",
+        "name": "ReFa\nBEAUTECH DRYER W",
         "text": "",
         "selected": false
       }
@@ -306,204 +463,51 @@
     ]
   },
   {
-    "id": "beauty-skincare",
-    "short-name": "Beauty (4項)",
-    "name": "Beauty (Skincare)",
-    "image": "categories/beauty-skincare.png",
-    "winner-badge": "dark",
+    "id": "new-in-town-brands",
+    "short-name": "New Brands in Town",
+    "name": "New Brands in Town",
+    "image": "categories/new-in-town-brands.png",
+    "winner-badge": "light",
     "items": [
       {
-        "id": "la-prairie",
-        "image": "skincare/la-prairie.jpg",
-        "name": "La Prairie\n魚子精華瓊貴透潤面霜",
+        "id": "fwee",
+        "image": "new-in-town-brands/fwee.jpg",
+        "name": "Fwee",
+        "text": "",
+        "selected": true
+      },
+      {
+        "id": "3coins",
+        "image": "new-in-town-brands/3coins.jpg",
+        "name": "3COINS",
         "text": "",
         "selected": false
       },
       {
-        "id": "cle-de-peau-beaute",
-        "image": "skincare/cle-de-peau-beaute.jpg",
-        "name": "Clé de Peau Beauté\n鉑鑽源亮細胞系列",
+        "id": "hetras",
+        "image": "new-in-town-brands/hetras.jpg",
+        "name": "Hetras",
         "text": "",
         "selected": false
       },
       {
-        "id": "shu-uemura",
-        "image": "skincare/shu-uemura.jpg",
-        "name": "Shu Uemura\n琥珀山茶花養膚潔顏油",
+        "id": "subdued",
+        "image": "new-in-town-brands/subdued.jpg",
+        "name": "Subdued",
         "text": "",
         "selected": false
       },
       {
-        "id": "sk-ii-skinpower",
-        "image": "skincare/sk-ii.jpg",
-        "name": "SK-II\nSKINPOWER 煥顏能量精華霜",
+        "id": "ongo",
+        "image": "new-in-town-brands/ongo.jpg",
+        "name": "ONGO",
         "text": "",
         "selected": false
       },
       {
-        "id": "pudori-hydra-refresh-lotion",
-        "image": "skincare/pudori.jpg",
-        "name": "Pudori\nHydra Refresh Lotion 水潤清爽面霜",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "la-mer-rejuvenating-night-cream",
-        "image": "skincare/la-mer.jpg",
-        "name": "La Mer\nTHE REJUVENATING NIGHT CREAM 精華修復晚霜",
-        "text": "",
-        "selected": false
-      }
-    ]
-  },
-  {
-    "id": "beauty-makeup",
-    "short-name": "Beauty (Makeup)",
-    "name": "Beauty (Makeup)",
-    "image": "categories/beauty-makeup.png",
-    "winner-badge": "dark",
-    "items": [
-      {
-        "id": "nars-light-reflecting",
-        "image": "makeup/nars.jpg",
-        "name": "NARS\nLIGHT REFLECTING™原生光幻彩蜜粉餅",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "dior-beauty-lip",
-        "image": "makeup/dior.jpg",
-        "name": "Dior Beauty\n傲姿舞台持色唇膏",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "prada-beauty-lip-balm",
-        "image": "makeup/prada.jpg",
-        "name": "Prada Beauty\n藍色唇膏",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "laura-mercier-setting-spray",
-        "image": "makeup/laura-mercier.jpg",
-        "name": "Laura Mercier\n鎖妝柔霧定妝噴霧",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "charlotte-tilbury-powder",
-        "image": "makeup/charlotte-tilbury.jpg",
-        "name": "Charlotte Tilbury\n輕盈零瑕蜜粉",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "hourglass-vanish-concealer",
-        "image": "makeup/hourglass.jpg",
-        "name": "Hourglass\nVanish™ Airbrush Concealer",
-        "text": "",
-        "selected": false
-      }
-    ]
-  },
-  {
-    "id": "beauty-perfume",
-    "short-name": "Beauty (Perfume)",
-    "name": "Beauty (Perfume)",
-    "image": "categories/beauty-perfume.png",
-    "winner-badge": "dark",
-    "items": [
-      {
-        "id": "byredo-blanche-absolu",
-        "image": "perfume/byredo.jpg",
-        "name": "Byredo\nBlanche Absolu de Parfum",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "le-labo-eucalyptus-20",
-        "image": "perfume/le-labo.jpg",
-        "name": "Le Labo\nEUCALYPTUS 20",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "chanel-n5",
-        "image": "perfume/chanel-n5.jpg",
-        "name": "CHANEL Beauty\nN°5 Eau De Parfum",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "jo-malone-raspberry-ripple",
-        "image": "perfume/jo-malone.jpg",
-        "name": "Jo Malone\nRaspberry Ripple Cologne",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "chloe-atelier-cedrus",
-        "image": "perfume/chloe.jpg",
-        "name": "CHLOÉ\nATELIER CEDRUS",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "diptyque-orpheon",
-        "image": "perfume/diptyque.jpg",
-        "name": "Diptyque\nOrphéon",
-        "text": "",
-        "selected": false
-      }
-    ]
-  },
-  {
-    "id": "beauty-device",
-    "short-name": "Beauty (Device)",
-    "name": "Beauty (Device)",
-    "image": "categories/beauty-device.png",
-    "winner-badge": "dark",
-    "items": [
-      {
-        "id": "medicube-age-r-booster-pro",
-        "image": "device/medicube.jpg",
-        "name": "Medicube\nAGE-R Booster Pro",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "panasonic-vitalift-rf-ex",
-        "image": "device/panasonic.jpg",
-        "name": "Panasonic\nVITALIFT RF EX EH-SR86",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "current-body-skin-led-mask",
-        "image": "device/current-body.jpg",
-        "name": "Current Body\nSkin LED 6 合 1 光療面膜儀",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "ghd-chronos-max",
-        "image": "device/ghd.jpg",
-        "name": "GHD\nChronos Max 寬板高清亮澤造型夾",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "dyson-supersonic-r",
-        "image": "device/dyson.jpg",
-        "name": "Dyson\nSupersonic r",
-        "text": "",
-        "selected": false
-      },
-      {
-        "id": "refa-beautech-dryer-w",
-        "image": "device/refa.jpg",
-        "name": "ReFa\nBEAUTECH DRYER W",
+        "id": "ahres",
+        "image": "new-in-town-brands/ahres.jpg",
+        "name": "AHRES",
         "text": "",
         "selected": false
       }

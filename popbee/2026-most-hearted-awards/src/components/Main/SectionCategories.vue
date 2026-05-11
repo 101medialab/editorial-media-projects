@@ -14,7 +14,7 @@
 
     <swiper-container ref="swiperEl" init="false" class="group/categories">
       <swiper-slide
-        v-for="{ id, 'short-name': shortName, image } in config.slice(0, -3)"
+        v-for="{ id, 'short-name': shortName, image } in categories"
         :key="`category-${id}`"
         class="w-[160px] md:max-w-[167px] group/item"
       >
@@ -41,10 +41,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, inject } from 'vue'
+import { ref, onMounted, inject, computed } from 'vue'
 import { PUBLIC_URL } from '~/constants'
 
-defineProps({
+const props = defineProps({
   config: {
     type: Array,
     required: true,
@@ -73,6 +73,19 @@ const swiperParams = {
 
 const pymChild = inject('pymChild')
 const scrollOffset = inject('scrollOffset')
+
+const categories = computed(() => {
+  const seenGroups = new Set()
+  return props.config.filter((item) => {
+    if (!item.group) return true
+
+    if (seenGroups.has(item.group)) return false
+
+    seenGroups.add(item.group)
+
+    return true
+  })
+})
 
 const scrollParentToChildEl = (e) => {
   e.preventDefault()
