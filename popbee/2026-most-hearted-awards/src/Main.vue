@@ -11,7 +11,7 @@
         alt="Most Hearted Awards 2026"
         class="hidden w-full sm:block"
       /> -->
-      <div class="mx-auto max-w-[1600px] px-[15px] lg:px-[30px] hidden w-full sm:block">
+      <div class="mx-auto max-w-[1450px] pt-[70px] px-[30px] hidden w-full sm:block">
         <img :src="`${PUBLIC_URL}header-key-visual.png`" alt="">
       </div>
     </section>
