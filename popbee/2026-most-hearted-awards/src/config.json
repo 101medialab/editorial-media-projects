@@ -213,42 +213,42 @@
       {
         "id": "kimpton",
         "image": "hotel/kimpton.jpg",
-        "name": "Kimpton",
+        "name": "香港尖沙咀金普頓酒店",
         "text": "",
         "selected": false
       },
       {
         "id": "shangri-la",
         "image": "hotel/shangri-la.jpg",
-        "name": "Shangri-La",
+        "name": "港島香格里拉酒店",
         "text": "",
         "selected": false
       },
       {
         "id": "dorsett",
         "image": "hotel/dorsett.jpg",
-        "name": "Dorsett",
+        "name": "香港啟德帝盛酒店",
         "text": "",
         "selected": false
       },
       {
         "id": "peninsula",
         "image": "hotel/peninsula.jpg",
-        "name": "Peninsula",
+        "name": "香港半島酒店",
         "text": "",
         "selected": false
       },
       {
         "id": "regent",
         "image": "hotel/regent.jpg",
-        "name": "Regent",
+        "name": "香港麗晶酒店",
         "text": "",
         "selected": false
       },
       {
         "id": "rosewood",
         "image": "hotel/rosewood.jpg",
-        "name": "Rosewood",
+        "name": "香港瑰麗酒店",
         "text": "",
         "selected": false
       }
