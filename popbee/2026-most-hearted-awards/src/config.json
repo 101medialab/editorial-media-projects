@@ -315,7 +315,7 @@
       {
         "id": "la-prairie",
         "image": "skincare/la-prairie.jpg",
-        "name": "La Prairie",
+        "name": "La Prairie\n魚子精華瓊貴透潤面霜",
         "text": "",
         "selected": false
       },
@@ -431,7 +431,7 @@
       {
         "id": "chanel-n5",
         "image": "perfume/chanel-n5.jpg",
-        "name": "Chanel\nN°5",
+        "name": "CHANEL Beauty\nN°5 Eau De Parfum",
         "text": "",
         "selected": false
       },
