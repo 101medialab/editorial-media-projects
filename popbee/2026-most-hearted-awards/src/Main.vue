@@ -11,8 +11,10 @@
         alt="Most Hearted Awards 2026"
         class="hidden w-full sm:block"
       /> -->
-      <div class="mx-auto max-w-[1450px] pt-[70px] px-[180px] hidden w-full sm:block">
-        <img :src="`${PUBLIC_URL}header-key-visual.png`" alt="">
+      <div
+        class="mx-auto hidden w-full max-w-[1450px] px-[180px] pt-[70px] sm:block"
+      >
+        <img :src="`${PUBLIC_URL}header-key-visual.png`" alt="" />
       </div>
     </section>
 
@@ -33,11 +35,18 @@
       </div>
 
       <img :src="`${PUBLIC_URL}mob-intro-img.png`" alt="" class="sm:hidden" />
-      <img :src="`${PUBLIC_URL}intro-img.png`" alt="" class="hidden sm:block w-full" />
+      <img
+        :src="`${PUBLIC_URL}intro-img.png`"
+        alt=""
+        class="hidden w-full sm:block"
+      />
     </section>
 
     <SectionCategories :config="config" />
-    <div :class="{ 'pointer-events-none': completed || submitting }" class="pt-[60px]">
+    <div
+      :class="{ 'pointer-events-none': completed || submitting }"
+      class="pt-[60px]"
+    >
       <SectionCategory
         v-for="(item, index) in config"
         :id="`category-${item.id}`"
@@ -47,7 +56,10 @@
         ref="sectionCategoriesEl"
         @selected-items="onSelected"
         @auto-next-section="onAutoNextSection"
-        :class="{'pb-[60px] lg:pb-[120px] mb-[60px] lg:mb-[120px] border-b border-white/50': index !== config.length - 1}"
+        :class="{
+          'mb-[60px] border-b border-white/50 pb-[60px] lg:mb-[120px] lg:pb-[120px]':
+            index !== config.length - 1,
+        }"
       >
         <template #footer>
           <footer
@@ -57,19 +69,21 @@
           >
             <div class="mb-[30px]">
               <button
-                v-if="!completed"
+                v-if="0 && !completed"
                 @click="submitVote"
                 :disabled="!isVotingFulfilled"
-                class="min-w-[191px] rounded-full bg-white px-[40px] py-[13.5px] text-base text-black not-disabled:cursor-pointer disabled:bg-[#AAA] disabled:text-white not-disabled:hover:opacity-70"
+                class="min-w-[191px] rounded-full bg-white px-[40px] py-[13.5px] text-base text-black not-disabled:cursor-pointer not-disabled:hover:opacity-70 disabled:bg-[#AAA] disabled:text-white"
                 :class="{ 'opacity-65': submitting }"
               >
-                {{ submitButtonText }}<span v-show="submitting"><span class="loader"></span></span>
+                {{ submitButtonText
+                }}<span v-show="submitting"><span class="loader"></span></span>
               </button>
               <button
                 v-else
                 class="pointer-events-none min-w-[191px] rounded-full bg-[#333] px-[40px] py-[13.5px] text-base text-white"
+                disabled
               >
-                您已成功投票
+                投票已完結
               </button>
             </div>
 
@@ -137,13 +151,13 @@ const onAutoNextSection = () => {
       footerEl.value[0].getBoundingClientRect().top +
       window.pageYOffset -
       scrollOffset.value -
-      (viewportInfo.value.height / 2) +
+      viewportInfo.value.height / 2 +
       footerEl.value[0].offsetHeight
 
-      // window.scrollTo({
-      //   top: scrollPosition,
-      //   behavior: 'smooth',
-      // })
+    // window.scrollTo({
+    //   top: scrollPosition,
+    //   behavior: 'smooth',
+    // })
     pymChild.value.scrollParentToChildPos(scrollPosition)
   } else {
     // go to next incomplete section
@@ -164,14 +178,12 @@ const onAutoNextSection = () => {
       const nextEl = sectionCategoriesEl.value[nextIndex].el
 
       const scrollPosition =
-        nextEl.getBoundingClientRect().top +
-        window.scrollY -
-        scrollOffset.value
+        nextEl.getBoundingClientRect().top + window.scrollY - scrollOffset.value
 
-        // window.scrollTo({
-        //   top: scrollPosition,
-        //   behavior: 'smooth',
-        // })
+      // window.scrollTo({
+      //   top: scrollPosition,
+      //   behavior: 'smooth',
+      // })
       pymChild.value.scrollParentToChildPos(scrollPosition)
     }
   }
