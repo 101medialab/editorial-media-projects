@@ -1,63 +1,121 @@
 <template>
-  <div class="group/item flex flex-col">
-    <div class="flex flex-1 flex-col">
-      <div class="mb-[15px] max-sm:px-[26px]">
-        <div class="group relative">
-          <div class="absolute inset-0">
-            <div
-              class="aspect-[4/3] rounded-lg overflow-hidden after:absolute after:inset-0 after:z-[1] after:bg-black/60 after:content-['']"
-              :class="{
-                'after:opacity-0': selected,
-                'after:opacity-100': !selected,
-              }"
-            >
-              <div
-                class="w-full h-full flex items-center justify-center text-white font-bold text-2xl transition-transform duration-300 group-hover:scale-105"
-                :style="{ backgroundColor: item['background-color'] || '#6b7280' }"
-              >
-                {{ name }}
-              </div>
-            </div>
-          </div>
-          <div
-            class="relative z-10 w-full aspect-[4/3] border-2 border-gray-300 rounded-lg"
-          ></div>
-          <slot name="badge" />
-          <a
-            class="absolute inset-0 z-20 block"
-            :href="url"
-            target="_blank"
-          ></a>
-        </div>
-      </div>
-      <div class="@container">
-        <p
-          class="mb-[20px] text-[24px] leading-[28.8px] font-medium whitespace-break-spaces"
-        >
-          {{ name }}
-        </p>
-      </div>
-      <p class="text-center text-base leading-[24px]">
-        {{ text }}
-      </p>
+  <div class="section-item">
+    <div class="item-visual">
+      <div class="category-badge">{{ item.category }}</div>
+      <img
+        :src="`${PUBLIC_URL}result/product/${item.image}`"
+        :alt="item.title"
+        class="product-img w-[271px] h-[319px]"
+      />
+      <div class="box-frame" aria-hidden="true" v-html="boxSvgHtml" />
     </div>
+
+<!--    <div class="item-name">-->
+<!--      <img :src="`${PUBLIC_URL}result/name-tag.svg`" alt="" aria-hidden="true" class="name-tag-bg" />-->
+<!--      <p>{{ item.title }}</p>-->
+<!--    </div>-->
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { PUBLIC_URL } from '~/constants'
 
-const { item, disabled } = defineProps({
+const props = defineProps({
   item: {
     type: Object,
     required: true,
   },
+  box: {
+    type: String,
+    required: true,
+  },
 })
 
-const image = computed(() => item.image)
-const name = computed(() => item.name)
-const text = computed(() => item.long_text ?? item.text)
-const selected = computed(() => item.selected ?? false)
-const url = computed(() => item.url)
+const boxSvgHtml = ref('')
+
+watchEffect(async () => {
+  const res = await fetch(`${PUBLIC_URL}result/${props.box}`)
+  boxSvgHtml.value = await res.text()
+})
 </script>
+
+<style scoped lang="scss">
+.section-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-visual {
+  position: relative;
+  width: 100%;
+
+  .category-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 20;
+    background-color: #1a2c4e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .product-img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 60%;
+    max-height: 70%;
+    object-fit: contain;
+    z-index: 0;
+  }
+
+  .box-frame {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: block;
+
+    :deep(svg) {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+.item-name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+
+  .name-tag-bg {
+    width: 100%;
+    display: block;
+  }
+
+  p {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #1a2c4e;
+    white-space: pre-line;
+    padding: 0 12px;
+  }
+}
+</style>

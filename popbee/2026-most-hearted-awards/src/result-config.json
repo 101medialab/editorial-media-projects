@@ -1,0 +1,82 @@
+[
+  {
+    "id": "part-one",
+    "box": "short-box.svg",
+    "items": [
+      {
+        "id": "fashion",
+        "category": "FASHION",
+        "image": "dior.png",
+        "title": "DIOR\nVOAGE BAG"
+      },
+      {
+        "id": "sports",
+        "category": "SPORTS",
+        "image": "nike.png",
+        "title": "NIKE X JACQUEMUS\nMOON SHOES"
+      },
+      {
+        "id": "jewellery",
+        "category": "JEWELLERY",
+        "image": "cartier.png",
+        "title": "CARTIER\nLOVE UNLIMITED BRACELET"
+      }
+    ]
+  },
+  {
+    "id": "part-two",
+    "box": "tall-box.svg",
+    "background": "#EDECED",
+    "logo": "logo-black.svg",
+    "items": [
+      {
+        "id": "skincare",
+        "category": "SKINCARE",
+        "image": "cle-de-peau.png",
+        "title": "CLE DE PEAU BEAUTÉ\n肌膚之鑰細緻系列"
+      },
+      {
+        "id": "makeup",
+        "category": "MAKEUP",
+        "image": "charlotte-tilbury.png",
+        "title": "CHARLOTTE TILBURY\n輕盈零瑕底粉"
+      },
+      {
+        "id": "perfume",
+        "category": "PERFUME",
+        "image": "byredo.png",
+        "title": "BYREDO BLANCHE ABSOLU\nDE PARFUM"
+      },
+      {
+        "id": "device",
+        "category": "DEVICE",
+        "image": "medicube.png",
+        "title": "MEDICUBE\nAGE-R BOOSTER PRO"
+      }
+    ]
+  },
+  {
+    "id": "part-three",
+    "box": "short-box.svg",
+    "items": [
+      {
+        "id": "tech",
+        "category": "TECH",
+        "image": "apple.png",
+        "title": "APPLE\nIPHONE 17 PRO"
+      },
+      {
+        "id": "new-brands",
+        "category": "NEW BRANDS",
+        "image": "fwee.png",
+        "title": "FWEE"
+      },
+      {
+        "id": "hotel",
+        "category": "HOTEL",
+        "image": "peninsula.png",
+        "title": "香港半島酒店"
+      }
+    ]
+  }
+]

@@ -2,51 +2,34 @@
   <div ref="root">
     <section class="main-banner">
       <img
-          :src="`${PUBLIC_URL}mob-hero-banner.jpg`"
+          :src="`${PUBLIC_URL}result/m-hero-banner.jpg`"
           alt="Most Hearted Awards 2026"
           class="w-full sm:hidden"
       />
       <img
-          :src="`${PUBLIC_URL}hero-banner.jpg`"
+          :src="`${PUBLIC_URL}result/hero-banner.jpg`"
           alt="Most Hearted Awards 2026"
           class="hidden w-full sm:block"
       />
     </section>
 
-    <SectionCategories />
+    <InfoBox />
 
-    <div>
-      <SectionCategory
-        v-for="(item, index) in config"
-        :id="`category-${item.id}`"
-        :key="`section.category.${item.id}`"
-        :config="item"
-      >
-        <template #footer>
-          <footer
-            v-if="index === config.length - 1"
-            class="mt-[60px] text-center"
-          >
-            <small class="text-[11px]"
-              >* Design elements and background colors</small
-            >
-          </footer>
-        </template>
-      </SectionCategory>
-      <div class="closing mx-auto max-w-[1123px] px-[15px] pb-[60px]">
-        <img :src="`${PUBLIC_URL}luggage.png`" alt="" class="w-full" />
-      </div>
-    </div>
+    <SectionResult
+      v-for="part in resultConfig"
+      :key="part.id"
+      :config="part"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, provide } from 'vue'
+import {ref, onMounted, provide} from 'vue'
 import pym from 'pym.js'
-import SectionCategories from '~/components/Result/SectionCategories.vue'
-import SectionCategory from '~/components/Result/SectionCategory.vue'
-import config from '~/config.json'
 import {PUBLIC_URL} from "~/constants.js";
+import InfoBox from '~/components/Result/InfoBox.vue'
+import SectionResult from '~/components/Result/SectionResult.vue'
+import resultConfig from '~/result-config.json'
 
 const pymChild = ref()
 const scrollOffset = ref(0)
@@ -60,13 +43,13 @@ provide('scrollOffset', scrollOffset)
 provide('viewportInfo', viewportInfo)
 
 onMounted(() => {
-  pymChild.value = new pym.Child({ polling: 500 })
+  pymChild.value = new pym.Child({polling: 500})
   pymChild.value.onMessage('positionOffset', (offset) => {
     scrollOffset.value = +offset
   })
   pymChild.value.onMessage('viewport-iframe-position', (payload) => {
     const [width, height] = payload.split(' ')
-    viewportInfo.value = { width: +width, height: +height }
+    viewportInfo.value = {width: +width, height: +height}
   })
 })
 </script>
