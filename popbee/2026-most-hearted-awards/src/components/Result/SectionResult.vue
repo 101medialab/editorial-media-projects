@@ -15,7 +15,7 @@
       </swiper-container>
       <div
         class="shelf-wrapper absolute bottom-[10px] left-0 w-full h-[93px] pointer-events-none"
-        :class="isPartTwo ? 'bottom-[10px]' : 'bottom-[25px]'"
+        :class="isPartTwo ? 'bottom-[15px]' : 'bottom-[20px]'"
         :style="{ backgroundImage: `url(${PUBLIC_URL}result/shelf_v2.png)`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto 93px' }"
       />
     </div>
