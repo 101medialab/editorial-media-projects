@@ -51,13 +51,16 @@ const swiperParams = {
   breakpoints: {
     768: {
       centeredSlides: false,
+      spaceBetween: 30,
+      slidesOffsetBefore: 30,
+      slidesOffsetAfter: 30,
     },
     1200: {
       centeredSlides: false,
       // slidesPerView: props.config.items.length,
       spaceBetween: isPartTwo ? 90 : 105,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
+      slidesOffsetBefore: 30,
+      slidesOffsetAfter: 30,
     },
   },
 }

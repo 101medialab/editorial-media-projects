@@ -5,6 +5,7 @@
         :src="`${PUBLIC_URL}result/items/${item.image}`"
         :alt="item.title"
         class="product-img h-auto w-[271px]"
+        :class="section === 'part-two' ? 'w-[225px]' : 'w-[271px]'"
       />
       <div class="name-tag relative w-[225px] mt-[11px]">
         <img

@@ -68,7 +68,7 @@ $screw-inset: 14px;
 .ra-board {
   position: relative;
   background: #ffffff;
-  border: 1.5px solid $navy;
+  border: 1.5px solid #333;
   padding: 52px 56px;
   width: 100%;
   max-width: 760px;
@@ -77,8 +77,8 @@ $screw-inset: 14px;
   p {
     font-family: var(--font-notos-tc), sans-serif;
     color: $navy;
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 16px;
+    line-height: 150%;
     text-align: center;
 
     & + p {
