@@ -17,40 +17,14 @@
         <img :src="`${PUBLIC_URL}result/screw.png`" alt="" aria-hidden="true" class="screw screw-br" />
       </div>
     </div>
-    <!-- Top-left product (1.png — tall portrait) -->
     <img
-        :src="`${PUBLIC_URL}result/1.png`"
+        v-for="img in decorativeImages"
+        :key="img.src"
+        :src="`${PUBLIC_URL}${img.src}`"
         alt=""
         aria-hidden="true"
         class="absolute pointer-events-none"
-        style="left: -3.6%; top: 5.6%; width: 16.1%; object-fit: contain;"
-    />
-
-    <!-- Top-right product (2.png — wide landscape) -->
-    <img
-        :src="`${PUBLIC_URL}result/2.png`"
-        alt=""
-        aria-hidden="true"
-        class="absolute pointer-events-none"
-        style="left: 80.5%; top: 2.9%; width: 15.4%; object-fit: contain;"
-    />
-
-    <!-- Bottom-left product (3.png — tall portrait) -->
-    <img
-        :src="`${PUBLIC_URL}result/3.png`"
-        alt=""
-        aria-hidden="true"
-        class="absolute pointer-events-none"
-        style="left: 5%; top: 61.4%; width: 7.5%; object-fit: contain;"
-    />
-
-    <!-- Bottom-right product (4.png — rotated) -->
-    <img
-        :src="`${PUBLIC_URL}result/4.png`"
-        alt=""
-        aria-hidden="true"
-        class="absolute pointer-events-none"
-        style="left: 85.6%; top: 56.1%; width: 20%; transform-origin: center; object-fit: contain;"
+        :style="isMobile ? img.mobile : isTablet ? img.tablet : img.desktop"
     />
   </div>
 </template>
@@ -87,7 +61,7 @@ $screw-inset: 14px;
   }
 
   @media (max-width: 48rem) {
-    padding: 50px 8%;
+    padding: 120px 15px;
     gap: 50px;
   }
 }
@@ -136,5 +110,53 @@ $screw-inset: 14px;
 }
 </style>
 <script setup>
-import {PUBLIC_URL} from "~/constants.js";
+import { ref, onMounted, onUnmounted } from 'vue'
+import { PUBLIC_URL } from '~/constants.js'
+
+const decorativeImages = [
+  {
+    src: 'result/1.png',
+    desktop: { left: '-20px', top: '20px', width: '230px', objectFit: 'contain' },
+    tablet:  { left: '-20px', top: '20px', width: '230px', objectFit: 'contain' },
+    mobile:  { left: '-20px', top: '-20px', width: '140px', objectFit: 'contain' },
+  },
+  {
+    src: 'result/2.png',
+    desktop: { right: '55px', top: '20px', width: '260px', objectFit: 'contain' },
+    tablet:  { right: '0', top: '25px', width: '200px', objectFit: 'contain' },
+    mobile:  { right: '-30px', top: '2.9%', width: '140px', objectFit: 'contain' },
+  },
+  {
+    src: 'result/3.png',
+    desktop: { left: '100px', bottom: '-20px', width: '100px', objectFit: 'contain' },
+    tablet:  { left: '60px', bottom: '-15px', width: '100px', objectFit: 'contain' },
+    mobile:  { left: '30px', bottom: '-40px', width: '70px', objectFit: 'contain' },
+  },
+  {
+    src: 'result/4.png',
+    desktop: { right: '-65px', bottom: '-55px', width: '260px', transformOrigin: 'center', objectFit: 'contain' },
+    tablet:  { right: '-65px', bottom: '-55px', width: '260px', transformOrigin: 'center', objectFit: 'contain' },
+    mobile:  { right: '-100px', bottom: '-100px', width: '200px', transformOrigin: 'center', objectFit: 'contain' },
+  },
+]
+
+const isMobile = ref(false)
+const isTablet = ref(false)
+let mqMobile, mqTablet
+const onMobileChange = (e) => { isMobile.value = e.matches }
+const onTabletChange = (e) => { isTablet.value = e.matches }
+
+onMounted(() => {
+  mqMobile = window.matchMedia('(max-width: 48rem)')
+  mqTablet = window.matchMedia('(min-width: 48.0625rem) and (max-width: 64rem)')
+  isMobile.value = mqMobile.matches
+  isTablet.value = mqTablet.matches
+  mqMobile.addEventListener('change', onMobileChange)
+  mqTablet.addEventListener('change', onTabletChange)
+})
+
+onUnmounted(() => {
+  mqMobile?.removeEventListener('change', onMobileChange)
+  mqTablet?.removeEventListener('change', onTabletChange)
+})
 </script>

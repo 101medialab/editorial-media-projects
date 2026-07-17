@@ -7,11 +7,17 @@
           class="w-[130px]"
       />
     </div>
-    <swiper-container ref="swiperEl" init="false">
-      <swiper-slide v-for="item in config.items" :key="item.id">
-        <SectionItem :item="item" :box="config.box" />
-      </swiper-slide>
-    </swiper-container>
+    <div class="slider-wrapper relative">
+      <swiper-container ref="swiperEl" init="false">
+        <swiper-slide v-for="item in config.items" :key="item.id">
+          <SectionItem :item="item" :box="config.box" :section="config.id" />
+        </swiper-slide>
+      </swiper-container>
+      <div
+        class="shelf-wrapper absolute bottom-[10px] left-0 w-full h-[93px] pointer-events-none"
+        :style="{ backgroundImage: `url(${PUBLIC_URL}result/shelf_v2.png)`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto 93px' }"
+      />
+    </div>
   </section>
 </template>
 
@@ -29,9 +35,11 @@ const props = defineProps({
 
 const swiperEl = ref()
 
+const isPartTwo = props.config.id === 'part-two'
+
 const swiperParams = {
   slidesPerView: 'auto',
-  spaceBetween: 15,
+  spaceBetween: 30,
   centerInsufficientSlides: true,
   slidesOffsetBefore: 15,
   slidesOffsetAfter: 15,
@@ -39,10 +47,11 @@ const swiperParams = {
     forceToAxis: true,
   },
   breakpoints: {
-    1024: {
-      spaceBetween: 105,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
+    1200: {
+      // slidesPerView: props.config.items.length,
+      spaceBetween: isPartTwo ? 90 : 105,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
     },
   },
 }
@@ -60,5 +69,6 @@ onMounted(() => {
   :deep(swiper-slide) {
     width: fit-content;
   }
+
 }
 </style>
