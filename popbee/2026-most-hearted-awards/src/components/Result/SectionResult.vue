@@ -15,6 +15,7 @@
       </swiper-container>
       <div
         class="shelf-wrapper absolute bottom-[10px] left-0 w-full h-[93px] pointer-events-none"
+        :class="isPartTwo ? 'bottom-[10px]' : 'bottom-[25px]'"
         :style="{ backgroundImage: `url(${PUBLIC_URL}result/shelf_v2.png)`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto 93px' }"
       />
     </div>
@@ -40,6 +41,7 @@ const isPartTwo = props.config.id === 'part-two'
 const swiperParams = {
   slidesPerView: 'auto',
   spaceBetween: 30,
+  centeredSlides: true,
   centerInsufficientSlides: true,
   slidesOffsetBefore: 15,
   slidesOffsetAfter: 15,
@@ -47,7 +49,11 @@ const swiperParams = {
     forceToAxis: true,
   },
   breakpoints: {
+    768: {
+      centeredSlides: false,
+    },
     1200: {
+      centeredSlides: false,
       // slidesPerView: props.config.items.length,
       spaceBetween: isPartTwo ? 90 : 105,
       slidesOffsetBefore: 0,

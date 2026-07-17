@@ -2,7 +2,7 @@
   <div class="result-announcement-info-box relative overflow-hidden lg:min-h-[614px]">
 
     <div class="ra-inner-wrapper">
-      <h1>Result Announcement</h1>
+      <h1 class="text-[46px] md:text-[60px]">Result Announcement</h1>
 
       <div class="ra-board">
         <p>感謝所有參與 POPBEE Most-Hearted Award 的讀者，這場由大家決定的潮流盛事終於揭曉！我們根據各位 POPBEE
@@ -53,7 +53,6 @@ $screw-inset: 14px;
   h1 {
     font-family: var(--font-bodndi);
     font-style: italic;
-    font-size: 60px;
     font-weight: 400;
     color: $navy;
     line-height: 1;
