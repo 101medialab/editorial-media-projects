@@ -46,7 +46,7 @@ $screw-inset: 14px;
   flex-direction: column;
   align-items: center;
   gap: 28px;
-  padding: 60px 22%;
+  padding: 60px 10%;
   text-align: center;
   width: 100%;
 
@@ -57,6 +57,14 @@ $screw-inset: 14px;
     color: $navy;
     line-height: 1;
     letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 100rem) {
+    padding: 60px 22%;
+  }
+
+  @media (min-width: 48.0625rem) and (max-width: 64rem) {
+    padding: 60px 40px;
   }
 
   @media (max-width: 48rem) {
@@ -98,13 +106,9 @@ $screw-inset: 14px;
     &-br { bottom: $screw-inset; right: $screw-inset; }
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 64rem) {
     padding: 40px 28px;
-
-    p {
-      font-size: 13px;
-      line-height: 1.8;
-    }
+    max-width: 600px;
   }
 }
 </style>
