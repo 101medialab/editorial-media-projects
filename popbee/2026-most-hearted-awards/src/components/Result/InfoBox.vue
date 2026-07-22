@@ -83,7 +83,6 @@ $screw-inset: 14px;
   box-shadow: 6px 8px 7.5px 0 #00000040;
 
   p {
-    font-family: var(--font-notos-tc), sans-serif;
     color: $navy;
     font-size: 16px;
     line-height: 150%;
