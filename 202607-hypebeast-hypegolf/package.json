@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "deploy": "../deploy.sh $(pwd) dist 202607-hypebeast-hypegolf"
+    "deploy": "../deploy.sh $(pwd) . 202607-hypebeast-hypegolf"
   },
   "author": "",
   "license": "ISC",
