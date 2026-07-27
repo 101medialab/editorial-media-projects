@@ -1,0 +1,11 @@
+{
+  "name": "202607-hypebeast-hypegolf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "../deploy.sh $(pwd) dist 202607-hypebeast-hypegolf"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
