@@ -118,20 +118,14 @@ sendViewportHeight();
 ```
 
 
-- **Scroll-driven campaigns need a second message: `scroll-offset`.** pym grows the iframe to the campaign's full content height so the article page scrolls, which leaves the iframe's own document permanently unscrolled. Any campaign built on document scroll — `position:sticky`, `position:fixed`, `document`/`window` scroll listeners, `IntersectionObserver`, or `innerHeight`-relative reveal tests — is dead in the embed until the parent relays where the reader is. `202610-dr-martens` is the reference: it ships an in-page shim that restores the reader's window as the viewport, and its embed must also send the reader's offset:
+- **Campaigns built on document scroll need a different embed: no pym at all.** pym grows the iframe to the campaign's full content height so the article page scrolls, which leaves the iframe's own document permanently unscrolled. Any campaign using `position:sticky`/`fixed`, `document`/`window` scroll listeners, `IntersectionObserver`, or `innerHeight`-relative tests is dead in that embed — sticky never engages, fixed elements pin to a 24,000px viewport, and no scroll listener ever fires. Embed those as a **plain iframe one viewport tall that scrolls itself**, and seed `--vh` from `window.innerHeight` (in a self-scrolling iframe the iframe's own viewport *is* the reader's visible area, so `screen.height` is the wrong source):
 
-  ```js
-  function sendState() {
-    var f = pymParent.iframe, top = f.getBoundingClientRect().top + window.scrollY;
-    pymParent.sendMessage('viewport-height', String(window.innerHeight));
-    pymParent.sendMessage('scroll-offset', String(Math.round(window.scrollY - top)));
-  }
-  pymParent.onMessage('viewport-height-request', sendState);
-  pymParent.onMessage('height', sendState);        // the campaign grew; re-measure
-  window.addEventListener('scroll', sendState, { passive: true });
-  window.addEventListener('resize', sendState);
+  ```html
+  <div id="hb-embed"><iframe src="https://campaigns.hypb.st/<directory>/"
+       style="display:block;width:100%;height:100svh;border:0" title="..."></iframe></div>
   ```
 
-  The 202507-oakley / 202511-yuki / 202607-hypebeast-hypegolf campaigns use no scroll-driven CSS or listeners at all, so they need only the snippet above them.
+  `202610-dr-martens` is the reference. Relaying the reader's scroll offset to the campaign over pym was implemented and tested first, and abandoned: it requires shimming `innerHeight`, `getBoundingClientRect`, `IntersectionObserver` and CSS sticky, and it still did not hold up in the live CMS. The self-scrolling iframe reproduces standalone exactly, with no campaign-side shim.
+
 
 Without it `--vh` falls back to `screen.height`, so on a 1080p screen with a 900px window the embedded page renders ~19% taller than standalone. The addition is backward compatible — campaigns that ignore the message are unaffected, including those (like `202507-oakley`) that use no `--vh` at all.
