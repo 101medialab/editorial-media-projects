@@ -218,10 +218,14 @@ def main():
     # sticky pins at top:0 by default, which is the viewport edge — under the site
     # header. Shift the pin point down by the header's occupied height. The notes
     # stage keeps its own 40px offset, measured from below the header.
-    header_css = (
-        f'.{SCOPE} .dm__sticky-wrapper{{top:var(--hb-header,0)}}'
-        f'.{SCOPE} .dm-notes__stage{{top:calc(var(--hb-header,0px) + 40px)}}'
-    ) if SUBTRACT_SITE_HEADER else ''
+    # NB: the pin point is deliberately left at top:0. initStickyImages decides when
+    # to reveal a section with `wrapper.rect.top <= 2` — i.e. it waits for the wrapper
+    # to reach the top of the viewport. Moving the pin down to var(--hb-header) means
+    # rect.top never drops below 57, so the reveal never fires and the section stays
+    # visibility:hidden. The wrapper's own content is centred, so the top slice that
+    # sits behind the header is empty anyway; only the ELEMENT is offset, not its
+    # contents. Shortening the wrapper via --vh is what stops it running off-screen.
+    header_css = ''
 
     doc = (
         '<!-- 202610-dr-martens — scoped inline embed.\n'
