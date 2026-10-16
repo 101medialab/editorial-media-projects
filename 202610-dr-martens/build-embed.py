@@ -42,8 +42,12 @@ SCOPE = 'dm-embed-scope'
 # The article supplies the reset, so the campaign's own element reset is dropped.
 # DRM_KEEP_RESET=1 builds the scoped-but-reset-included variant, for comparison.
 DROP_RESET = os.environ.get('DRM_KEEP_RESET') != '1'
-# Size the campaign against the area below the site header (#page-header).
-SUBTRACT_SITE_HEADER = os.environ.get('DRM_NO_HEADER_OFFSET') != '1'
+# Rename .post-body-content -> .post-body-content-none to drop the theme's
+# rules on that wrapper. DRM_NO_RENAME=1 keeps the class as-is.
+RENAME_POST_BODY = os.environ.get('DRM_NO_RENAME') != '1'
+# Let the site header scroll off instead of staying pinned, so the campaign can
+# use the whole viewport. DRM_KEEP_HEADER_STICKY=1 leaves it sticky.
+SCROLL_OFF_HEADER = os.environ.get('DRM_KEEP_HEADER_STICKY') != '1'
 
 
 def split_rules(css):
@@ -167,65 +171,41 @@ def main():
     js = js.replace('document.documentElement.style.setProperty("--vh"',
                     'document.querySelector(".' + SCOPE + '").style.setProperty("--vh"')
 
-    if SUBTRACT_SITE_HEADER:
-        # --vh is the campaign's viewport abstraction: it drives the sticky wrapper
-        # height (calc(var(--vh,1vh) * 100)) and every vh-sized image/panel. Reducing
-        # its value by the space the site header occupies sizes the whole campaign to
-        # the visible area instead of the raw viewport, which is what keeps a pinned
-        # section from running under #page-header.
-        #
-        # #page-header is sticky with a NEGATIVE top (156px tall at top:-99px on
-        # desktop = 57px occupied; 94/-34 = 60px on mobile), so the occupied space is
-        # height + top, not height. `getBoundingClientRect().bottom` would give the
-        # same number only while stuck, and would shift the layout on scroll.
-        old_t = 'function t(){e(window.innerHeight)}'
-        # Publish the offset as --hb-header as well as folding it into --vh: --vh
-        # drives the SIZE, but a sticky element pinned at top:0 still snaps to the
-        # viewport edge, so its offset needs the pin point moved too.
-        new_t = (
-            'function o(){var h=document.getElementById("page-header");if(!h)return 0;'
-            'var s=getComputedStyle(h);'
-            'if(s.display==="none"||s.visibility==="hidden")return 0;'
-            'var tp=parseFloat(s.top);'
-            'return Math.max(0,Math.round(h.getBoundingClientRect().height+(isNaN(tp)?0:tp)))}'
-            'function t(){var d=o();e(window.innerHeight-d);'
-            'try{document.querySelector(".' + SCOPE + '").style.setProperty("--hb-header",d+"px")}catch(x){}}'
-        )
-        if old_t in js:
-            js = js.replace(old_t, new_t, 1)
-        else:
-            print('  ! --vh seeding pattern not found; header offset not applied')
-
-        # The seeding script lives in <head>, so it runs before the body exists and
-        # #page-header cannot be measured yet (this is why the offset has to be
-        # re-applied, not just computed once). Re-seed once parsing is done, and
-        # again after load and a couple of delays, in case the header is injected
-        # late by the site's own scripts.
-        tail = 't(),window.addEventListener("resize",t)}();'
-        tail_new = (
-            't(),window.addEventListener("resize",t),'
-            'document.addEventListener("DOMContentLoaded",t),'
-            'window.addEventListener("load",t),'
-            'setTimeout(t,600),setTimeout(t,2000)}();'
-        )
-        if tail in js:
-            js = js.replace(tail, tail_new, 1)
-        else:
-            print('  ! --vh re-seed hook not found; header offset may not apply')
-    js = js.replace('document.body.appendChild',
-                    'document.querySelector(".' + SCOPE + '").appendChild')
+    # --vh is the plain viewport. The site header is left to scroll off on its own
+    # rather than being subtracted, so the campaign sizes itself to the full
+    # viewport as the standalone build does.
 
     # sticky pins at top:0 by default, which is the viewport edge — under the site
     # header. Shift the pin point down by the header's occupied height. The notes
     # stage keeps its own 40px offset, measured from below the header.
-    # NB: the pin point is deliberately left at top:0. initStickyImages decides when
-    # to reveal a section with `wrapper.rect.top <= 2` — i.e. it waits for the wrapper
-    # to reach the top of the viewport. Moving the pin down to var(--hb-header) means
-    # rect.top never drops below 57, so the reveal never fires and the section stays
-    # visibility:hidden. The wrapper's own content is centred, so the top slice that
-    # sits behind the header is empty anyway; only the ELEMENT is offset, not its
-    # contents. Shortening the wrapper via --vh is what stops it running off-screen.
-    header_css = ''
+    # Any --vh rule the themed page already carries is neutralised (see the appended
+    # JS, which renames .post-body-content). Re-assert the var on :root so children
+    # inherit the campaign's value by inheritance rather than by a nearer rule.
+    header_css = f':root{{--vh:inherit}}'
+
+    # The Hypebeast theme styles .post-body-content, and several of those rules reach
+    # the campaign (the --vh override is the one that matters here). Renaming the class
+    # only for our own ancestor subtree disables them without touching the rest of the
+    # article. Done from JS rather than by hand so a re-paste keeps working even if the
+    # wrapper's class changes upstream.
+    # #page-header is sticky (156px tall at top:-99px, so only its bottom 57px shows).
+    # Sticky pins it to the viewport for the whole page, so the campaign's full-viewport
+    # wrappers always have it across their top. Setting it static lets it scroll away
+    # with the article. This is deliberately unscoped: the header sits outside the
+    # campaign's subtree. !important is needed because the theme's own rule sets it.
+    header_rule = (
+        '<style>#page-header{position:static!important}</style>'
+    ) if SCROLL_OFF_HEADER else ''
+
+    rename = ''
+    if RENAME_POST_BODY:
+        rename = (
+            '<script>(function(){var el=document.querySelector(".post-body-content");'
+            'if(!el)return;'
+            'el.classList.remove("post-body-content");'
+            'el.classList.add("post-body-content-none")'
+            '})();</script>'
+        )
 
     doc = (
         '<!-- 202610-dr-martens — scoped inline embed.\n'
@@ -235,7 +215,9 @@ def main():
         f'<style>{rewrite_assets(scoped)}{header_css}</style>\n'
         f'{rewrite_assets(markup)}\n'
         f'{rewrite_assets(js)}\n'
+        f'{rename}\n'
         '</div>\n'
+        f'{header_rule}\n'
     )
     OUT.write_text(doc, encoding='utf-8')
 
