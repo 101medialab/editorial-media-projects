@@ -193,6 +193,14 @@ def main():
     js = js.replace('document.documentElement.style.setProperty("--vh"',
                     'document.querySelector(".' + SCOPE + '").style.setProperty("--vh"')
 
+    # gem-rain appends its layer to <body>. Detached from the scope it loses the
+    # scoped `.dm-gem-rain{overflow:hidden}` rule, and its gems -- spawned at random x
+    # and pushed side to side by the physics -- then extend the document's scrollWidth
+    # past the viewport, producing a horizontal scrollbar that grows as gems appear.
+    # Keeping the layer inside the scope restores the clip.
+    js = js.replace('document.body.appendChild',
+                    'document.querySelector(".' + SCOPE + '").appendChild')
+
     # --vh is the plain viewport. The site header is left to scroll off on its own
     # rather than being subtracted, so the campaign sizes itself to the full
     # viewport as the standalone build does.
