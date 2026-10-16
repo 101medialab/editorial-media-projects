@@ -1,0 +1,11 @@
+{
+  "name": "202610-dr-martens",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "../deploy.sh $(pwd) . 202610-dr-martens"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
