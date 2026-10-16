@@ -117,4 +117,21 @@ window.addEventListener('resize', sendViewportHeight);
 sendViewportHeight();
 ```
 
+
+- **Scroll-driven campaigns need a second message: `scroll-offset`.** pym grows the iframe to the campaign's full content height so the article page scrolls, which leaves the iframe's own document permanently unscrolled. Any campaign built on document scroll — `position:sticky`, `position:fixed`, `document`/`window` scroll listeners, `IntersectionObserver`, or `innerHeight`-relative reveal tests — is dead in the embed until the parent relays where the reader is. `202610-dr-martens` is the reference: it ships an in-page shim that restores the reader's window as the viewport, and its embed must also send the reader's offset:
+
+  ```js
+  function sendState() {
+    var f = pymParent.iframe, top = f.getBoundingClientRect().top + window.scrollY;
+    pymParent.sendMessage('viewport-height', String(window.innerHeight));
+    pymParent.sendMessage('scroll-offset', String(Math.round(window.scrollY - top)));
+  }
+  pymParent.onMessage('viewport-height-request', sendState);
+  pymParent.onMessage('height', sendState);        // the campaign grew; re-measure
+  window.addEventListener('scroll', sendState, { passive: true });
+  window.addEventListener('resize', sendState);
+  ```
+
+  The 202507-oakley / 202511-yuki / 202607-hypebeast-hypegolf campaigns use no scroll-driven CSS or listeners at all, so they need only the snippet above them.
+
 Without it `--vh` falls back to `screen.height`, so on a 1080p screen with a 900px window the embedded page renders ~19% taller than standalone. The addition is backward compatible — campaigns that ignore the message are unaffected, including those (like `202507-oakley`) that use no `--vh` at all.
