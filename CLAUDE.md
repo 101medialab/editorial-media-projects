@@ -32,9 +32,9 @@ npm run deploy       # build, then ../deploy.sh $(pwd) dist <campaign-path>
 
 ### 2. Hand-authored static HTML
 
-`202607-hypebeast-hypegolf`, `levis-digital-experience`.
+`202607-hypebeast-hypegolf`, `levis-digital-experience`, `202610-dr-martens`.
 
-No build step. A single prebuilt `index.html` (with inline CSS/JS) plus an `assets/` directory. The campaign path is hardcoded as `<base href="/<directory>/" />` inside the HTML. Deploy with:
+No build step. A single prebuilt `index.html` (with inline CSS/JS) plus an asset directory (usually `assets/`; `202610-dr-martens` uses `images/` + `fonts/` instead). The campaign path is hardcoded as `<base href="/<directory>/" />` inside the HTML. Deploy with:
 
 ```
 npm run deploy       # ../deploy.sh $(pwd) . <directory>
@@ -93,5 +93,28 @@ python3 -m unittest discover -s tests -k <name>  # single test
 - `dist/` and `node_modules/` are gitignored and never committed — build output lives on disk only. `.DS_Store` is also ignored.
 - Campaign directories are named `<YYYYMM>-<client>`; the deployed S3 directory sometimes differs from the folder name (see above).
 - **Never commit credentials.** `.env`, `.env.*`, `node_modules`, and `dist` are gitignored; keep secrets in the per-campaign `.env` (copy from `.env.dist`) only. If you find a live key in a tracked file, treat it as a leak to report rather than something to quietly move.
-- `202610-dr-martens` is an empty placeholder for an upcoming campaign.
-- Campaigns are iframe-embedded, so pages include the `pym.js` `pym.Child` snippet (Vite campaigns) and use viewport-relative sizing; a shared fix used `vh`-driven iframe growth with a relative base href. Keep iframe-height communication intact when editing layouts.
+- Campaigns are iframe-embedded — see **Embedding (pym)** below for the parent snippet and the `--vh` sizing contract. Keep iframe-height communication intact when editing layouts.
+- `202610-dr-martens` is a hand-authored static campaign (archetype 2); its client build hardcoded root-absolute asset paths that were rewritten to `/202610-dr-martens/…` so they resolve under the campaign path.
+
+## Embedding (pym)
+
+Campaigns are embedded by this snippet, which lives in the article/CMS template — **not** in this repo, so it cannot be changed from here:
+
+```html
+<div id="hb-embed"></div>
+<script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>var pymParent = new pym.Parent('hb-embed', 'https://campaigns.hypb.st/<directory>/', {});</script>
+```
+
+- **pym v1 carries only `height`/`width` messages.** There is no `viewport-height`/`viewport-width`, and the parent sends only `initialWidth`/`childId` as iframe URL params. The parent resizes the iframe to the child's full content height, so inside an embedded campaign `window.innerHeight` is the *whole document* and raw CSS `vh`/`svh` is meaningless.
+- **Iframe-safe sizing:** use `calc(var(--vh, 1vh) * N)` instead of raw `vh`/`svh`, with `--vh` set to 1% of the *visible* height — seed from `screen.height` when `window.self !== window.top`, and from `window.innerHeight` (plus a `resize` listener) when top-level. Seeding from `window.innerHeight` while embedded collapses the layout. Reference implementation: `202607-hypebeast-hypegolf`.
+- **Parent half of the handshake (optional).** The campaign child already sends `viewport-height-request` and listens for `viewport-height`; only the parent side is missing, and pym's Parent does expose `onMessage`/`sendMessage`. Adding it makes embedded layout match standalone to ~0.1%:
+
+```js
+function sendViewportHeight() { pymParent.sendMessage('viewport-height', String(window.innerHeight)); }
+pymParent.onMessage('viewport-height-request', sendViewportHeight);
+window.addEventListener('resize', sendViewportHeight);
+sendViewportHeight();
+```
+
+Without it `--vh` falls back to `screen.height`, so on a 1080p screen with a 900px window the embedded page renders ~19% taller than standalone. The addition is backward compatible — campaigns that ignore the message are unaffected, including those (like `202507-oakley`) that use no `--vh` at all.
