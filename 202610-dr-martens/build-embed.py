@@ -48,6 +48,9 @@ RENAME_POST_BODY = os.environ.get('DRM_NO_RENAME') != '1'
 # Let the site header scroll off instead of staying pinned, so the campaign can
 # use the whole viewport. DRM_KEEP_HEADER_STICKY=1 leaves it sticky.
 SCROLL_OFF_HEADER = os.environ.get('DRM_KEEP_HEADER_STICKY') != '1'
+# Reveal the first section as soon as it is on screen, rather than waiting for
+# its top to reach the viewport top. DRM_NO_FIRST_REVEAL=1 disables this.
+REVEAL_FIRST_WRAPPER = os.environ.get('DRM_NO_FIRST_REVEAL') != '1'
 
 
 def split_rules(css):
@@ -168,6 +171,25 @@ def main():
     markup = markup.replace('</main>', '</div>')
 
     js = '\n'.join(scripts)
+
+    if REVEAL_FIRST_WRAPPER:
+        # The reveal fires once a wrapper's top reaches the viewport top:
+        #     t <= (r ? s : 2) && n >= i        // r = already "in"
+        # (t = wrapper rect.top, s = `buffer`, n = rect.bottom, i = innerHeight * exitAt).
+        # So a section that starts on screen stays hidden until it is scrolled to the
+        # very top. The first wrapper is already in view on arrival, so its threshold is
+        # widened to the whole viewport — it reveals as soon as it is on screen at all,
+        # while the rest of the sections keep the scroll-driven behaviour.
+        old_cond = 'return t<=(r?s:2)&&n>=i'
+        new_cond = (
+            'if(e.wrapper===document.querySelector(".' + SCOPE + ' .dm__sticky-wrapper"))'
+            'return n>0&&t<=innerHeight;'
+            'return t<=(r?s:2)&&n>=i'
+        )
+        if old_cond in js:
+            js = js.replace(old_cond, new_cond, 1)
+        else:
+            print('  ! reveal condition not found; first-wrapper reveal not widened')
     js = js.replace('document.documentElement.style.setProperty("--vh"',
                     'document.querySelector(".' + SCOPE + '").style.setProperty("--vh"')
 
