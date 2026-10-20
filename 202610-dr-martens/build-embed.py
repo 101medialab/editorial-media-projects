@@ -51,6 +51,15 @@ SCROLL_OFF_HEADER = os.environ.get('DRM_KEEP_HEADER_STICKY') != '1'
 # Reveal the first section as soon as it is on screen, rather than waiting for
 # its top to reach the viewport top. DRM_NO_FIRST_REVEAL=1 disables this.
 REVEAL_FIRST_WRAPPER = os.environ.get('DRM_NO_FIRST_REVEAL') != '1'
+# Mobile: the sticky category strip under the masthead (.mobile-header-bottom,
+# top:60px) pins over the campaign. Made static on narrow viewports only.
+# DRM_KEEP_MOBILE_NAV=1 disables this.
+UNSTICK_MOBILE_NAV = os.environ.get('DRM_KEEP_MOBILE_NAV') != '1'
+# .post-body-article clips its own horizontal overflow.
+CLIP_ARTICLE_X = os.environ.get('DRM_NO_ARTICLE_CLIP') != '1'
+CLIP_MODE = os.environ.get('DRM_CLIP_MODE', 'clip')  # 'clip' or 'hidden'
+# Branding: the campaign wrote "Dr Martens" without the period in image alts.
+DR_PERIOD = os.environ.get('DRM_NO_DR_PERIOD') != '1'
 
 
 def split_rules(css):
@@ -172,6 +181,14 @@ def main():
 
     js = '\n'.join(scripts)
 
+    if DR_PERIOD:
+        # The campaign shipped "Dr Martens" (no period) in the image `alt` attributes,
+        # alongside correct "Dr. Martens" in the visible copy. Normalise to the brand's
+        # own spelling. Applied to the markup; the alt strings live there, not in the JS.
+        dr_before = len(re.findall(r'\bDr(?!\.)', markup))
+        markup = re.sub(r'\bDr(?!\.)', 'Dr.', markup)
+        print(f'  Dr -> Dr. in {dr_before} alt attribute(s)')
+
     if REVEAL_FIRST_WRAPPER:
         # The reveal fires once a wrapper's top reaches the viewport top:
         #     t <= (r ? s : 2) && n >= i        // r = already "in"
@@ -226,6 +243,30 @@ def main():
     header_rule = (
         '<style>#page-header{position:static!important}</style>'
     ) if SCROLL_OFF_HEADER else ''
+
+    # Two more page-level rules, both deliberately unscoped because the elements they
+    # target sit outside the campaign's subtree:
+    #   .mobile-header-bottom  the sticky category strip under the masthead on narrow
+    #                          viewports (top:60px, z-index 190). Static on mobile only,
+    #                          so the desktop masthead is unaffected.
+    #   .post-body-article     clips its own horizontal overflow, so anything in the
+    #                          campaign that would widen the document is contained here.
+    # The .site-main-nav selector the brief named does not exist in this theme; this is
+    # the element that actually pins on mobile.
+    # <site-main-nav> is a custom element that only exists in the beta layout
+    # (https://hypebeast.com/_beta/enable sets hb_beta_layout, which adds
+    # `beta-layout` to <body>). It ships static, but its own JS switches it to
+    # `position:sticky; top:18px` on scroll, where it then sits over the campaign's
+    # full-height wrappers. Forcing it static on mobile stops that.
+    if UNSTICK_MOBILE_NAV:
+        header_rule += (
+            '@media (max-width:991px){'
+            '.mobile-header-bottom{position:static!important}'
+            'site-main-nav{position:static!important}'
+            '}'
+        ).join(['<style>', '</style>'])
+    if CLIP_ARTICLE_X:
+        header_rule += f'<style>.post-body-article{{overflow-x:{CLIP_MODE}}}</style>'
 
     rename = ''
     if RENAME_POST_BODY:
