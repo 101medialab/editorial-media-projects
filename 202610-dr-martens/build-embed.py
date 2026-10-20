@@ -60,6 +60,11 @@ CLIP_ARTICLE_X = os.environ.get('DRM_NO_ARTICLE_CLIP') != '1'
 CLIP_MODE = os.environ.get('DRM_CLIP_MODE', 'clip')  # 'clip' or 'hidden'
 # Branding: the campaign wrote "Dr Martens" without the period in image alts.
 DR_PERIOD = os.environ.get('DRM_NO_DR_PERIOD') != '1'
+# gem-rain sizes its layer and its floor from documentElement.scrollHeight, which
+# inline is the whole article, so the confetti layer spans the page and its floor
+# lands at the page bottom. Scope both to the campaign wrapper instead, so the
+# confetti settles inside the module. DRM_NO_GEM_BOUNDS=1 disables this.
+SCOPE_GEM_BOUNDS = os.environ.get('DRM_NO_GEM_BOUNDS') != '1'
 
 
 def split_rules(css):
@@ -180,6 +185,31 @@ def main():
     markup = markup.replace('</main>', '</div>')
 
     js = '\n'.join(scripts)
+
+    if SCOPE_GEM_BOUNDS:
+        # `$` is the layer width, `A` its height and the y of the floor body.
+        # documentElement.scrollHeight is the article inline, so both must come from
+        # the campaign wrapper: getBoundingClientRect() because the wrapper is not a
+        # scroll container, so clientWidth/scrollHeight would not describe it.
+        # Guarded on the scope element existing, so a standalone build is untouched.
+        old_bounds = ('$=document.documentElement.clientWidth,'
+                      'y?A=innerHeight:(v.style.height="0px",'
+                      'A=document.documentElement.scrollHeight,'
+                      'v.style.height=`${A}px`)')
+        new_bounds = ('$=((function(){try{var w=document.querySelector(".' + SCOPE
+                      + ' .dm__wrapper");if(!w)return null;var r=w.getBoundingClientRect();'
+                      'return Math.round(r.width)}catch(e){return null}})())'
+                      '??document.documentElement.clientWidth,'
+                      'y?A=innerHeight:(v.style.height="0px",'
+                      'A=((function(){try{var w=document.querySelector(".' + SCOPE
+                      + ' .dm__wrapper");if(!w)return null;var r=w.getBoundingClientRect();'
+                      'return Math.round(r.height)}catch(e){return null}})())'
+                      '??document.documentElement.scrollHeight,'
+                      'v.style.height=`${A}px`)')
+        if old_bounds in js:
+            js = js.replace(old_bounds, new_bounds, 1)
+        else:
+            print('  ! gem-rain bounds pattern not found; confetti bound not scoped')
 
     if DR_PERIOD:
         # The campaign shipped "Dr Martens" (no period) in the image `alt` attributes,
