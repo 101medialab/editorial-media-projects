@@ -215,9 +215,15 @@ def main():
         # The campaign shipped "Dr Martens" (no period) in the image `alt` attributes,
         # alongside correct "Dr. Martens" in the visible copy. Normalise to the brand's
         # own spelling. Applied to the markup; the alt strings live there, not in the JS.
-        dr_before = len(re.findall(r'\bDr(?!\.)', markup))
-        markup = re.sub(r'\bDr(?!\.)', 'Dr.', markup)
-        print(f'  Dr -> Dr. in {dr_before} alt attribute(s)')
+        # Case-preserving, and anchored on "Martens" rather than any word starting
+        # with Dr — a bare \bDr\b also matches "DRAG"/"dragging" elsewhere in the copy.
+        # "DR MARTENS" in the camera frame keeps its caps, so the period is inserted
+        # without touching the case.
+        dr_before = len(re.findall(r'(?i)\bDr(?!\.)(\s+Martens)', markup))
+        # Insert the period after the D and keep the rest of the match verbatim, so
+        # "DR MARTENS" becomes "DR. MARTENS" rather than a mixed-case string.
+        markup = re.sub(r'(?i)\b(Dr)(?!\.)(\s+Martens)', r'\1.\2', markup)
+        print(f'  Dr -> Dr. in {dr_before} brand string(s)')
 
     if REVEAL_FIRST_WRAPPER:
         # The reveal fires once a wrapper's top reaches the viewport top:
